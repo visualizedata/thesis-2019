@@ -10,6 +10,7 @@
   <link href="web/css/style.css" rel="stylesheet">
   <link href="web/css/color.css" rel="stylesheet">
   <link href="web/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
   <script>
@@ -20,6 +21,12 @@
 
       // images
       $("div .project").each(function() {
+        if ($(this).attr('video-src') != undefined && $(this).attr('video-src') != '') {
+          console.log($(this).attr('video-src'));
+          var video = "<button onclick='playVideo(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-play-circle' style='font-size:`16px'></i>&nbsp; PLAY VIDEO</button>";
+          $(this).append(video);
+        }
+
         if ($(this).attr('href') != undefined) {
 
           // scale
@@ -78,8 +85,25 @@
 
       // activate tooltip
       $('[data-toggle="tooltip"]').tooltip();
-
     });
+
+    function playVideo(url) {
+      var player = document.getElementById("videoPlayer");
+      var mp4Vid = document.getElementById('videoSource');
+
+      player.pause();
+
+      // Now simply set the 'src' property of the mp4Vid variable!!!!
+
+      videoSource.src = url;
+
+      player.load();
+      player.play();
+
+      if (player.requestFullscreen) {
+        player.requestFullscreen();
+      }
+    }
   </script>
 </head>
 
@@ -158,7 +182,7 @@
     </div>
 
     <a id="batool"></a>
-    <div href="https://bsakbar.github.io/thesis/web/home.html" img-src="https://github.com/bsakbar/thesis/blob/master/preview.png?raw=true" class="project col-md-12">
+    <div href="https://bsakbar.github.io/thesis/web/home.html" img-src="https://github.com/bsakbar/thesis/blob/master/preview.png?raw=true" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -178,7 +202,7 @@
     </div>
 
     <a id="ryan"></a>
-    <div href="http://ryanabest.com/ms2-2019/thesis/" img-src="https://raw.githubusercontent.com/ryanabest/ms2-2019/master/thesis/public/preview.png" class="project col-md-12">
+    <div href="http://ryanabest.com/ms2-2019/thesis/" img-src="https://raw.githubusercontent.com/ryanabest/ms2-2019/master/thesis/public/preview.png" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Drawing Discrimination
@@ -200,7 +224,7 @@
     </div>
 
     <a id="simone"></a>
-    <div href="https://simone-betito.github.io/msdv-thesis-SB" img-src="https://github.com/simone-betito/msdv-thesis-SB/blob/master/preview.png?raw=true" class="project col-md-12">
+    <div href="https://simone-betito.github.io/msdv-thesis-SB" img-src="https://github.com/simone-betito/msdv-thesis-SB/blob/master/preview.png?raw=true" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Repatriation: An Approach For A Fairer Museum
@@ -242,7 +266,7 @@
     </div>
 
     <a id="candice"></a>
-    <div href="https://candicejmchan.github.io/candicethesis" img-src="https://github.com/candicejmchan/candicethesis/blob/master/preview.png?raw=true" class="project col-md-12">
+    <div href="https://candicejmchan.github.io/candicethesis" img-src="https://github.com/candicejmchan/candicethesis/blob/master/preview.png?raw=true" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Opioids: The Branding and Commercialization of Pain
@@ -264,7 +288,7 @@
     </div>
 
     <a id="emily"></a>
-    <div href="https://3milychu.github.io/music-vis/" img-src="https://github.com/3milychu/thesis/blob/master/documentation/preview.png?raw=true" class="project col-md-12">
+    <div href="https://3milychu.github.io/music-vis/" img-src="https://github.com/3milychu/thesis/blob/master/documentation/preview.png?raw=true" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Notes on Perspective: An embodied digital musical interface that invites you into the lived experience of audience reactions by sentiment felt during a classical music performance in real-time
@@ -286,7 +310,7 @@
     </div>
 
     <a id="clare"></a>
-    <div href="https://churc.github.io/MajorStudio2" img-src="https://github.com/churc/MajorStudio2/blob/master/images/churchouse_thesis.png?raw=true" class="project col-md-12">
+    <div href="https://churc.github.io/MajorStudio2" img-src="https://github.com/churc/MajorStudio2/blob/master/images/churchouse_thesis.png?raw=true" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Do our museums reflect us as a society?
@@ -307,7 +331,7 @@
     </div>
 
     <a id="jed"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -327,7 +351,7 @@
     </div>
 
     <a id="alonso"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -347,7 +371,7 @@
     </div>
 
     <a id="mikaela"></a>
-    <div href="https://mikaela-el.github.io/thesis/code" img-src="https://raw.githubusercontent.com/mikaela-el/thesis/master/previewImage.png" class="project col-md-12">
+    <div href="https://mikaela-el.github.io/thesis/code" img-src="https://raw.githubusercontent.com/mikaela-el/thesis/master/previewImage.png" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           From the Supreme Court to the States: Visualizing Women’s Reproductive Rights
@@ -369,7 +393,7 @@
     </div>
 
     <a id="andrew"></a>
-    <div href="http://thewatercrisis.us" img-src="https://raw.githubusercontent.com/AndrewLevinson/thesis/master/src/assets/images/preview.png" class="project col-md-12">
+    <div href="http://thewatercrisis.us" img-src="https://raw.githubusercontent.com/AndrewLevinson/thesis/master/src/assets/images/preview.png" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           The United States Water Crisis: How changes to the natural water cycle and transitioning population centers are causing water stress
@@ -391,7 +415,7 @@
     </div>
 
     <a id="grace"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -411,7 +435,7 @@
     </div>
 
     <a id="colleen"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -431,7 +455,7 @@
     </div>
 
     <a id="aaditi"></a>
-    <div href="https://aaditirokade.github.io/thesisProject" img-src="https://raw.githubusercontent.com/aaditirokade/thesis/master/preview.png" class="project col-md-12">
+    <div href="https://aaditirokade.github.io/thesisProject" img-src="https://raw.githubusercontent.com/aaditirokade/thesis/master/preview.png" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Visualizing the impact of climate change on flight experience: An exploration of domestic travel sector of civil aviation in India
@@ -453,7 +477,7 @@
     </div>
 
     <a id="suzanna"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -473,7 +497,7 @@
     </div>
 
     <a id="nic"></a>
-    <div href="https://nicstark.github.io/thesis/MicroSite" img-src="https://raw.githubusercontent.com/nicstark/thesis/master/1.png" class="project col-md-12">
+    <div href="https://nicstark.github.io/thesis/MicroSite" img-src="https://raw.githubusercontent.com/nicstark/thesis/master/1.png" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Cambrian Analytica: What would it take for people to care about their personal data?
@@ -495,7 +519,7 @@
     </div>
 
     <a id="kiril"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -515,7 +539,7 @@
     </div>
 
     <a id="isabel"></a>
-    <div href="" img-src="" class="project col-md-12">
+    <div href="" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -535,7 +559,7 @@
     </div>
 
     <a id="michael"></a>
-    <div href="https://wolfm2.github.io/thesis/Sahel/" img-src="https://github.com/wolfm2/thesis/blob/master/preview.gif?raw=true" class="project col-md-12">
+    <div href="https://wolfm2.github.io/thesis/Sahel/" img-src="https://github.com/wolfm2/thesis/blob/master/preview.gif?raw=true" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           How Fragile is the Sahel? An analytical perspective on fragility and its indicators.
@@ -557,7 +581,7 @@
     </div>
 
     <a id="stephanie"></a>
-    <div href="https://ssyung.github.io/thesis/" img-src="" class="project col-md-12">
+    <div href="https://ssyung.github.io/thesis/" img-src="" video-src="" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
         </span>
@@ -636,6 +660,10 @@
     <div class="bottom-stripe col-md-12 marginbot-50">
       <div class="bottom-stripe-inner"></div>
     </div>
+
+    <video controls autoplay id="videoPlayer">
+      <source id="videoSource" src=""></source>
+    </video>
 
   </div>
   <script src="web/js/bootstrap.min.js"></script>

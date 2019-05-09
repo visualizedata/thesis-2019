@@ -311,3 +311,8 @@ button:hover,
     color: #e82e21 !important;
     transition: all .3s ease-in-out;
 }
+
+#fullscreen-video {
+  width: 0;
+  height: 0;
+}
