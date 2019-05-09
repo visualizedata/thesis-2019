@@ -312,7 +312,11 @@ button:hover,
     transition: all .3s ease-in-out;
 }
 
-#fullscreen-video {
+#videoPlayer {
   width: 0;
   height: 0;
+}
+
+.glyphicon-chevron-up {
+  padding-bottom: 10px;
 }
