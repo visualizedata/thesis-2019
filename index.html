@@ -23,7 +23,8 @@
       $("div .project").each(function() {
         if ($(this).attr('video-src') != undefined && $(this).attr('video-src') != '') {
           console.log($(this).attr('video-src'));
-          var video = "<button onclick='playVideo(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-play-circle' style='font-size:`16px'></i>&nbsp; PLAY VIDEO</button>";
+          var video = "<table width='100%'><tr><td><button onclick='playVideo(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-play-circle' style='font-size:`16px'></i>&nbsp; PLAY VIDEO</button></td>";
+          video += "<td align='right'><button id='download' onclick='window.location.assign(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-download' style='font-size:`16px'></i> DOWNLOAD VIDEO</button></td></tr></table>";
           $(this).append(video);
         }
 
@@ -100,14 +101,21 @@
     });
 
     function playVideo(url) {
+      var localDownloadPath = '/Users/username/Downloads';
       var player = document.getElementById("videoPlayer");
-      var mp4Vid = document.getElementById('videoSource');
+      var videoSource = document.getElementById('videoSource');
+      var localSource = document.getElementById('localSource');
 
       player.pause();
 
-      // Now simply set the 'src' property of the mp4Vid variable!!!!
-
       videoSource.src = url;
+
+      var file = url.replace(/^.*[\\\/]/, '');
+      console.log('video url', file);
+      var person = $("div").find(`[video-src='${url}']`).prev().attr('id');
+      console.log('person', person);
+
+      localSource.src = localDownloadPath + '/' + person + '/' + '/' + file;
 
       player.load();
       player.play();
@@ -738,6 +746,7 @@
     </div>
 
     <video controls autoplay id="videoPlayer">
+      <source id="localSource" src=""></source>
       <source id="videoSource" src=""></source>
     </video>
 
