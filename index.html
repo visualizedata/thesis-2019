@@ -23,7 +23,7 @@
       $("div .project").each(function() {
         if ($(this).attr('video-src') != undefined && $(this).attr('video-src') != '') {
           console.log($(this).attr('video-src'));
-          var video = "<table width='100%'><tr><td><button onclick='playVideo(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-play-circle' style='font-size:`16px'></i>&nbsp; PLAY VIDEO</button></td>";
+          var video = "<table width='100%'><tr><td><button class='download' onclick='playVideo(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-play-circle' style='font-size:`16px'></i>&nbsp; PLAY VIDEO</button></td>";
           video += "<td align='right'><button class='download' onclick='window.location.assign(\"" + $(this).attr('video-src') + "\")'><i class='fa fa-download' style='font-size:`16px'></i> DOWNLOAD VIDEO</button></td></tr></table>";
           $(this).append(video);
         }
@@ -523,7 +523,7 @@
     </div>
 
     <a id="isabel"></a>
-    <div href="https://isver.github.io/mst/" img-src="https://github.com/IsVer/mst/raw/master/Data/img/screensh.png" video-src="https://github.com/IsVer/mst/blob/master/demo.mov?raw=true" class="project col-md-12">
+    <div href="https://isver.github.io/ms-t/" img-src="https://github.com/IsVer/ms-t/raw/master/Data/img/screensh.png" video-src="https://github.com/IsVer/ms-t/blob/master/demo.mov?raw=true" class="project col-md-12">
       <p class=" col-md-3">
         <span class="title">
           Passive Activism: Environmental shareholder activism and the role of index funds
