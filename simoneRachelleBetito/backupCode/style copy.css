@@ -1,0 +1,75 @@
+.title-font {
+  font-family: adobe-devanagari, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.directives-font {
+  font-family: "Inconsolata", monospace;
+}
+
+/* slides */
+#slides {
+  text-align: center;
+}
+
+#slide-previous-arrow,
+#slide-next-arrow {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+#slide-previous-arrow {
+  left: 1em;
+}
+#slide-next-arrow {
+  right: 1em;
+}
+
+.slide-visible {
+  display: block;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.dots-group {
+  width: 100vw;
+  position: fixed;
+  bottom: 20px;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+*.dot {
+  border-radius: 100px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.dot:hover {
+  background-color: gray;
+}
+
+.dot-active {
+  background-color: #000;
+  transition: all 0.15s ease-in;
+}
+
+.dot-inactive {
+  background-color: #fff;
+  transition: all 0.15s ease-in;
+}

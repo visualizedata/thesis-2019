@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <title>
+      Slideshow
+    </title>
+
+    <style>
+      #slides {
+        text-align: center;
+      }
+
+      #slide-previous-arrow,
+      #slide-next-arrow {
+        cursor: pointer;
+        position: fixed;
+        top: 40%;
+        font-size: 2em;
+        font-weight: bold;
+        z-index: 1;
+      }
+
+      #slide-previous-arrow {
+        left: 1em;
+      }
+      #slide-next-arrow {
+        right: 1em;
+      }
+
+      .slide-visible {
+        display: block;
+      }
+
+      .slide-hidden {
+        display: none;
+      }
+    </style>
+
+    <script src="slides.js" type="application/javascript"></script>
+  </header>
+  <body>
+    <div id="slides">
+      <div id="slide-previous-arrow">&lt;</div>
+
+      <div class="slide-visible">
+        Slide One
+      </div>
+      <div class="slide-hidden">
+        Slide Two
+      </div>
+      <div class="slide-hidden">
+        Slide Three
+      </div>
+
+      <div id="slide-next-arrow">&gt;</div>
+    </div>
+  </body>
+</html>

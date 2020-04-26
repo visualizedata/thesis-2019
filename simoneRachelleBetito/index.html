@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon.png"
+    />
+    <title>
+      Repatriation: An Approach For A Fairer Museum
+    </title>
+    <!--css-->
+    <link rel="stylesheet" href="https://use.typekit.net/tfz7vwf.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tfz7vwf.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="slides">
+        <div id="home" class="slide-visible">
+          <div id="title">
+            <h1>Repatriation: An Approach For A Fairer Museum</h1>
+            <h5>By Simone Betito <span>May 2019</span></h5>
+            <br />
+            <br />
+            <br />
+            <div>
+              <h6>Exhibition Starts Here</h6>
+              <a href="#" id="startArrow">
+                <img src="images/ic_arrow_forward_36px.svg"/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="map" class="slide-hidden">
+          <section id="modal-box">
+            <div id="dialogue">
+              <div id="modal-content">
+                <h3>About Repatriation &amp; Why It's Important</h3>
+                <p>
+                    Museums are bastions of culture, they hold artifacts from all over the world. These artifacts hold different meanings to different people and some want their artifacts repatriated. Restitution is defined by Merriam Webster as
+                  <span class="u"
+                    >“the restoration of something to its rightful owner.”</span
+                  >
+                  Many authors have explored the impacts restitution has had on
+                  art, museums, culture and the party making the return request.
+                  However,
+                  <span class="u">there is no universal approach.</span> This
+                  framework is the main portion of the visualization and
+                  proposes four pillars:
+                  <span class="u"
+                    >Symbolism, Legality, Morality, and Preservation.</span
+                  >
+                  Then we will apply it to a sample of the MET's (Metropolitan
+                  Museum of Art in New York City) collection, as a test of reproducibility.
+                </p>
+
+                <p>
+                  Lately, there's been a push to return artifacts that have been
+                  taken through colonization. In November 2018, France announced
+                  it would return thousands of artifacts taken during their
+                  colonial period. Startlingly,
+                  <span class="u">
+                    90% of Africa's heritage currently lies outside the
+                    continent.
+                  </span>
+                  <br />
+                  <br />Note: Restitution and repatriation will be used
+                  interchangeably throughout this visualization.
+                  <br />
+                  <br /><strong>
+                    Click on to explore restitution cases worldwide.
+                  </strong>
+                </p>
+
+                <h6>
+                  Hover over the lines to see the artifact in question.
+                </h6>
+
+                <br />
+              </div>
+              <button id="lets-go" onclick="toggleModal()">Let's Go</button>
+            </div>
+            <div id="screen"></div>
+          </section>
+          <div id="svg-map">
+            <h1>Artifact Movement Around The World</h1>
+            <h3>Case Studies: Mapping Global Restitution Cases</h3>
+
+            <!-- LEGEND -->
+            <p>
+              <span class="legend-repatriated"><span></span>Repatriated</span>
+              <span class="legend-not-repatriated"
+                ><span></span>Not Repatriated</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div id="modelExplainer" class="slide-hidden">
+          <div class="modelExplainerText0">
+            <h1 class="modelText4">Model Methodology:</h1>
+            <p class="modelText4"><span class="u">This way to view the four pillars that make up the repatriation model.</span> <img class="arrow2" src="images/ic_arrow_forward_36px.svg"/></p>
+          </div>
+        </div>
+
+        <div id="model" class="slide-hidden">
+          <table>
+            <tr>
+              <td>
+                <div class="Symbolism-square">
+                  <span>
+                    Does the item represent a religious symbol?
+                    <br />
+                    Symbolic Value? <br />
+                    Group Value? <br />
+                    Importance to national or community pride?</span
+                  >
+                  <img
+                    class="symbolism-background-art"
+                    src="images/symbolicKPI2.jpg"
+                  />
+                </div>
+                <div class="squareMini">
+                  <p>Symbolism</p>
+                </div>
+              </td>
+              <td>
+                <div class="legality-square">
+                  <span
+                    >Was the item taken in a consensual manner?
+                    <br />
+                    Was the art acquired during looting? <br />
+                    Is the ownership the result of imperialism? <br
+                  /></span>
+                  <img
+                    class="legality-background-art"
+                    src="images/legalityKPI.jpg"
+                  />
+                </div>
+                <div class="squareMini">
+                  <p>Legality</p>
+                </div>
+              </td>
+              <td>
+                <div class="preservation-square">
+                  <span
+                    >Will the item be preserved?<br />
+                    Is the item reproducible? <br />
+                    What is the Material Risk Assessment? <br />
+                    What is the Conflict Zones Assessment? <br
+                  /></span>
+                  <img
+                    class="preservation-background-art"
+                    src="images/preservationKPI.jpeg"
+                  />
+                </div>
+                <div class="squareMini">
+                  <p>Preservation</p>
+                </div>
+              </td>
+              <td>
+                <div class="morality-square">
+                  <span
+                    >Is there a power imbalance between the requestor and the
+                    requestee?<br />
+                    What's the argument from the court of public opinion?<br />
+                    Part of the public's discussions?</span
+                  >
+                  <img
+                    class="morality-background-art"
+                    src="images/moralityKPI2.jpg"
+                  />
+                </div>
+                <div class="squareMini">
+                  <p>Morality</p>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <h3 class="modelExplainerText2">
+            What if we applied this model to a sample of 5000 items from the MET’s collection?
+          </h3>
+          <h6 class="modelExplainerText1">
+            Hover over the images to see what questions were asked in order to
+            build the model
+          </h6>
+        </div>
+        <div id="modelViz" class="slide-hidden">
+          <div id="modelViz2">
+            <h2>
+              Case Study: Applying The Repatriation Model to A Sample of 5000 Items from the MET's Collection
+            </h2>
+            <h6>Hover over the circles to see information about that item</h6>
+            <img class="legend" src="images/legend.svg">
+            <svg id="modelVizSVG"></svg>
+            <div class="sideModal" id="69.269.6a,-b">
+              <button id="close-button" onclick="closePanel()">
+                <img
+                  id="close-icon"
+                  src="images/ic_close_24px.svg"
+                  alt="close button"
+                  width="100%"
+                />
+              </button>
+              <h1>Case Study: Stone Male in Parka with Harpoon</h1>
+              <div class="image-holder">
+                <img
+                  src="images/stoneMaleHarpoon.jpeg"
+                  alt="Stone Male in Parka with Harpoon"
+                  width="100%"
+                />
+              </div>
+              <div class="sideModalText">
+                <p>
+                  <span class="u">This artifact has a cumulative score of 15.</span> <br />
+                  <br />
+                  The repatriation model likely picked up on this item because
+                  it meets the Preservation KPI's material assessment as a stone
+                  sculpture and the geographical location of where this item was
+                  made, Canada. The Inuit were historically marginalized so this
+                  meets the Legality KPI. <br />
+                  The provenance of this item is not entirely clear. On the
+                  MET's website it says: "Said to be from: Port Harrison
+                  (Inukjuak) James A. Houston, New York, until 1969". <br />
+                </p>
+                <a
+                  href="https://www.metmuseum.org/art/collection/search/309564?&searchField=All&sortBy=Relevance&ft=69.269.6&offset=0&rpp=20&amp;pos=1"
+                  >source</a
+                >
+              </div>
+            </div>
+
+            <div class="sideModal" id="L.2017.54.3">
+              <button id="close-button" onclick="closePanel()">
+                <img
+                  id="close-icon"
+                  src="images/ic_close_24px.svg"
+                  alt="close button"
+                  width="100%"
+                />
+              </button>
+              <h1>Case Study: Shaman's Mask</h1>
+              <div class="image-holder">
+                <img
+                  src="images/shamansMask.jpeg"
+                  alt="Shaman's Mask"
+                  width="100%"
+                />
+              </div>
+              <div class="sideModalText">
+                <p>
+                  <span class="u">This artifact has a cumulative score of 10.</span> <br />
+                  <br />
+                  The repatriation model considered this item to be contentious.
+                  Likely because it's an item from an Tlingit indigenous people
+                  and for this symbolic meaning. The description on the MET's
+                  site describes this item as: "This malevolent mask manifests a
+                  powerful spirit being that helped a shaman mediate between the
+                  worlds of matter and spirit".
+                  <br />
+                </p>
+                <a
+                  href="https://www.metmuseum.org/art/collection/search/726654?&searchField=All&sortBy=Relevance&ft=Unrecorded+Tlingit+artist&offset=0&rpp=20&amp;pos=1"
+                  >source</a
+                >
+              </div>
+            </div>
+            <div class="sideModal" id="83.2.392">
+              <button id="close-button" onclick="closePanel()">
+                <img
+                  id="close-icon"
+                  src="images/ic_close_24px.svg"
+                  alt="close button"
+                  width="100%"
+                />
+              </button>
+              <h1>Case Study: Medal of Captain Stephen Decatur, 1800–1830</h1>
+              <div class="image-holder">
+                <img src="images/medal.jpg" alt="medal" width="100%" />
+              </div>
+              <div class="sideModalText">
+                <p>
+                  <span class="u">This artifact has a cumulative score of 16.</span> <br />
+                  <br />
+                  The model picked up on a few American items, which makes sense
+                  considering how the metrics were combined. Items in North
+                  America scored higher. Not everything is required to be
+                  repatriated if the item makes sense in its current location.
+                </p>
+                <a href="https://www.metmuseum.org/art/collection/search/5066"
+                  >source</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="dataMethod3" class="slide-hidden">
+          <div id="dataMethod4">
+            <h1>Data Methodology</h1>
+            <h2>How the metrics are measured:</h3>
+            <div class="row">
+              <div class="column">
+                <div id="methodExplainer">
+                  <h3>Symbolism</h3>
+                  <p>
+                    For this model, the Symbolism metric was calculated by
+                    binary scoring any object name within the <span class="u">"Object Column"</span> in
+                    the dataset that had any naming convention with a reference to funerary, marriage,
+                    armour/war or ceremonial meaning as 1.
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <div id="methodExplainer">
+                  <h3>Legality</h3>
+                  <p>
+                    The legality metric was calculated by scoring any item
+                    within the <span class="u">"Culture" column</span>in the dataset that had a culture
+                    identified as "peoples" or a historically marginalized
+                    community as 1, while the rest of the items were scored as 0.
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <div id="methodExplainer">
+                  <h3>Preservation</h3>
+                  <p>
+                    The preservation metric is a combination of two parts, the
+                    materiality score and the risk assessment score. The
+                    materiality portion was calculated by assessing the strength
+                    of the material the artifact is made from. <span class="u">Materiality scale was measured as such: Clay = 1
+                    Wood = 2 Ivory & Bone = 3 Stone = 4 Metals = 5.</span> The logic behind this is the stronger
+                    the material, the easier the artifact would be to return
+                    without damage from transport or the elements.
+                    <br />
+                    The risk assessment score was calculated from the
+                    <span class="u">Peace Index Scale</span>, spcifically their regional scale from
+                    most safe region to unsafest region. Regional scoring:
+                    <span class="u">Europe = 1 North America = 2 Asia-Pacific = 3 South America
+                    = 4 Central America & caribbean = 5 Sub-Saharan Africa = 6
+                    Russia & Eurasia = 7 South Asia = 8 Middle East & North
+                    Africa = 9</span>
+                    <br />
+                    The safer the region, the less risk of damage to the
+                    artifact in the midst of transportation and relocation.
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <div id="methodExplainer">
+                  <h3>Morality</h3>
+                  <p>
+                    Morality refers to the opinion of the general public on the
+                    item in question by looking at Google Searches over a period
+                    of time. This way we can assess if an item is top of mind
+                    for the region and part of the overall public's discussions.
+                    If the <span class="u">Google search shows a higher search rate (>1000),
+                    then the item is given a score of 1, if not, it is scored as
+                    0.</span> However, in this particular model, the Morality metric
+                    was not applied. This metric can always be applied if deemed
+                    appropriate for the situation to provide further context.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="conclusion" class="slide-hidden">
+          <div>
+            <h1>Conclusion</h1>
+            <p>
+              In the 18 and 19 centuries, increasingly unequal global power
+              relations enabled European countries to accumulate huge numbers of
+              cultural artifacts which found their way into their burgeoning
+              museums. Ethnographic museums, in particular, have been the
+              keepers of other people’s cultures, imposing their own
+              classifications and interpretations onto objects from different
+              peoples around the world: indigenous groups almost never had a
+              voice. This model is intended to be a
+              <span class="u">conversation starter.</span>
+              Ideally, becoming a neutral voice in the repatriation discussions.
+              Museums are a reflection of society at large and should not hold
+              objects that have a contentious nature as part of their
+              provenance. <i
+                >Museums and Restitution: New Practices, New Approaches (pp.
+                2-3). Taylor and Francis. Kindle Edition.</i
+              >
+            </br>
+          </br>
+              The model was a success in terms of its ability to bucket
+              the samples into 4 distinct "shelves" and that it chose the
+              appropriate items for those buckets. This framework is not intended to diminish past or present repatriation efforts. Museums are a
+              reflection of society at large and provide a great service. As societies try to atone for past behaviours on
+              marginalized communities,
+              <span class="u"
+                >fairer museums are an important part of writing past
+                wrongs.</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <div id="Sources" class="slide-hidden">
+          <h1>Sources</h1>
+          <div id="sources2">
+            <p>
+              <ul>
+                
+                <li>Agarwal, Mamta. "Process of Preservation of the Artifacts | Archaeological Findings." History Discussion. <a href="http://www.historydiscussion.net/art/process-of-preservation-of-the-artifacts-archaeological-findings/1823">Source.</a></li>
+                
+                <li>Art and Sovereignty in Global Politics 2017. New York, NY Palgrave Macmillan.</li>
+                
+                <li>Exploring Machu Picchu a.</li>
+                
+                <li>Native American Repatriation and Nagpra b. Wordpress.</li>
+                
+                <li>Negotiating Culture Heritage, Ownership, and Intellectual Property 2013. Amherst : University of Massachusetts Press.</li>
+                
+                <li>"Return of African Artifacts Sets a Tricky Precedent for Europe’s Museums." c.The New York Times. <a href="https://www.nytimes.com/2018/11/27/arts/design/macron-report-restitution-precedent.html.">Source.</a></li>
+                
+                <li>"U.N. General Assembly Resolution on the Restitution of Art to Countries Victims of Expropriation." 1974.International Legal Materials 13 (1): 243-244. doi:10.1017/S0020782900044971. <a href="https://www-jstor-org.libproxy.newschool.edu/stable/20691230">Source.</a></li>
+                
+                <li>Aratani, Lauren. "&nbsp;FBI Finds 2,000 Human Bones at Indiana Home: 'Unlike Anything We’d Ever seen'." The Guardian. <a href="https://www.theguardian.com/us-news/2019/feb/28/fbi-finds-2000-human-bones-indiana-home-?CMP=Share_AndroidApp_Gmail">Source.</a></li>
+                
+                <li>Beisaw, April and Penelope Duus. 2016. "Repatriation as Inspiration: Multigenerational Perspectives on American Archaeology-Museum Relationships." Museum Worlds 4 (1): 95-110. doi:10.3167/armw.2016.040108.</li>
+                
+                <li>Charney, Noah. The Museum of Lost Art. First published ed.</li>
+                
+                <li>Cuno, James B. 2011. Who Owns Antiquity? Museums and the Battle Over our Ancient Heritage Princeton, N.J; Woodstock : Princeton University Press.</li>
+                
+                <li>DISPOSITION POLICY. Disposition Policy.</li>
+                
+                <li>Goodwin, Paige. 2008. "Mapping the Limits of Repatriable Cultural Heritage: A Case Study of Stolen Flemish Art in French Museums." University of Pennsylvania Law Review 157 (2): 673.</li>
+                
+                <li>Hartocollis, Anemona. 2019. "Who should Own Photos of Slaves? the Descendants, Not Harvard, a Lawsuit Says." The New York Times. <a href="https://www.nytimes.com/2019/03/20/us/slave-photographs-harvard.html">Source.</a></li>
+                
+                <li>Institute for Economics & Peace. 2018. Global Peace Index 2018. Sydney.</li>
+                
+                <li>Kramer, Jennifer. 2006. Switchbacks : Art, Ownership, and Nuxalk National Identity Vancouver : UBC Press.</li>
+                
+                <li>McIntosh, Molly L. 2006. "Exploring Machu Picchu: An Analysis of the Legal and Ethical Issues Surrounding the Repatriation of Cultural Property." Duke Journal of Comparative & International Law 17 (1): 199.</li>
+                
+                <li>McManamon, Francis P. "The Native American Graves Protection and Repatriation Act (NAGPRA)." National Park Service., accessed March 4, 2019, <a href="https://www.nps.gov/archeology/tools/laws/NAGPRA.htm">Source.</a></li>
+                
+                <li>Merryman, John Henry. 1985. "Thinking about the Elgin Marbles." Michigan Law Review 83 (8): 1880. doi:10.2307/1288954.</li>
+                
+                <li>"The Metropolitan Museum of Art Collection API.", last modified Mar 28, <a href="https://metmuseum.github.io/">Source.</a></li>
+                
+                <li>"Top 10 Museums and Galleries." National Geographic., last modified September 20, accessed March, 2019, <a href="https://www.nationalgeographic.com/travel/top-10/museum-galleries/">Source.</a></li>
+
+                <li>Salem, Aisha Y. 2005. "Finders Keepers-the Repatriation of Egyptian Art." J.Tech.L.& Pol'Y 10: 173.</li>
+                
+                <li>Steele IV, Chauncery D. 1999. "The Morgantina Treasure: Italy's Quest for Repatriation of Looted Artifacts." Suffolk Transnat'L L.Rev. 23: 667.</li>
+                
+                <li>Thompson, Erin L., author. 2016. Possession : The Curious History of Private Collectors from Antiquity to the Present New Haven : Yale University Press.</li>
+                
+                <li>Tythacott, Louise and Kostas Arvanitis. 2014. Museums and Restitution: New Practices, New Approaches Ashgate Publishing.</li>
+                
+                <li>Watkins, Joe. 2013. "THE POLITICS OF ARCHAEOLOGY; Heritage, Ownership, and Repatriation." In Negotiating Culture, edited by Laetitia La Follette, 15-37: University of Massachusetts Press.</li>
+              </ul>
+
+            </p>
+          </div>
+        </div>
+
+        <div id="slide-previous-arrow">
+            <img src="images/ic_arrow_back_36px.svg"/>
+          <!-- &#8249; -->
+        </div>
+        <div id="slide-next-arrow">
+            <img src="images/ic_arrow_forward_36px.svg"/>
+            <!-- &#8250; -->
+          </div>
+
+        <div class="dots-group">
+          <div class="dots">
+            <div class="dot dot-active" data-key="0" id="dot1"></div>
+            <div class="dot dot-inactive" data-key="1" id="dot2"></div>
+            <div class="dot dot-inactive" data-key="2" id="dot3"></div>
+            <div class="dot dot-inactive" data-key="3" id="dot4"></div>
+            <div class="dot dot-inactive" data-key="4" id="dot5"></div>
+            <div class="dot dot-inactive" data-key="5" id="dot6"></div>
+            <div class="dot dot-inactive" data-key="6" id="dot7"></div>
+            <div class="dot dot-inactive" data-key="7" id="dot8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="slides.js"></script>
+    <script src="main.js"></script>
+    <script src="mapViz.js"></script>
+    <script src="mainModel.js"></script>
+  </body>
+</html>

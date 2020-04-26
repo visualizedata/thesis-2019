@@ -1,0 +1,42 @@
+MUST BE DONE FOR KEYNOTE VIDEO
+- Convert us map to gallons
+- Update water stress markers/labels on first dark map to include more spots
+- CHART Three
+    - Animate from low to high opactiy on first text box
+    - Slider label tag on hover highlights circle on plot and makes others inactive
+
+Overall
+- Responsive charts / text in all sections
+- Write, write, write! 
+- Add links to references throughout piece
+- CONVERT ALL UNITS TO BGAL/TIME
+- Make my own favicon
+- SEO stuff/prerender
+
+Hero
+- Daniel's idea for water texture in map
+
+Section One
+- Tooltip should fade out when scrolling action
+- Add another view for 2019 projection on line/water source
+
+Seciton Two
+- USE BGAL OF WATER
+-— Potentially add another view for callout/tooltip? (maybe not necessary)
+- Add ogallala zoom in?
+- Map infrastructure animation to amounts needed
+---
+    Special chart 2 Responsive: 
+    - Overflow issue with panel
+    - Side mini panel fixed horizonal
+    - Add hamburger for main panel 
+    - Fit map in viewport mapbox
+
+Section Three
+- Animate in from 0 current levels
+- hovering makes others inactive for better focus
+- Fill up background with water, paper.js
+---
+    Special chart 3 Responsive: 
+    - Where does model explaination/results go on smaller screens?
+        -- Potentially small counter with total saved fixed on screen that can be clicked and expanded as panel or modal.

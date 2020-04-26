@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="js/swiped-events.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Overpass:200,200i,300,400,600,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo:100,300,300i, 400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<!-- onboarding -->
+<div class="onboarding">
+</div>
+
+<!-- background fill -->
+<div class="fill">
+</div>
+
+<!-- people filters -->
+<div id="perspective-filter">
+	<i class="material-icons">remove_red_eye</i>
+</div>
+
+<div class="people-filters">
+	<option id="all" value="all">Everyone</option>
+	<div class="filters" id=people-filter-1>
+		<h1>Performers</h1>
+		<option  style="background-color:#D8A693;color:white;" id="performer" value="both">Both</option>
+		<option id="performer" value="pianist">Pianist Only</option>
+		<option id="performer" value="cellist">Cellist Only</option>
+	</div>
+	<div class="filters" id=people-filter-1>
+		<h1>Class Member</h1>
+		<option style="background-color:#D8A693;color:white;" id="audience" value="all">All</option>
+		<option id="audience" value="heard">Heard Only</option>
+		<option id="audience" value="played">Played Only</option>
+	</div>
+	<div class="filters" id=people-filter-1>
+		<h1>Nonperforming</h1>
+		<option style="background-color:#D8A693;color:white;" id="backup" value="both">Both</option>
+		<option id="backup" value="pianist">Pianist Only</option>
+		<option id="backup" value="cellist">Cellist Only</option>
+	</div>
+</div>
+	<input id="ref" value="10"></input>
+	<input id="svg-load" value="0"></input>
+
+
+<!-- vis perspective -->
+<div class="perspective">
+		<div class="option" id="spatial">
+			<div class="label"></div>
+			<div class="circle-button">
+				<i class="material-icons">location_on</i>
+			</div>
+		</div>
+		<div class="option" id="comments">
+			<div class="label"></div>
+			<div class="circle-button">
+				<i class="material-icons">forum</i>
+			</div>
+		</div>
+		<div class="option" id="signature">
+			<div class="label"></div>
+			<div class="circle-button">
+				<i class="material-icons">palette</i>
+			</div>
+		</div>
+
+		<div class="option" id="about">
+			<div class="label"></div>
+			<div class="circle-button">
+				?
+			</div>
+		</div>
+
+		<div class="floater">
+			<a href="https://en.wikipedia.org/wiki/Fantasy_Pieces_for_Clarinet_and_Piano_(Schumann)" target="_blank">
+				<div id="app-name">
+					Fantasiestücke, Op.73 (Schumann, Robert)
+				</div>
+			</a>
+		</div>
+</div>
+
+<!-- populate score page -->
+<div class="page" id="page1">
+</div>
+
+<!-- reactions -->
+<div class="view">
+
+	<!-- comments -->
+	<div id="reactions">
+		<div id="just_listening">
+			<iframe src="assets/onboarding/data/4/demo.html" frameborder=0></iframe>
+		</div>
+		<div id="start-message">
+			<h1>Notes on Perspective</h1>
+			<p>Recital critique for Fantasiestücke, Op.73 (Schumann, Robert) by an ensemble class at the Mannes School of Music. This data visualization invites you to interact with the reactions that occured among the musicians by reconstructing the event from collected data in experienced time.</p>
+			<div class="button" id="play">Enter</div>
+		</div>
+	</div>
+	<!-- spatial -->
+	<div id="reactions2">
+		<div id="ensemble_show" class="circle-button">i</div>
+		<!-- info button lightbox -->
+		<div id="ensemble_about" "class="info">
+			<h1>Meet the Ensemble</h1>
+			<p>Hover over each ensemble member to see their background, familiarity with Fantasiestücke Op. 73 and general thoughts about the piece. During the performance, <em id="pos">positive</em>, <em id="neg">negative</em> or  <em id="mixed">mixed</em> reactions by each member will glow for 10 seconds from onset of sentiment.</p>
+		</div>
+		<div id="hall">
+			<div class="performers">
+				<div class="person performer" id="performing_pianist"></div>
+				<div class="person performer" id="performing_cellist"></div>
+			</div>
+			<div class="audience">
+				<div class="person member none" id="class_member_1"></div>
+				<div class="person member none" id="class_member_2"></div>
+				<div class="person member heard" id="class_member_3"></div>
+				<div class="person member both" id="class_member_4"></div>
+				<div class="person member both" id="class_member_5"></div>
+				<div class="person member both" id="class_member_6"></div>
+				<div class="person member none" id="class_member_7"></div>
+				<div class="person member both" id="class_member_8"></div>
+				<div class="person member heard" id="class_member_9"></div>
+				<div class="person member both" id="class_member_10"></div>
+			</div>
+			<div class="backups">
+				<div class="person backup" id="non-performing_pianist"></div>
+				<div class="person backup" id="non-performing_cellist"></div>
+			</div>
+		</div>
+	</div>
+	<!-- signature -->
+	<div id="reactions3">
+		<!-- info button icon -->
+		<div id="imp_show" class="circle-button">i</div>
+		<!-- info button lightbox -->
+		<div id="imp_about" "class="info">
+			<h1>Impressions</h1>
+			<p>Impressions draws the data captured from each moment throughout the performance and paints a unique impression of that moment based only on that data. How to interpret each moment impression:</p>
+			<div class="mapping">
+				<div id="symbol1"></div>
+				<p>White spots on the disc represents a member of the performance. Hover over spots to see their title.</p>
+			</div>
+			<div class="mapping">
+				<div id="symbol2"></div>
+				<p>Filled spots show that this person experienced a unique reaction not shared by any other member</p>
+			</div>
+			<div class="mapping">
+				<div id="symbol3">
+					<img src="assets/images/symbol3.png">
+				</div>
+				<p>Spots linked with a thread shows that this person experienced a reaction shared by the member they are linked to</p>
+			</div>
+			<div class="mapping">
+				<div id="symbol4">
+					<img src="assets/images/symbol4.png">
+				</div>
+				<p>The atmosphere of each beat was generated by clustering the musical notation for that beat by similarity across the score. Reference the color bars below the score for groupings. The pulse visually presents the piece's tempo of 4/4 time at 90bpm, where each "breath" is a measure</p>
+			</div>
+			<div class="mapping">
+				<div id="symbol5">
+					<img src="assets/images/symbol5.png">
+				</div>
+				<p>The shaded area of the disc references where the performers (performing and non-performing) are situated</p>
+			</div>
+		</div>
+		<!-- visualization -->
+			<div id="record" class="cluster-none"></div>
+				 <div id="canvas"></div>
+	</div>
+
+
+	<!-- view tooltip -->
+	<div class="tooltip"><div class="profile"></div></div>
+
+</div>
+
+<!-- audio container -->
+<div class="audio-container">
+
+		<div class="filters-holder">
+			<div class="filters">
+				<div class="option zoom" name="zoom" value="dynamic">Dynamic</div>
+				<div class="option zoom" name="zoom" value="locked">Locked</div>
+			</div>
+			<div class="filters">
+				<div class="option playback" name="playback" value="experienced">Relative time</div>
+				<div class="option playback" name="playback" value="real">Absolute time</div>
+			</div>
+		</div>
+
+		<audio controls>
+	 		 <source src="assets/music.wav" type="audio/wav">
+		</audio>
+</div>
+
+<!-- preload images -->
+<div id="preload">
+   <img src="assets/images/clusternone.png" width="1" height="1"/>
+<!--    <img src="assets/images/cluster0.png" width="1" height="1"/> -->
+   <img src="assets/images/cluster1.png" width="1" height="1"/>
+   <img src="assets/images/cluster2.png" width="1" height="1"/>
+   <img src="assets/images/cluster3.png" width="1" height="1"/>
+   <img src="assets/images/cluster4.png" width="1" height="1"/>
+</div>
+
+</body>
+<!-- <script type="text/javascript" src="computed.js"></script> -->
+<script type="text/javascript" src="js/main.js"></script>
+</html>
