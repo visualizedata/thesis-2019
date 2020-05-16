@@ -1,0 +1,577 @@
+body,
+html {
+	background-color: #ffffff;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+#chart1 {
+	display: block;
+	position: absolute;
+	width: 250px !important;
+	height: 250px !important;
+	margin-top: 50px;
+	margin-left: 32px;
+}
+
+#chart2 {
+	display: block;
+	position: absolute;
+	width: 250px !important;
+	height: 250px !important;
+	margin-top: 40px;
+	margin-left: 35px;
+}
+
+#chart3 {
+	display: block;
+	position: absolute;
+	width: 250px !important;
+	height: 250px !important;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+#chart4 {
+	display: block;
+	position: absolute;
+	width: 250px !important;
+	height: 250px !important;
+	margin-top: 50px;
+	margin-left: 25px;
+}
+
+.card1 {
+	position: absolute;
+	display: flex;
+	margin-top: 218px;
+	left: 700px;
+	width: 310px;
+	height: 310px;
+	background: transparent;
+	border: 1px solid;
+	border-color: #232323;
+	border-radius: 8px;
+	font-size: 18px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: normal;
+	color: #404040;
+	overflow: hidden;
+
+}
+
+.yellowPoly{
+	position: absolute;
+	display: block;
+	width: 175px;
+	/* margin-left: 81px; */
+	margin-left: 66px;
+	margin-top: 89px;
+}
+.greenPoly{
+	position: absolute;
+	display: block;
+	width: 147px;
+	margin-left: 80px;
+	margin-top: 98px;
+}
+.bluePoly{
+	position: absolute;
+	display: block;
+	width: 154px;
+	margin-left: 71px;
+	margin-top: 86px;
+}
+.redPoly{
+	position: absolute;
+	display: block;
+	width: 147px;
+	margin-left: 70px;
+	margin-top: 102px;
+}
+
+.card2 {
+	background: #ffffff;
+	position: fixed;
+	margin-top: 8px;
+	left: 700px;
+	width: 790px;
+	height: 630px;
+	border: 1px solid;
+	border-color: #232323;
+	border-radius: 8px;
+	display: block;
+	overflow: hidden;
+
+}
+.card2content{
+	display: block;
+	padding-top: 40px;
+	padding-left: 52px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: -0.3px;
+	color: #404040;
+	width: 390px;
+	float:left;
+	text-align: justify;
+	text-justify: inter-word;
+	position: absolute;
+
+}
+
+.card1 .about {
+	padding-top: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+.card1 .about h3,
+.card1 .about .lead {
+	font-weight: 300;
+	margin: 0;
+}
+
+.card1 .about h3 {
+	font-size: 14px;
+}
+
+.tooltip-placeholder {
+	background-color: #fff;
+	border-radius: 3px;
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	color: #aaa;
+	position: relative;
+	/* z-index: 2; */
+}
+
+
+.subhead {
+	font-size: 14px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	letter-spacing: auto;
+	color: #404040;
+}
+
+.subsubhead {
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 200;
+	letter-spacing: auto;
+	color: #404040;
+}
+
+.genderradio {
+	left: 160px;
+	top: -115px;
+	position: relative;
+	cursor: pointer;
+	z-index: +1;
+}
+
+
+/* Hide the browser's default radio button */
+
+.genderradio input {
+	position: fixed;
+	opacity: 0;
+	cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkmark {
+	float: left;
+	position: relative;
+	height: 10px;
+	width: 10px;
+	background-color: transparent;
+	border: 0.5px solid #404040;
+	border-radius: 50%;
+}
+
+
+/* When the radio button is checked, add a red background */
+
+.genderradio input:visited~.checkmark {
+	background-color: #404040;
+}
+
+.radioText {
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 200;
+	padding-top: 8px;
+	color: #404040;
+}
+
+
+
+
+.slidecontainer1 {
+	display: flex;
+	margin-top: 2%;
+	width: 200px;
+	float: left;
+}
+
+.slidecontainer2 {
+	display: flex;
+	margin-top: 2%;
+	float: right;
+	margin-left: 40px;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 200px;
+	height: 1px;
+	background: #d3d3d3;
+	outline: none;
+	-webkit-transition: .2s;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #404040;
+	cursor: pointer;
+}
+
+.smallhead {
+	font-size: 18px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 500;
+	letter-spacing: normal;
+	color: #404040;
+}
+
+.units{
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 200;
+	letter-spacing: -0.5px;
+	color: #858585;
+	position: relative;
+	display: flex;
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.boxSlider {
+	width: 529px;
+	margin-left: 160px;
+	margin-top: -19px;
+	background: #ffffff;
+	border: 1px solid;
+	border-color: #232323;
+	border-radius: 8px;
+	display: flex;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+
+.logo{
+	width:140px;
+	margin-left: 200px;
+	margin-top: 70px;
+	position: relative;
+	display:  flex;
+}
+
+
+.slides {
+	display: flex;
+	margin-left: 40px;
+	margin-top: 40px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	-webkit-scroll-snap-points-x: repeat(530px);
+	-ms-scroll-snap-points-x: repeat(530px);
+	-webkit-scroll-snap-type: mandatory;
+	-ms-scroll-snap-type: mandatory;
+	scroll-snap-type: mandatory;
+}
+
+.slides::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+	background: transparent;
+	border-radius: 20px;
+}
+
+.slides::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.slides>div {
+	flex-shrink: 0;
+	width: 487px;
+	transform: scale(1);
+	transition: transform 0.5s;
+	position: relative;
+	display: flex;
+	font-size: 20px;
+}
+
+.slides>div:target {
+	transform: scale(1);
+}
+
+.outputValue{
+	position:absolute;
+	margin-top:-35px;
+	margin-left:173px;
+	font-size: 24px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+}
+
+.circles>a {
+	background: #ffffff;
+	top: 2px;
+	left: 200px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	text-decoration: none;
+	border-radius: 50%;
+	border: 1px solid;
+	border-color: #232323;
+	margin: 0 0 0.5rem 0;
+	position: relative;
+}
+/*
+a:active{
+	background: #232323;
+} */
+
+
+
+.date {
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: auto;
+	display: flex;
+	position: absolute;
+	border: 0.5px solid #232323;
+	border-radius: 5px;
+	background-color: #ffffff;
+	width: 120px;
+
+}
+
+
+::-webkit-datetime-edit {
+	padding: 3px;
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+	background: transparent;
+}
+
+::-webkit-datetime-edit-text {
+	color: #404040;
+	padding: 0 0.2em;
+}
+
+::-webkit-datetime-edit-month-field {
+	color: #404040;
+}
+
+::-webkit-datetime-edit-day-field {
+	color: #404040;
+}
+
+::-webkit-datetime-edit-year-field {
+	color: #404040;
+}
+
+::-webkit-inner-spin-button {
+	display: none;
+}
+
+.nametext {
+	font-size: 12px;
+	font-family: 'Roboto Mono', monospace;
+	color: #404040;
+}
+
+.name {
+	width: 120px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 0;
+	-webkit-appearance: none;
+	padding: 4px 4px;
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+	border: 0.5px solid #232323;
+	border-radius: 5px;
+}
+
+.bmi {
+	width: 600px;
+	top:410px;
+	margin-left:0px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+
+}
+
+#bheight{
+	width: 40px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	padding: 3px 3px;
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+	border: 0.5px solid #232323;
+}
+#bweight{
+	width: 40px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	padding: 3px 3px;
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+	border: 0.5px solid #232323;
+}
+
+
+
+
+.downloadBtn {
+	top: 220px;
+	left: 1550px;
+	position: absolute;
+	display: flex;
+}
+
+.arrowBtn{
+	margin-top:10px;
+	margin-left: 255px;
+	position: absolute;
+	display: flex;
+}
+
+#report {
+	display: none;
+}
+
+#chartCard2{
+width: 550px !important;
+display: flex;
+position: relative;
+}
+
+
+.BPS{
+margin-top: 0px;
+float: left;
+}
+
+.BPD{
+margin-top: 36px;
+margin-left: 30px;
+float: right;
+}
+
+#bpchart {
+	display: block;
+	position: absolute;
+	width: 300px !important;
+	height: 300px !important;
+}
+
+
+#dot{
+	margin-left:0px;
+	margin-top: -6px;
+	border-left: 1.5px solid;
+	color:#ff7a7a;
+  height: 70px;
+	display: flex;
+	position: absolute;
+	z-index: +1;
+}
+
+#barline1{
+	margin-left:312px;
+	margin-top: 448px;
+	border-left: 1.4px dashed;
+	color:#ff7a7a;
+  height: 135px;
+	display: flex;
+	position: absolute;
+	z-index: +1;
+}
+
+#barline2{
+	margin-left:469px;
+	margin-top: 448px;
+	border-left: 1.4px dashed;
+	color:#ff7a7a;
+  height: 135px;
+	display: flex;
+	position: absolute;
+	z-index: +1;
+}

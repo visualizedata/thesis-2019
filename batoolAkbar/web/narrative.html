@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <style>
+        body {
+        background-color: #ffffff;
+        overflow: scroll;
+        }
+
+        h1{
+          font-size: 45px;
+          line-height: 1.8;
+          letter-spacing: -0.08em;
+          word-spacing: -0.3em;
+        	font-family: 'Roboto Mono', monospace;
+          color: #232323;
+        	font-weight: 500;
+        }
+
+        h2{
+          font-size: 28px;
+          font-family: 'Roboto Mono', monospace;
+          font-weight: 300;
+          line-height: 1.5em;
+          letter-spacing: -0.8px;
+          word-spacing: -1.3px;
+          color: #232323;
+        }
+
+        .sideNav{
+          top: 230px;
+          left: 1548px;
+          position: fixed;
+          display: block;
+          width: 45px;
+
+        }
+
+
+        .boxSlider {
+          width: 1300px;
+          height: 700px;
+          margin-left: 180px;
+          margin-top: 150px;
+          background: #ffffff;
+          display: block;
+          overflow: auto;
+          /* border: 1px solid;
+          border-color: #232323;
+          border-radius: 8px; */
+
+        }
+
+
+        .boxSlider::-webkit-scrollbar {
+        	width: 5px;
+        	height: 5px;
+        }
+
+        .boxSlider::-webkit-scrollbar-thumb {
+        	background: transparent;
+        	border-radius: 20px;
+        }
+
+        .boxSlider::-webkit-scrollbar-track {
+        	background: transparent;
+        }
+
+        .text1, .text2{
+          float: right;
+          margin-right:80px;
+          margin-top: -650px;
+          display: block;
+          letter-spacing: -0.8px;
+          word-spacing: -1;
+  				width:550px;
+          font-size: 17px;
+          line-height: 1.8;
+        	font-family: 'Roboto Mono', monospace;
+        	font-weight: 300;
+          text-align: left;
+          color: #404040;
+          margin-left: 500px;
+          text-justify: inter-word;
+        }
+
+        .visualizations {
+         margin-bottom:170px;
+         width: 550px;
+         height: 550px;
+         display: inline-flex;
+         position: relative;
+         float: left;
+         background: transparent;
+         text-align: center;
+         align-items: center;
+         color: #000;
+         font-size: 3em;
+       }
+
+       .arrowUp{
+         cursor: pointer;
+       }
+       .arrows{
+         margin-left: 1545px;
+         width: 40px;
+         margin-top: -290px;
+       }
+
+
+       .highlight{
+         background-color: #ff7a7a;
+
+       }
+       .underline{
+         border-bottom: solid 2px #ff7a7a;
+         display: inline;
+         padding-bottom: 3px;
+       }
+
+       .readyBtn{
+         text-decoration: none !important;
+         position: relative;
+         display: block;
+         margin-top: 300px;
+         font-size: 22;
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 500;
+         color: #232323;
+       }
+        .readyBtn:hover{
+        color: #ff7a7a;
+
+        }
+
+      </style>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="icon" href="tabIcon.png">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
+      <title>Medigon</title>
+      </head>
+
+
+    <div class="sideNav">
+      <a href="home.html">
+        <img src="home.svg" alt="home">
+      </a>
+      <a href="index.html">
+        <img  src="chartsPage.svg" alt="home">
+      </a>
+
+      <a href="references.html">
+      <img style="
+      top: 580px;
+      left:5px;
+      position: absolute;
+      display: flex;"
+      width= 35px; src="references.svg">
+      </a>
+    </div>
+
+
+
+
+<div class="boxSlider">
+
+      <div style="margin-left:50px;" class="visualizations" data-aos="fade-up">
+      <img style="
+      margin-top: 150px !important;
+
+      " width=440px id="bloodCircle6" src="bloodCircle7.gif">
+
+      </div>
+      <div  class="text1" data-aos="fade-up">
+      <span>
+      <h1><span style="font-weight: 200;">your</span> blood, <span style="font-weight: 200;">your</span>  data.</h1>
+      Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an <span class="highlight">unusual
+      format</span> that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from transporting oxygen, it stores important data about the body's performance. Therefore it's important that we
+      understand it and become participants in our own health and bodies.
+      <h2>How can we make it <span class="underline">simpler</span> and <span class="underline">more accessible?</span></h2>
+      <br>
+      Start Scrolling
+      <img style="margin-right:355px; margin-top:-8px; float:right; " width= 50px; src="arrowdown.svg" alt="arrow">
+      </span>
+      </div>
+
+
+      <div  class="visualizations" >
+      <img  style="
+      margin-top: 150px !important;
+
+      " width=520px src="bloodGroups4.gif" >
+      </div>
+      <div class="text1">
+      <h2>1.</h2>
+      Blood consists of different elements, there are <span class="highlight">four main groups</span> that most people get their blood tested on: Complete Blood Count (CBC),
+      Differential Blood Count (DBC), Basic Metabolic Panel, and Renal and Liver Function Tests. Each group represents blood elements.<span class="highlight">Every element
+      is different, it has a different function, different range, and different unit.</span> This is why it's hard sometimes to make sense out of the test
+      results when each result looks different.
+      <br>
+      <br>
+      <h2>Let's use the <span class="underline">Complete Blood Count </span>as an example.</h2>
+      </div>
+
+
+      <div class="visualizations" >
+      <img width=520px src="unitsTree.gif">
+      </div>
+      <div class="text1">
+        <h2>2.</h2>
+        The Complete Blood Count contains 9 blood elements, each element has a differentrange and value [See example below]
+        and they all have different measurment units. Therefore <span class="highlight">normalization</span> is an important step for the visualization.
+        <br>
+        <br>
+        <br>
+        <img width=350px  src="unitTable.gif">
+        <h2>What is <span class="underline">normalization</span>?</h2>
+      </div>
+
+
+      <div class="visualizations" >
+        <br>
+      <img style="
+      margin-top: 250px !important;
+
+      " width=450px src="normProcess.gif">
+      </div>
+      <div class="text1">
+        <h2>3.</h2>
+        <span class="underline">Normalization</span> is the process of converting irregular values to more standardized
+        values by using simple math equations. [See example below] that explains the concept of normalization, each bar has a different
+        length, weight, and unique characteristics. Imagine fitting these bars in one template, it's not possible without using normalization.
+        After normalization, they all have the same length and weight with maintaining the characteristics. In our case, to make the test results easier to read, we need to <span class="highlight">normalize the values and
+        the units.</span>
+        <br>
+        <br>
+        <img style="margin-left:-23px;" width=400px  src="normConcept3.gif">
+        <h2>Why is it necessary?</h2>
+      </div>
+
+      <div class="visualizations" >
+      <img style="
+      margin-top: 100px !important;
+
+      " width=450px src="polygons.gif">
+      </div>
+      <div class="text1">
+        <h2>4.</h2>
+         To understand the results, we normalized blood elements to have a standard range and to remove the units. To make it more
+         accessible, they will be fitted in <span class="highlight">polygons</span>, each blood component is represented in a different polygon, we're using <span class="highlight">nonagon</span>
+         in the CBC example because it contains 9 elements. <span class="underline">Normalization is an important step to make it possible for the
+         elements to be fitted in one polygon.</span>
+         <br>
+         <br>
+         <h2>How are the polygons going to show the test results?</h2>
+
+      </div>
+
+
+      <div class="visualizations" >
+      <img style="
+      margin-top: -80px !important;
+      margin-left: 30px !important;
+
+      " width=520px src="polyRange2.gif">
+      </div>
+      <div class="text1">
+        <h2>5.</h2>
+         As a result of normalization, all the elements now share the same <span class="highlight">normal range</span>, the thickness of the polygon
+         determines the noraml range for that blood component, any value outside the ring is considered <span class="underline">above normal </span>or<span class="underline"> under normal</span>
+
+        <a class="readyBtn" href="index.html">I'm Ready</a>
+      </div>
+
+
+
+</div>
+
+<!-- <div class="arrows">
+<a onclick="plusDivs(-1)">
+   <img id="arrowUp" class="arrowUp" width= 40px; src="upArrow.svg" alt="arrow">
+</a>
+<a onclick="plusDivs(1)">
+   <img id="arrowDown" class="arrowUp" width= 40px; src="downArrow.svg" alt="arrow">
+</a>
+</div> -->
+
+
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="../assets/lib/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script>
+
+
+      // setTimeout(fade_out, 14000);
+      // function fade_out() {
+      //   $("#bloodCircle6").fadeOut().empty();
+      // }
+      //
+      // var slideIndex = 1;
+      // showDivs(slideIndex);
+      //
+      // function plusDivs(n) {
+      //   showDivs(slideIndex += n);
+      // }
+      //
+      // function showDivs(n) {
+      //   var i;
+      //   var x = document.getElementsByClassName("slides1");
+      //   if (n > x.length) {slideIndex = 1}
+      //   if (n < 1) {slideIndex = x.length}
+      //   for (i = 0; i < x.length; i++) {
+      //     x[i].style.display = "none";
+      //   }
+      //   x[slideIndex-1].style.display = "block";
+      // }
+
+
+         //https://github.com/michalsnik/aos
+         AOS.init({
+         duration: 3000,
+        });
+
+
+        //https://jsfiddle.net/4vm1sht5/3/
+
+        highlight();
+
+        $(window).on("scroll", function(){
+          highlight();
+        });
+
+        function highlight(){
+          var scroll = $(window).scrollTop();
+          var height = $(window).height();
+
+          $(".highlight").each(function(){
+            var pos = $(this).offset().top;
+            if (scroll+height >= pos) {
+              $(this).addClass("active");
+            }
+          });
+        }
+
+
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+</html>
