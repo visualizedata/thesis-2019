@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+    pre {
+display: none;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<div>First SVG</div>
+<div id="svg1"></div>
+<div>Second SVG</div>
+<div id="svg2"></div>
+<pre id="data1">cluster,value
+foo,8
+bar,1
+baz,7
+foobar,9
+foobaz,4</pre>
+<pre id="data2">cluster,value
+foo,1
+bar,2
+baz,3
+foobar,9
+foobaz,8</pre>
+
+/* function draw(selector, url){
+    //code here
+};
+Then, inside that function draw, you set the position of your SVG:
+
+var svg = d3.select(selector).append("svg")...
+And the URL you get the data:
+
+d3.json(ulr, function(error, root) {...
+After that, just call the draw function twice, with different arguments:
+
+draw(selector1, url1);
+draw(selector2, url2);
+Here is a demo, read it carefully to see how it works:
+
+Hide code snippet */
+<script>
+
+draw("#svg1", "donors");
+draw("#svg2", "raised");
+
+function draw(selector, col){
+
+var data = d3.csvParse("data/gfm-900.csv");
+console.log(data);
+
+var width = 500,
+    height = 150;
+
+var svg = d3.select(selector)
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var xScale = d3.scalePoint()
+    .domain(data.map(function(d) {
+        console.log("raised" + d.raised);
+        console.log("donors", d.donors);
+        return d.cluster
+
+    }))
+    .range([50, width - 50])
+    .padding(0.5);
+
+var yScale = d3.scaleLinear()
+    .domain([0, d3.max(data, function(d) {
+        return d.col
+    }) * 1.1])
+    .range([height - 20, 6]);
+
+var line = d3.line()
+	.x(function(d){ return xScale(d.cluster)})
+	.y(function(d){ return yScale(d.value)});
+	
+svg.append("path")
+	.attr("d", line(data))
+	.attr("stroke", "teal")
+	.attr("stroke-width", "2")
+	.attr("fill", "none");
+
+var xAxis = d3.axisBottom(xScale);
+var yAxis = d3.axisLeft(yScale);
+
+svg.append("g").attr("transform", "translate(0,130)")
+    .attr("class", "xAxis")
+    .call(xAxis);
+
+svg.append("g")
+    .attr("transform", "translate(50,0)")
+    .attr("class", "yAxis")
+    .call(yAxis);
+
+}
+</script>

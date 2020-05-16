@@ -1,0 +1,101 @@
+.positions-less-opacity {
+  opacity: 0.1;
+}
+
+@mixin  border {
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 3px
+}
+
+// Credit: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+.checkbox-container {
+  display: block;
+  // https://css-tricks.com/centering-css-complete-guide/
+  // Todo figure out how to center multiple lines with the  checkbox
+  // display: table;
+  // vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.6rem;
+  padding-left: 4.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  height: 2.4rem;
+  width: 2.4rem;
+  color: rgba(150,150,150,1);
+  // background-image: url("cross.jpg");
+  // background-repeat: no-repeat;
+  // background-size: 20px;
+  @include border;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: rgba(150,150,150,0.75);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: rgba(150,150,150,1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 0.87rem;
+  top: 0.45rem;
+  width: 0.5rem;
+  height: 1.0rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-inline {
+  display: inline;
+  padding-top: 0.6rem;
+  padding-left: 3.6rem;
+}

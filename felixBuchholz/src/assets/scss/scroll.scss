@@ -1,0 +1,16 @@
+.scrollama-container {
+ height: 100%;
+}
+
+.scrolling-over-container {
+  // width: 85%;
+  line-height: 2.5rem;
+  width: 100%;
+  margin: 0;
+  @include sans;
+  background: rgba(252,252,252,0.95)
+}
+
+.scrolling-over-content {
+  padding: 52px;
+}

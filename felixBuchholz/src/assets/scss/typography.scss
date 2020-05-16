@@ -1,0 +1,341 @@
+/* Base Typography Styles
+Credit to Skeleton.css
+Credit to Andrew Levinson
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin sans {
+  font-family: "Merriweather Sans", sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i|Merriweather:300,300i,400,400i,700,700i');
+@import 'breakpoints';
+@import 'color_defs';
+
+html {
+  font-size: 62.5%;
+  /* font-size: 40.5%; */
+}
+
+body {
+  font-size: 1.7em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Merriweather", serif;
+  color: rgba(0,0,0,0.85);
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  -moz-osx-font-smoothing: grayscale;
+}
+.sans {
+  @include sans;
+}
+.ul-no-indent {
+  // list-style-position: inside;
+  list-style-type: circle;
+  padding-left: 0;
+}
+.space-li {
+  margin: 1rem 0; 
+}
+.tiny-spacer {
+  height: 2rem;
+}
+.small-spacer {
+  height: 3.75rem;
+}
+
+.return-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+  margin:0;
+}
+
+.insight button {
+  margin: 2px -5px;
+  padding: 5px;
+  background: rgba(87,176,234,0);
+  color: rgba(87,176,234,1);
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  margin: 2px;
+  padding: 8px;
+  background: rgba(87,176,234,0);
+  color: rgba(87,176,234,1);
+  border-radius: 2px;
+  border: 2px solid rgba(87,176,234,1);
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(87,176,234,0.85);
+  color: rgba(255,255,255,1);
+}
+
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(87,176,234,1)
+}
+
+.text-no-opacity {
+  opacity: 0;
+}
+
+.small {
+  font-size: 1.4rem;
+  letter-spacing: 0.01rem;
+  font-weight: 300;
+}
+
+.huge {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  // line-height: 1rem;
+}
+
+.big {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  // line-height: 1rem;
+}
+
+.medium {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  // line-height: 1rem;
+}
+
+.huge-slam {
+  line-height: 1.5rem;
+}
+
+.huge-label {
+  line-height: 0.5rem;
+}
+
+.regular {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+.light {
+  font-style: inherit;
+  font-weight: 300;
+}
+
+.bold {
+  font-style: inherit;
+  font-weight: bolder;
+}
+.boldest {
+  font-style: inherit;
+  font-weight: 700;
+}
+.italic {
+  font-weight: inherit;
+  font-style: italic;
+}
+.left {
+  padding-right: 36%;
+}
+.right {
+  padding-left: 36%;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.slam-top {
+  margin-top: 0rem;
+}
+.slam-bottom {
+  margin-bottom: 0rem;
+}
+.slam{
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.hug-top {
+  margin-top: 1rem;
+}
+.hug-bottom {
+  margin-bottom: 1rem;
+}
+.unhug {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+.unhug-top {
+  margin-top: 3.75rem;
+}
+.unhug-top-small {
+  margin-top: 2.5rem;
+}
+.unhug-top-175 {
+  margin-top: 1.75rem;
+}
+.unhug-top-tiny {
+  margin-top: 0.7rem;
+}
+.unhug-bottom {
+  margin-bottom: 3.75rem;
+}
+.unhug-bottom-tooltip {
+  margin-bottom: 1rem;
+}
+.unhug-bigtime {
+  margin-top: 40rem;
+}
+.note-top-unhug {
+  margin-top: 1rem;
+}
+
+.spot-number {
+  margin: 2rem 0;
+}
+
+.source-for-spot-number {
+  margin-top: 0.5rem;
+}
+
+.note-typo {
+  font-size: 1.4rem;
+  font-family: "Merriweather Sans", sans-serif;
+  font-style: italic;
+  color: $font-light-color;
+}
+
+/* Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h2, h5, .topheadline {
+  padding-top: 32px
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.35;
+  letter-spacing: -0.04rem;
+  margin-bottom: 1rem;
+  @include phablet {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.42;
+  letter-spacing: -0.125rem;
+  margin-bottom: 1rem;
+  @include phablet {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: -0.1rem;
+}
+
+h4 {
+  font-size: 2rem;
+  /* line-height: 1.35; */
+  line-height: 1.3;
+  /* letter-spacing: -0.08rem; */
+  letter-spacing: -0.1rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  letter-spacing: -0.08rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-top: 0rem;
+  // letter-spacing: 0.05rem;
+}
+
+svg {
+  color: rgba(0,0,0, 0.65);
+}
+  
+body {
+  font-size: 1.6rem;
+  line-height: 1.35;
+}
+g,
+text {
+  font-size: 1.35rem;
+  font-family: "Merriweather Sans", sans-serif;
+  // font-weight: 300;
+}
+.sidegraph-axis, .sidegraph-axis text {
+  font-size: 1.2rem;
+}
+.graph-label {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+.graph-label-small {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+p {
+  line-height: 1.72;
+  margin-bottom: 1.5rem;
+}
+.intro {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.tooltip-p {
+  // font-weight: 300;
+  line-height: 1.4;
+  @include phablet {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+}
+
+
+.subheadline {
+  font-style: inherit;
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+}
+
+.small-footnote {
+  display: inline;
+  position: absolute;
+  margin-top: 10px;
+  font-size: 1.3rem; 
+}
+
+.insight {
+  line-height: 1.8;
+}

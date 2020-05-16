@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<html>
+<body>
+  <div class= "container">
+  <div id="radiusGraph" style="width: 60%; height: 1000px;">
+    <div class="heading" style="width: 300px; text-align: center; position: absolute; top: 225px; left: 300px">
+      <h1>The Sum of Us</h1>
+      <h2>What can crowdfunding tell us about the U.S. healthcare gap?</h2>
+     </div>
+  <button onclick="update(nodeRadiusCluster)">Enter</button>
+  <button onclick="drop()">Drop</button>
+  <!-- <svg width="600" height="600" viewBox="-480 -250 960 600">
+      <circle r="100" stroke="brown" stroke-opacity="0.5" fill="none"></circle>
+      <circle r="200" stroke="steelblue" stroke-opacity="0.5" fill="none"></circle>
+    </svg> -->
+  <!-- <button oncllick="update(nodeRadiusAll)">onLoad layout</button> -->
+  </div>
+  <div id="subtitle" style="position: absolute; top: 225px; left: 900px; height: 3000px;">
+    <ul>
+      <li class="cluster1">Help</li>
+      <li class="cluster2">Family </li>
+      <li class="cluster3"> Work</li>
+      <li class="cluster4">Surgery</li>
+
+      </ul>
+  </div>
+</div>
+<script>
+//set dynamic svg width
+ 
+// var width = forceDiv.clientWidth - margin.left - margin.right;
+// var height = forceDiv.clientHeight - margin.top - margin.bottom;
+
+//     // Use the extracted size to set the size of an SVG element.
+//     svg
+//       .attr("width", width)
+//       .attr("height", height);
+
+
+// set the dimensions and margins of the graph
+var margin = {top: 300, right: 50, bottom: 40, left: 450},
+    width = 900 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#radiusGraph")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+         "translate(" + margin.left + "," + margin.top + ")");
+          // "translate(" + margin.left * 2 + "," + margin.top * 2 + ")");
+
+// var forceDiv = document.getElementById("radiusGraph");
+// var svg = d3.select(forceDiv).append("svg"),
+//     margin = {top: 40, right: 50, bottom: 40, left: 50};
+
+
+var nodes = [].concat(
+  d3.range(180).map(function() { return {type: 0}; }),
+  d3.range(160).map(function() { return {type: 1}; }),
+  d3.range(60).map(function() { return {type: 2}; }),
+  d3.range(100).map(function() { return {type: 3}; }),
+  d3.range(80).map(function() { return {type: 4}; }),
+  d3.range(250).map(function() { return {type: 5}; }),
+  d3.range(7).map(function() { return {type: 6}; }),
+  d3.range(30).map(function() { return {type: 7}; })
+);
+
+var nodeRadiusAll = [220, 210, 180, 200, 190, 230, 165, 175];
+var nodeRadiusCluster = [200, 170, 70, 130, 100, 230, 10, 40];
+var colorArr= ["pink", "red", "hotpink", "purple", "orange", "violet", "orange", "violet"];
+
+
+function update(nodeRadius) {
+   d3.selectAll("circle").remove()
+    var node = d3.select("svg")
+      .selectAll("circle")
+      .data(nodes)
+      .enter().append("circle")
+        .attr("r", 2.5)
+        // .attr("fill", function(d) { return d.type === "a" ? "brown" : "steelblue"; })
+        .attr("fill", function(d) { return colorArr[d.type] })
+        .attr("class", function(d) { return "cluster" + d.type});
+        
+
+    var simulation = d3.forceSimulation(nodes)
+        .force("charge", d3.forceCollide().radius(5))
+        // .force("r", d3.forceRadial(function(d) { return d.type === "a" ? 100 : 200; }))
+        .force("r", d3.forceRadial(function(d) { return nodeRadius[d.type] }))
+        .on("tick", ticked);
+
+    function ticked() {
+      node
+          .attr("cx", function(d) { return d.x + margin.left; })
+          .attr("cy", function(d) { return d.y + margin.top; })
+          .on("mouseover", handleMouseOver)
+          .on("mouseout", handleMouseOut);
+
+          // .mouseover("fill", function(d) { // write functionn that then selects a node and higlights all other nodes with same class and words in div tor right with same words, onmouse out rehighlight all)
+          //   d3.selectAll("class", function(d){
+          //     return 
+          //   })
+          // })
+    }
+
+    function handleMouseOver() {
+      var thisClass = d3.select(this).attr("class");
+      console.log(thisClass);
+        d3.selectAll("circle")
+          .transition()
+          .duration(150)
+          .attr("fill", "#cdcdcd")
+          .attr("opacity", 0.5);
+        d3.selectAll("." + thisClass)
+        .transition()
+          .duration(150)
+          .attr("fill", function(d) {  return colorArr[d.type]; })
+          .attr("r", 3.5)
+          .attr("opacity", 1);
+         
+    }
+    
+    function handleMouseOut() {
+      d3.selectAll("circle")
+        .attr("fill", function(d) { return colorArr[d.type]; })
+        .attr("opacity", 1)
+        .attr("r", 2.5)
+    }
+
+    
+}
+
+
+// function drop() {
+//   var node = d3.select("svg")
+//       .selectAll("circle")
+//         .transition("drop")
+//         .delay(function(d,i){return(i*1.1)})
+//         .duration(2000)
+//         .attr("cy", function(d) { return -200; });
+    
+// }
+// intro slide can have all cluster around title with intro text on right about the issue and why we care-  anter button that on click sets the nnew radius for all campiagns
+update(nodeRadiusAll);
+var called = false;
+
+window.addEventListener("scroll", function () {
+    var offsets = document.getElementById('title').getBoundingClientRect();
+    var top = offsets.top;
+    // var bottom = offsets.bottom;
+    console.log(called);
+    if (!called) {
+        if (top < -200) {
+        called = !called;
+        return update(nodeRadiusCluster);
+      }
+      return called;
+    }
+  
+ 
+});
+// handle mouseover/ mouseout with functions not just callback
+</script>
+</body>
+</html>

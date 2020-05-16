@@ -1,0 +1,178 @@
+// // Credit: https://codepen.io/anon/pen/MRXvdp
+// $main-color: rgba(255,255,255,0.01);
+// $secondary-color: rgba(87,176,234,1);
+// $width: 550px; // Change Me
+
+// .move-right {
+//   margin-left: 0%;
+// }
+
+// .controls {
+//   position: absolute;
+//   font-size: 2rem;
+//   font-weight: 900;
+//   cursor: pointer;
+//   padding: 6px 12px;
+//   top: 1.2rem;
+//   // opacity: 0;
+//   color: $secondary-color;
+//   // color: white; 
+//   // background: $secondary-color;
+//   border-radius: 50%;
+// }
+// .controls:hover {
+//   color: white; 
+//   background: $secondary-color;
+// }.control-minus {
+//   left: 0%;
+// }
+// .control-plus {
+//   left: 83%;
+// }
+
+// .group.bignumberinput {
+//   width: 100%;
+//   height: $width/5;
+//   overflow: hidden;
+//   position: relative;
+// }
+
+
+
+// label.bignumberinput {
+//   position: absolute;
+//   text-align: center;
+//   top: 2.8rem;
+//   left: 10%;
+//   width: 80%;
+//   color: $secondary-color;
+//   font-size: 1.6rem;
+//   line-height: 1.5rem;
+//   cursor: text;
+//   transition: .25s ease;
+//   // content: "enter a number";
+// }
+
+// input.bignumberinput {
+//   text-align: center;
+//   display: block;
+//   // margin-left: 42%;
+//   margin-top: 0rem;
+//   width: 100%;
+//   // padding-top: $width/15;
+//   border: none;
+//   border-radius: 0; // For iOS
+//   // border-bottom: solid $width/150 rgba(white, .5);
+//   color:$secondary-color;
+//   background: $main-color;
+//   font-size: 5rem;
+//   font-weight: 900;
+//   transition: .3s 0.2s ease;
+//   &:invalid {
+//     color: grey;
+//     ~label {
+//       color: grey;
+//     }
+//     ~.controls {
+//       color: grey;
+//       opacity: 0;
+//     }
+//     ~.bar {
+//       background: grey;
+//     }
+//   }
+//   &:valid {
+//     // border-bottom-color: rgba(white, .5);
+//     ~label {
+//       top: 7.4rem;
+//       font-size: 1.6rem;
+//       color: $secondary-color;
+//       text-align: center;
+
+//     }
+//     ~.control-plus {
+//       left: 64%;
+//     }
+//     ~.control-minus {
+//       left: 22%;
+//     }
+//     ~.bar {
+//       // text-align: center;
+//       margin-left: 43%;
+//       width: 4rem;
+//       height: 0.1rem;
+//     }
+//   }
+//   &:focus {
+//     outline: none;
+//     // border-bottom-color: $secondary-color;
+//     ~label {
+//       top: 7.4rem;
+//       // left: 3.8rem;
+//       font-size: 1.4rem;
+//       font-weight: 900;
+//       color: $secondary-color;
+//       text-align: center;
+//     }
+//     ~.bar {
+//       margin-left: 43%;
+//       width: 4rem;
+//       height: 0.4rem;
+//       background: $secondary-color;
+//     }
+//     ~.controls {
+//       // color: $secondary-color;
+//     }
+//     ~input {
+//       color: $secondary-color;
+//     }
+    
+//   }
+
+//   // Stop Chrome's hideous pale yellow background on auto-fill
+  
+//   &:-webkit-autofill {
+//     -webkit-box-shadow: 0 0 0px 1000px $main-color inset;
+//     -webkit-text-fill-color: $secondary-color !important;
+//     // border-bottom-color: rgba(white, .5);
+//   }
+// }
+
+
+// .bar.bignumberinput {
+//   // background: $secondary-color;
+//   background: $secondary-color;
+//   content: '';
+//   width: 100%;
+//   height: 0.1rem;
+//   margin-top: 0.6rem;
+//   position: relative;
+//   // // transform: translateX(-100%);
+//   // transition: .3s ease;
+  
+//   // &:before {
+//   //   content: '';
+//   //   // position: absolute;
+//   //   width: 100%;
+//   //   height: 250%;
+//   //   left: 3.6rem;
+//   //   background: $secondary-color;
+//   //   // transform: translateX(-100%);
+    
+//   // }
+// }
+
+// ::selection {background: rgba($secondary-color, .3);}
+
+
+// // Credit: Andrei Gheorghiu
+// // https://stackoverflow.com/questions/45396280/customizing-increment-arrows-on-input-of-type-number-using-css
+// input[type="number"] {
+//   -webkit-appearance: textfield;
+//      -moz-appearance: textfield;
+//           appearance: textfield;
+// }
+// input[type=number]::-webkit-inner-spin-button, 
+// input[type=number]::-webkit-outer-spin-button { 
+//   -webkit-appearance: none;
+// }

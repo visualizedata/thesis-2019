@@ -1,0 +1,34 @@
+{
+  "name": "thesis",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "d3": "^5.9.2",
+    "hamburgers": "^1.1.3",
+    "intersection-observer": "^0.6.0",
+    "node-gyp": "^4.0.0",
+    "roughjs": "^3.1.0",
+    "v-show-slide": "^1.6.0",
+    "vue": "^2.6.6",
+    "vue-scrollama": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-svg-loader": "^0.12.0",
+    "vue-template-compiler": "^2.5.21"
+  }
+}

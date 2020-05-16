@@ -1,0 +1,263 @@
+
+        <!-- Index 0 ******************************************************************** -->
+        <div
+          class="step1 scrolling-over-container"
+          data-step="a"
+          id="start-of-the-intro"
+        >
+          <!-- v-if="insight == 'intro'" -->
+          <div class="scrolling-over-content">
+            <h3>Introduction</h3>
+            <div class="unhug-bottom">
+              The following graph shows the distribution of household incomes
+              and welfare transfers in the US in 2017.
+            </div>
+            To learn how you can interact with it, you can just keep on
+            <span class="bold">scrolling.</span>
+            <!-- <button class="button" @click="startIntro">
+              scroll through a small introduction.
+            </button> -->
+            <p>
+              Or you can
+              <a href="#end-of-intro"
+                ><button class="button" @click="readyToChange">
+                  skip the introduction
+                </button></a
+              >
+              and start using it.
+            </p>
+          </div>
+        </div>
+        <!-- Index 1 ******************************************************************** -->
+        <div class="step2 scrolling-over-container" data-step="b">
+          <!-- v-if="insight == 'introLegendA'" -->
+          <div class="scrolling-over-content">
+            <div>
+              <h4>Let’s take a look at the legend:</h4>
+              The height of the bars in the chart indicates the amount of income
+              and benefits. Each bar stack represents an income group. The
+              stacks are grouped and sorted by income without benefits.
+            </div>
+            <div class="unhug-top">
+              This line&nbsp;
+              <svg
+                class="inline-svg"
+                v-if="isLoaded"
+                :width="scale.x.bandwidth() * 1.6"
+                height="5"
+              >
+                <line
+                  x1="0"
+                  y1="1"
+                  :x2="scale.x.bandwidth() * 1.6"
+                  y2="1"
+                  stroke="rgba(0,0,0,0.6)"
+                  stroke-width="2"
+                  stroke-dasharray="1 3"
+                  stroke-linecap="round"
+                ></line>
+              </svg>
+              above each stacked bar group indicates how much the sum of income
+              and benefits was before you made any changes. It will turn
+              <span class="regular color-negative">red</span> if the result of
+              this group is negative. It turns
+              <span class="regular color-positive">green</span> if the group
+              profits from your configuration.
+            </div>
+            <div class="unhug-top">
+              The bars have two different textures. This one
+              <svg
+                class="inline-svg"
+                v-if="isLoaded"
+                :width="scale.x.bandwidth() * 1.6"
+                height="16"
+              >
+                <path
+                  :transform="`translate(1, 1)`"
+                  stroke-width="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  :d="legendPathMarketIncomeSmall.fill"
+                ></path>
+                <path
+                  :transform="`translate(1, 1)`"
+                  stroke-width="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  :d="legendPathMarketIncomeSmall.stroke"
+                ></path>
+              </svg>
+              for the income without benefits (but before taxes) and this one
+              for welfare benefits, tax credits and the UIG:&nbsp;
+              <svg
+                class="inline-svg"
+                v-if="isLoaded"
+                :width="scale.x.bandwidth() * 1.6"
+                height="16"
+              >
+                <path
+                  :transform="`translate(1, 1)`"
+                  stroke-width="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  :d="legendPathTransfersSmall.fill"
+                ></path>
+                <path
+                  :transform="`translate(1, 1)`"
+                  stroke-width="0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  :d="legendPathTransfersSmall.stroke"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Index 2 ******************************************************************** -->
+        <div class="step3 scrolling-over-container" data-step="d">
+          <div class="scrolling-over-content">
+            <div>
+              <h4>Let’s talk about scale!</h4>
+
+              Because incomes in the last group are so high, it’s hard to see
+              the welfare benefits.
+
+              <div class="unhug-top">
+                On the left you have 2 options to see more details:
+              </div>
+              <div class="simple-flex unhug-top">
+                <div class="">
+                  Uncheck this box to hide incomes:
+                  <label class="checkbox-container sans">
+                    <div class="color-minc center">Income without benefits</div>
+                    <input
+                      v-if="isLoaded"
+                      type="checkbox"
+                      v-model="positionsArray[0].checked"
+                      @click="togglePosition(0)"
+                    />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div>or</div>
+                <div>
+                  Zoom on the first 6 groups with this icon:
+                  <div class="zoom-container unhug-top-175" @click="scaleYAxis">
+                    <div class="icon-medium">
+                      <zoomIcon class="zoom-icon" />
+                      <div
+                        class="small sans color-light plusOrMinus pom-scroll-adjust"
+                      >
+                        {{ zoomSign[0] }}
+                      </div>
+                    </div>
+                    <p class="sans zoomText color-light">
+                      Zoom {{ zoomSign[1] }} the Y-axis
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Index 3 ******************************************************************** -->
+        <div class="step4 scrolling-over-container" data-step="d">
+          <div class="scrolling-over-content">
+            <div>
+              <h4>The welfare interface</h4>
+              In this scheme the idea is to replace current welfare benefits
+              with a UIG. You can hover over the different categories to see how
+              they affect incomes in all groups and select them individually.
+              <p v-if="!allWelfareUnchecked">
+                <button @click="uncheckAll">
+                  But for now – let’s un-check all of them!
+                </button>
+              </p>
+              <p v-else-if="allWelfareUnchecked">
+                Ok!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Index 4 ******************************************************************** -->
+        <div class="step5 scrolling-over-container" data-step="d">
+          <div class="scrolling-over-content">
+            <div>
+              <div>
+                Let’s activate the UIG.
+                <label
+                  class="checkbox-inline checkbox-container sans color-primary checkbox-primary"
+                >
+                  <input
+                    v-if="isLoaded"
+                    v-show="positionsArray[positionsArray.length - 1].checked"
+                    type="checkbox"
+                    v-model="positionsArray[positionsArray.length - 1].checked"
+                    @click="togglePosition(positionsArray.length - 1)"
+                  />
+                  <span class="checkmark checkmark-primary"></span>
+                </label>
+              </div>
+              <transition name="fade">
+                <div
+                  v-if="isLoaded"
+                  v-show="onlyUIG[0].checked"
+                  class="unhug-top"
+                >
+                  Now we have to decide how many of the lower income groups
+                  should benefit from it. <br />
+                  Let’s
+                  <button @click="setUIGBinsTo5">set it to 5.</button>
+                </div>
+              </transition>
+              <div v-if="uigChanged & (numOfUIGBins == 5)" class="unhug-top">
+                Great! Now every household with an income less than the upper
+                boundary of group 5,
+                <span class="regular color-primary"
+                  >$ {{ UIGthresholdF }},</span
+                >
+                will get 50 % of the difference to the threshold as an income
+                guarantee.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Index 5 ******************************************************************** -->
+        <div class="step6 scrolling-over-container" data-step="d">
+          <div class="scrolling-over-content">
+            <div>
+              <h4>The balance</h4>
+              Our changes result in a overall balance of
+              <span :class="`bold color-${balancePosOrNeg}`"
+                >$ {{ currentBalanceF.join(" ") }}.</span
+              >
+              Still room to tweak this scheme! We could think about whether some
+              welfare programs should still be active, or adjust the amount of
+              groups that benefit from the UIG.
+              <br />
+              <br />
+              Scroll a little bit further… <br />
+              and you’ll see a summary of the effects of your changes below the
+              graph and can start using it.
+              <p class="bold color-primary">Enjoy exploring!</p>
+              <!-- <div class="unhug-top">
+                <button @click="readyToChange">Enjoy exploring!</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- Index 6 ******************************************************************** -->
+        <div class="step7 " data-step="d" id="end-of-intro">
+          <hr />
+        </div>
+        <!-- Index 7 ******************************************************************** -->
+        <div class="step8" data-step="d">
+          <hr />
+        </div>
+        <!-- Template ******************************************************************** -->
+        <!-- <div class="stepX scrolling-over-container" data-step="d">
+          <div class="scrolling-over-content">
+            X
+          </div>
+        </div> -->
+        

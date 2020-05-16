@@ -1,0 +1,502 @@
+	<!DOCTYPE html>
+<!--DCLA JOBTYPES PERCENT by race ethnicity grid with circles -->
+<!--horizontally aligned with buttons for numbers and percents-->
+<!--works with percentDCLAcirclesgrid2.js-- >
+<!--and styleDCLAcircle.css-->
+<!--NYC DCLA DATA FILTERED SO ONLY MUSEUMS  -->
+<!--FILTERED OUT LOW BUDGET MUSEUMS so only BUDGETS MORE THAN $999,999: 7647 museums-->
+<!--FILTERED OUT VOLUNTEERS _ PAID STAFF ONLY with the EXCEPTION OF THE BOARD so down to only 7346 - all at museums with budgets over 1m-->
+
+
+
+<!--22 job types by race ethnicity for all years for paid staff (exception, board) at high budget museums -->
+<html>
+
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <!--<link rel="stylesheet" type="text/css" href="styleDCLAcircle.css">-->
+
+    <title>DCLA percent - all job types</title>
+    <!--<link rel="stylesheet" type="text/css" href="styleDCLAcircle.css">-->
+    <link rel="stylesheet" href="https://use.typekit.net/dsl0cau.css">
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <style type="text/css">
+/*      body {*/
+/*        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;*/
+/*        font-size: 1.5em;*/
+/*        padding: 0.2em;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*      }*/
+     
+/*#svg21{*/
+/*        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;*/
+/*        font-size: 1.5em;*/
+/*        padding: 0.2em;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*}*/
+/*		  button {*/
+/*		  position: absolute;*/
+/*			padding: 15px;*/
+/*			margin-bottom: 10px;*/
+/*		  margin-left: 1em;*/
+/*			padding: 10px;*/
+			/*background: "red";*/
+/*			width: 80px;*/
+/*			height: 100px;*/
+/*			float: left;*/
+/*		  }*/
+/*		  #byNumber{*/
+/*		  margin-left: 0;*/
+/*			float: left;*/
+/*		  }*/
+/*		  #byRaceEthnicity{*/
+/*		  margin-left: 10em;*/
+/*			float: left;*/
+/*			}*/
+/*      #byJobtype{*/
+/*      margin-left: 20em;*/
+/*      float: left;*/
+/*      }*/
+      /*#byPercent{*/
+      /*float: left;*/
+      /*margin-left: 30em;*/
+      /*}*/
+  
+  
+body {
+  font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+  font-size: 1em;
+  line-height: 1.3em;
+  display: flex;
+  justify-content: center;
+  padding: 0.2em;
+  /*background:#e9e9e9;*/
+  background: #877c74;
+}
+
+p {
+	font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
+p#info {
+	width: 600px;
+	margin-bottom: 60px;
+}
+
+#svg21{
+  font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+  font-size: 1em;
+}
+.stylenumbers{
+  background-color: "yellow";
+   opacity: 0.6;
+   width: 50px;
+   height: 30px;
+   padding: 1em;
+}
+.stylepercent{
+  background-color: "pink";
+   opacity: 0.6;
+   width: 50px;
+   height: 30px;
+   padding: 1em;
+}
+#percent-btn:active {
+    transform: scale(0.995);
+}
+#percent-btn:hover {
+    outline: 0.5px solid #9ea5aa;
+    outline-offset: 1px;
+    transform: scale(0.995);
+}
+#numbers-btn:active {
+    transform: scale(0.995);
+}
+#numbers-btn:hover {
+    outline: 0.5px solid #9ea5aa;
+    outline-offset: 1px;
+    transform: scale(0.995);
+}
+.percenttext, .numberstext{
+  font-size: 0.7em;
+  color: #f5f4f9;
+  fill: currentColor;
+}
+ /*button#percent-btn{*/
+ /*  background: "#f7eb42";*/
+ /*  float: left;*/
+ /*  width: 40px;*/
+ /*  height: 20px;*/
+ /*  padding: 1em;*/
+ /*  }*/
+/* button#numbers-btn{*/
+/*   background: "#f9c8c5";*/
+/*   float: left;*/
+/*   width: 40px;*/
+/*   height: 20px;*/
+/*   padding: 1em;*/
+/*   }*/
+   
+/*  button {*/
+/*    display: inline-block;*/
+/*    float: left;*/
+/*    border: none;*/
+/*    padding: 1rem 2rem;*/
+/*    margin: 0;*/
+/*    text-decoration: none;*/
+    /*background: #0069ed;*/
+/*    color: #ffffff;*/
+/*    font-family: sans-serif;*/
+/*    font-size: 1rem;*/
+/*    cursor: pointer;*/
+/*    text-align: center;*/
+/*    transition: background 250ms ease-in-out, */
+/*                transform 150ms ease;*/
+/*    -webkit-appearance: none;*/
+/*    -moz-appearance: none;*/
+/*}*/
+
+
+
+.textpink {
+  color: #fdd2f5;
+  fill: currentColor;
+  opacity: 0.8;
+}
+.textsubhead {
+  color: #f5f4f9;
+  fill: #f5f4f9;
+  fill: currentColor;
+  opacity: 0.8;
+}
+.circlepink {
+  color: #fdd2f5;
+  fill: currentColor;
+  stroke: #d384ff;
+  stroke-weight: 0.01;
+  opacity: 0.5;
+}
+
+.linegrid {
+  opacity: 0.4;
+}
+
+.circlenumbers{
+  color: "yellow";
+  fill: currentColor;
+  opacity: 0.5;
+}
+.circlepercent {
+  color: "pink";
+  fill: currentColor;
+  opacity: 0.5;
+}
+.percent7{
+  visibility: "hidden";
+  color: #f5f4f9;
+  fill: currentColor;
+  opacity: 0.8;
+  font-size: 75%;
+}
+.number7{
+  visibility: "hidden";
+  color: #f5f4f9;
+  fill: currentColor;
+  opacity: 0.8;
+  font-size: 75%;
+}
+    </style>
+
+  </head>
+
+  <body onresize='window.location.reload(true)'>
+
+
+   <!--text   -->
+    <!--<p id="info">Press the button to see numbers. Click a bar to remove the connected element from the data set.</p>-->
+		
+		<div id="svg21"></div>
+	
+
+		<div id="percent-btn" class="stylepercent"></div>
+		<div id="numbers-btn" class="stylenumbers"></div>
+	<!--</div>-->
+    
+    <script language="javascript" type="text/javascript" src="percentDCLAcirclegrid5horsort.js"></script>
+  </body>
+
+</html>
+
+
+
+
+<!--/////=======links to indexDCLAcirclegrid2.js-->
+
+<!--// // 		d3.json("alljobtypes2.json").then((data)=>{-->
+<!--// //                 svgPlot(data);-->
+<!--// //             });-->
+<!--//             d3.json("alljobtypes.json").then((data)=>{-->
+<!--//                 svgPlot(data);-->
+<!--//             });-->
+<!--// let svgPlot = (data) => { ////need to call a different svgPlot -->
+<!--//                 console.log(data); ////with each chart for multiple charts-->
+<!--// ////grid-->
+<!--//     const startv = 250;   ////vertical-->
+<!--//     const rowheight = 70; -->
+<!--//     const starth = 320;   ////horizontal-->
+<!--//     const colwidth = 60;-->
+<!--//     const linevstart = 295;-->
+
+<!--// ////margin-->
+<!--// 	var margin = {top: 100, right: 80, bottom: 40, left: 40};-->
+<!--//     // var margin.right = 100;-->
+<!--// // 	var width = 1200 - margin.left - margin.right; // Use the window's width -->
+<!--// // 	var height = 1500 - margin.top - margin.bottom; // Use the window's height   -->
+
+<!--// 	var width = starth+colwidth*7+margin.right+margin.right;  -->
+<!--// 	var height = startv+rowheight*22+margin.bottom;    -->
+
+<!--// var svg = d3.select('#svg1').append('svg')   -->
+<!--//                 .attr("width", width)-->
+<!--//     			.attr("height", height)-->
+
+<!--//         var g = svg.append('g')    ////then append to global g -->
+<!--// //////this is how to move the chart to the correct position-->
+<!--//             // 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");-->
+
+
+<!--//   const filtered = data.filter((d)=>{-->
+<!--//                         return d.dat //////THIS WORKS TO FILTER-->
+<!--//                         })-->
+<!--//                         console.log(filtered.length);-->
+<!--//                         console.log(filtered);-->
+
+
+<!--//     var newData = filtered;  ////arrays that contain artist data-->
+
+<!--//                 let nested_data = d3.nest()-->
+<!--//                         .key(function(newData) { -->
+<!--//                             return newData.dat; -->
+<!--//                         })-->
+<!--//                         .entries(newData);-->
+<!--//                 //         console.log(nested_data);-->
+
+<!--// ////return just the data and numbers                -->
+<!--//     var dclajobtypes = nested_data.map((e,i) => { -->
+<!--//                     return {jobtype: e.values[0].jobtype, dat: e.key}-->
+<!--//                 });-->
+<!--//     //             console.log(dclajobtypes)-->
+<!--//                 console.log(dclajobtypes.length)-->
+<!--//                 // console.log(dclajobtypes[0].dat)-->
+
+<!--// ////////////\\\\\\\\-->
+<!--// /////js string split() method to return a string into an array of substrings-->
+<!--//     var dclajob =  dclajobtypes.map((e,i) => { -->
+<!--//                     // console.log(e)-->
+<!--//                     return {dat: e.dat.split(",")} // Here is the split method-->
+<!--//                 });-->
+<!--//                 // console.log(dclajob)-->
+<!--//                 console.log(dclajob.length)   -->
+<!--//     //             console.log(data)-->
+
+<!--// //////////for the separate numbers in the arrays - double for loop -->
+<!--// let datacircles = [];-->
+
+<!--// for(let i = 0; i < data.length; i++){-->
+<!--//   let childdat = data[i].dat;-->
+<!--//   for(let j = 0; j < childdat.length; j++){-->
+<!--// //   console.log(childdat[j]);           ////////this gets the separate numbers in each of the arrays-->
+<!--//   datacircles.push(childdat[j]);-->
+<!--//   }-->
+<!--// }-->
+<!--// console.log(datacircles)-->
+
+<!--// ////====horizontal lines-->
+<!--//     let linesh = svg.append('g')-->
+<!--//         linesh.selectAll('line')-->
+<!--//           .data(data)-->
+<!--//           .enter()-->
+<!--//           .append('line')-->
+<!--//               .attr('x1', linevstart)-->
+<!--//               .attr('x2', linevstart+colwidth*7)-->
+<!--//               .attr('y1', (d, i) => {-->
+<!--//                 return i*rowheight+startv;-->
+<!--//               })-->
+<!--//               .attr('y2', (d, i) => {-->
+<!--//                 return i*rowheight+startv;-->
+<!--//               })-->
+<!--//               .attr('stroke', 'pink')-->
+<!--//               .attr('stroke.width', 1)-->
+<!--//     console.log(data)    -->
+
+<!--// ////====vertical lines-->
+<!--//     let linesv = svg.append('g')-->
+<!--//         linesv.selectAll('line')-->
+<!--//           .data(data[0].dat)-->
+<!--//           .enter()-->
+<!--//           .append('line')-->
+<!--//               .attr("class", "line")-->
+<!--//               .attr('x1', (d, i) => {-->
+<!--//                 // return starth+i*colwidth;-->
+<!--//                 return starth+i*colwidth;-->
+<!--//                 // return starth+i+colwidth; /////cool receeding grid-->
+<!--//               })-->
+<!--//               .attr('x2', (d, i) => {-->
+<!--//                 return starth+i*colwidth;-->
+<!--//               })-->
+<!--//               .attr('y1', startv-25)-->
+<!--//               .attr('y2', height-margin.bottom*1.5)-->
+<!--//               .attr('stroke', 'pink')-->
+<!--//               .attr('stroke-width', 0.7);-->
+
+
+<!--// ////====jobtype labels-->
+<!--// let jobtype = svg.append('g')-->
+<!--//   jobtype.selectAll('text')-->
+<!--//       .data(data)-->
+<!--//       .enter()-->
+<!--//       .append('text')-->
+<!--//         .text((d,i) => {return d.jobtype})-->
+<!--//         // .attr('x', starth/1.1)-->
+<!--//         .attr('x', starth/1.11)-->
+<!--//         .attr('y', (d,i) => {-->
+<!--//           return i*rowheight+startv+5;-->
+<!--//         })-->
+<!--//         .attr('transform', (d,i) => {-->
+<!--//         //   let a = 55;-->
+<!--//           let x = 0;-->
+<!--//         //   let x = 15;-->
+<!--//           let y = i*rowheight+startv+x-->
+<!--//         })     -->
+<!--//         .attr('font-size', '70%')-->
+<!--//         .attr("text-anchor", "end");-->
+
+
+<!--// //////////for labels -->
+<!--// let datalabels = ["American Indian or Alaskan Native & Native Hawaiian or Pacific Islander", "Asian", "Black or African American", "Hispanic", "Two Or More Races", "White", "Declined to State"]-->
+
+
+<!--// let raceethlable = svg.append('g')-->
+<!--//     raceethlable.selectAll('text')-->
+<!--//     //   .data(labels)-->
+<!--//       .data(datalabels)-->
+<!--//       .enter()-->
+<!--//       .append('text')-->
+<!--//         .text((d) => {return d}) -->
+<!--//         .attr('y', startv-30)-->
+<!--//         .attr('x', (d,i) => {-->
+<!--//           return i*colwidth+starth;-->
+<!--//         })-->
+<!--//         .attr('transform', (d,i) => {-->
+<!--//           let a = -20;-->
+<!--//           let x = i*colwidth+starth;-->
+<!--//           let y = startv-25;-->
+<!--//           return `rotate(${a}, ${x}, ${y})`;-->
+<!--//         })-->
+<!--//         .attr('font-size', '70%');-->
+<!--//         // console.log(data)-->
+
+
+
+<!--// // /////circles, use square root to get the area -->
+<!--//             let radarea = d3.scaleSqrt()    ////to get area of circles need square root -->
+<!--//                                 .domain([0, (636)])  -->
+<!--//                                 .range([0, 55]);-->
+<!--//                             console.log(radarea(636))-->
+
+<!--// 		      //console.log(data[21].dat[5])-->
+<!--// 		      //console.log(data[21].dat)-->
+
+<!--// ///////how to wrap the circles into rows-->
+<!--// // https://stackoverflow.com/questions/27105991/how-to-uniformly-distribute-svg-circles-in-d3-->
+
+<!--// let circles = svg.append("g") ///// selectAll selects every child in the selection-->
+<!--//             circles.selectAll("circles")-->
+<!--//                     .data(datacircles, (d,i)=>{-->
+<!--//                         return d,i-->
+<!--//                     })-->
+<!--//                   .enter()-->
+<!--//                   .append("g")-->
+<!--//                   .attr("class", "circle")-->
+<!--//                   .attr('x',  (d, i) => { // for horizontal use diameter for spacing circles -->
+<!--//                         return  (i % 7) * colwidth+starth; ////HOW TO MOVE TO NEXT ROW??-->
+<!--//                         //  return  (i % 22) * colwidth+starth;-->
+<!--//                         // return  i*colwidth+starth; -->
+<!--//                         // return i*colwidth-->
+<!--//                     })-->
+<!--//                     .attr('y', (d,i)=>{-->
+<!--//                         return (startv + rowheight * parseInt (i / 7));-->
+<!--//                     })-->
+
+<!--//                     .append("circle")-->
+<!--//                     .attr("cx", (d, i) => { // for horizontal use diameter for spacing circles -->
+<!--//                         return  (i % 7) * colwidth+starth;-->
+
+<!--//                     })-->
+
+<!--//                     .attr("cy", (d, i)=> {-->
+<!--//             			return (startv + rowheight * parseInt (i / 7)); ///vertical-->
+
+<!--//                     })-->
+<!--//                     .attr("r", (d,i) => {           -->
+<!--//                                 return radarea(d); //////for DRAWING this works to return circle area-->
+
+<!--//                             })-->
+<!--//                     .attr('fill', '#fdd2f5')-->
+<!--//                     // .attr('stroke', 'green')-->
+<!--//                     .on('mouseenter', function(d,i){-->
+<!--//                         console.log('hover');-->
+<!--//                         console.log(d)-->
+<!--//                         heading.text(d)-->
+<!--//     				});-->
+
+<!--// //////draw circles-->
+<!--//             // circles.append("circle")-->
+<!--//             //         .data(datacircles, (d,i) => { -->
+<!--//             //             //   return i-->
+<!--//             //               return i /////get one circle element with data, not radius-->
+<!--//             //           })-->
+<!--//             //         .attr('x',  (d, i) => { // for horizontal use diameter for spacing circles -->
+<!--//             //             //  return  (i % 22) * colwidth+starth;-->
+<!--//             //             // return  i*colwidth+starth;-->
+<!--//             //             return i-->
+<!--//             //         })-->
+<!--//             //         .attr('y', (d,i)=>{-->
+<!--//             //             return (startv + rowheight * parseInt (i / 7));-->
+<!--//             //             // return	 Math.floor(i / 154) + rowheight;-->
+<!--//             //         })-->
+<!--//             //         // .attr('y', startv)-->
+<!--//             //         // .attr("cx", (d, i) => { // for horizontal use diameter for spacing circles -->
+<!--//             //         //     return  (i % 7) * 50 + 200; ////spacing-->
+<!--//             //         // })-->
+<!--//             //         .attr("cx", (d, i) => { // for horizontal use diameter for spacing circles -->
+<!--//             //             // return  (i % 22) * colwidth+starth; ////spacing-->
+<!--//             //             //  return  i*colwidth+starth;-->
+<!--//             //              return i-->
+
+<!--//             //         })-->
+<!--//             //         // .attr("cy", startv)-->
+<!--//             //         .attr("cy", (d, i)=> {-->
+<!--//             //             return (startv +rowheight * parseInt (i / 7));-->
+<!--//             // // // 			return	 (i / 154) + rowheight; ///vertical-->
+<!--//             // // 			return i*rowheight+startv-->
+<!--//             //         })-->
+<!--//             //         .attr("r", (d,i) => {           -->
+<!--//             //                     return radarea(d); //////for DRAWING this works to return circle area-->
+<!--//             //                     //  return radarea(data.dat);-->
+<!--//             //                     // return 10;-->
+<!--//             //                 });-->
+
+
+<!--// let heading = g.append('g')  //// append text to global-->
+<!--// 				.append('text')-->
+<!--//                 .text('NYC DCLA Grantees Staff: Museums with budgets over $999,999')-->
+<!--//                 .attr('x', margin.left/2)-->
+<!--//                 .attr('y', margin.top/4)-->
+<!--//                 .attr('font-size', '80%'); -->
+
+<!--//   }; -->

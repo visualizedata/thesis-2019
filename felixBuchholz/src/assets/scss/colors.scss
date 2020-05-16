@@ -1,0 +1,112 @@
+@import 'color_defs';
+
+body {
+  background: $body-background-color;
+}
+
+::selection {
+  background: $primary; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: $primary; /* Gecko Browsers */
+  color: white;
+}
+// *-----------------------------
+// Utility
+
+.white {
+    color: $center-background-color;
+}
+
+// -----------------------------*
+
+// Credit: Sarah Dayan, https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps
+$colors: (
+  primary: $primary,
+  uig: $uig,
+  work: $work,
+  family:$family,
+  retirement:$retirement,
+  disability:$disability,
+  healthcare:$healthcare,
+  minc: $minc, 
+  deactive-income: $deactive-income, 
+  deactive-welfare: $deactive-welfare, 
+  deactive-uig: $deactive-uig, 
+  positive: $positive,
+  negative: $negative,
+  standard: $standard,
+  medium: $medium,
+  light: $light
+);
+@mixin color-modifiers {
+  @each $name, $rgba in $colors {
+    &-#{$name} {
+      color: $rgba;
+    }
+  }
+}
+.color {
+  @include color-modifiers;
+}
+
+@mixin fill-modifiers {
+  @each $name, $rgba in $colors {
+    &-#{$name} {
+      fill: $rgba;
+    }
+  }
+}
+.fill {
+  @include fill-modifiers;
+}
+
+@mixin stroke-modifiers {
+  @each $name, $rgba in $colors {
+    &-#{$name} {
+      stroke: $rgba;
+    }
+  }
+}
+.stroke {
+  @include color-modifiers;
+}
+
+@mixin checkmark-modifiers {
+  @each $name, $rgba in $colors {
+    &-#{$name} {
+      color: $rgba;
+      border-color: $rgba;
+    }
+  }
+}
+.checkmark {
+  @include checkmark-modifiers;
+}
+
+@mixin checkbox-hover-modifiers {
+  @each $name, $rgba in $colors {
+    &-#{$name} {
+      background-color: lighten( $rgba, 15% );
+    }
+  }
+}
+.checkbox-container:hover input ~ .checkmark {
+  @include checkbox-hover-modifiers;
+}
+
+@mixin checkbox-checked-modifiers {
+  @each $name, $rgba in $colors {
+    &-#{$name} {
+      background-color: $rgba;
+    }
+  }
+}
+.checkbox-container input:checked ~ .checkmark {
+  @include checkbox-checked-modifiers;
+}
+
+.grid-lines {
+  opacity: 0.08;
+}

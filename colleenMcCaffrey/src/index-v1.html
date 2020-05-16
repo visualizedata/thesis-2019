@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <title>Sum of Us</title>
+	    
+		<!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant:300,400" rel="stylesheet">
+		
+		<!-- Styling -->
+		<!-- <link href="style.css" rel="stylesheet"> -->
+		
+		<!-- D3 v4 -->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		
+		<!-- Custom "chord" and "ribbon" functions -->
+		<script src="loom.js"></script>
+        <!-- <script src="string.js"></script> -->
+<style>
+html { font-size: 62.5%; } 
+ 
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  fill: #b9b9b9;
+}
+p {
+    font-size: 13px;
+    opacity: 0.70;
+}
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-size: 42px;
+    font-weight: 400;
+}
+h2 {
+    font-size: 28px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.lotr-content-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#lotr-title {
+	font-size: 42px;
+	font-weight: 300;
+	margin: 40px 30px 0px 30px;
+	color: #272727;
+}
+
+#lotr-subtitle {
+	font-size: 14px;
+	color: #b1b1b1;
+	margin: 0px 30px 20px 30px;
+	font-weight: 300;
+}
+
+#lotr-intro {
+	font-size: 16px;
+	margin: 0px 30px 10px 30px;
+	max-width: 800px;
+}
+
+#lotr-note {
+	font-size: 14px;
+	margin: 0px 30px 10px 30px;
+	max-width: 800px;
+	color: #b1b1b1;
+	font-weight: 300;
+}
+
+#lotr-chart {
+	text-align: center;
+}
+
+#lotr-credit {
+	font-size: 14px;
+	margin: 10px 30px 5px 30px;
+}
+
+#lotr-sources {
+	font-size: 11px;
+	max-width: 300px;
+	margin: 15px 30px 5px 30px;
+	color: #9e9e9e;
+	font-weight: 300;
+	padding-bottom: 20px;
+}
+
+a:hover {
+  	text-decoration: none;
+  	border-bottom: 1px solid black;
+}
+
+a, a:link, a:visited, a:active {
+	text-decoration: none;
+  	color: black;
+  	border-bottom: 1px dotted rgba(0, 0, 0, .5);
+}
+
+rect,
+path,
+text,
+g,
+line {
+  transition: all 0.2s ease-in-out 0.2s;
+}
+/*--- chart ---*/
+
+.name-title {
+	/* font-family: 'Macondo Swash Caps', cursive; */
+	font-size: 2.8rem;
+	fill: #232323;
+	cursor: default;
+	text-anchor: middle;
+}
+
+.value-title {
+	text-anchor: middle;
+	font-size: 1.8rem;
+  	fill: #b9b9b9;
+}
+
+.character-note {
+	text-anchor: middle;
+	font-size: 1.4rem;
+    fill: #232323;
+/*	font-weight: 300;*/
+}
+			
+.inner-label {
+	/* font-family: 'Macondo Swash Caps', cursive; */
+	font-size: 1.4rem;
+	fill: #232323;
+    cursor: default;
+}
+
+.outer-label {
+	/* font-family: 'Macondo', cursive; */
+	font-size: 1.6rem;
+	fill: #5f5f5f;
+	cursor: default;
+}
+
+.outer-label-value {
+  	font-size: 1.2rem;
+  	fill: #b9b9b9;
+}
+#lotr-chart {
+    display: block;
+}
+
+/* app layout */
+.container {
+	width: 100%;
+    display: block;
+}
+.section {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+.content-1 {
+    display: block;
+    /* width: 100%; */
+    width: 40%;
+    padding: 5%;
+}
+
+.content-1-3 {
+    display: block;
+    width: 29.3%;
+    /* padding-top: 40px; */
+    padding-left: 3%;
+    padding-right: 2%;
+
+
+}
+.content-2-3 {
+    display: block;
+    width: 66.7%;
+}
+/* #hero{
+  background: url(images/thesis-hero.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+} */
+
+.display {
+    margin-top: 30%;
+    height: 100vh;
+    align-items: center; 
+
+    
+}
+
+.section-wrap {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 776px) {
+    .section {
+        flex-wrap: wrap;
+    }
+    .content-2-3 {
+        width: 100%;
+    }
+    .content-1-3 {
+        width: 100%;
+    }
+
+}
+</style>
+		
+	</head>
+	<body>
+    <div class="container">
+        <div class="section">
+            <div id="hero" class="content-1 center">
+                <div class="display">
+                    <h1>The Sum of Us</h1>
+                    <h3> What can crowdfunding tell us about the gaps in the American healthcare system?</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,37 @@
+html,
+input, 
+body,
+bars {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: #355C7D
+}
+
+.red {
+  color: #C06C84;
+}
+
+#bars {
+  margin: 0 auto;
+}
+#bars2 {
+    margin-top: 200px;
+}
+
+#center {
+  text-align: center;
+}
+
+#links {
+  padding: 5rem 10rem;
+}
+
+div,
+rect,
+path,
+text,
+g,
+line {
+  transition: all 0.4s ease-in-out 0.4s;
+}
+

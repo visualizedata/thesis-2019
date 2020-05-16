@@ -1,0 +1,2501 @@
+/* look around on https://fonts.google.com to find other typefaces… */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+/*bebas neue, aktiv-grotesk, aktiv-grotesk-thin */
+
+@import url("https://use.typekit.net/dsl0cau.css");
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 */
+
+html,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav {
+  display: block;
+}
+
+/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }*/
+
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav {display: block; }*/
+
+/*section {display: block; }*/
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* end reset */
+
+/* use the sensible version of the box model */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+/* set default font for body text */
+
+body {
+  font-family: aktiv-grotesk-thin, sans-serif, aktiv-grotesk-regular, sans-serif, "Helvetica", 'Saira', sans-serif;
+  justify-content:center;
+  margin: 3em auto;
+  font-size: 1em;
+  line-height: 1.3em;
+  background: #877c74;
+  background-color: #877c74; 
+  color: #877c74;
+}
+
+wrapper{
+  max-width: 1250px;
+  margin: 0em auto;
+  /*padding: 2em 0.5em;*/
+  margin-bottom: 1em;
+}
+
+/*https://css-tricks.com/full-width-containers-limited-width-parents/*/
+/*wraps  page*/
+article{
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*2 column text*/
+.paragraph2col{
+  position: relative;
+}
+.textblockleft{
+  float: left;
+  display: block;
+  width: 50%;
+  padding: 0.5em;
+  padding-right: 1.5em;
+  color: #f5fcf7;
+  line-height: 1.4em;
+  font-size: 1.1em;
+  /*text spacing*/
+  font-kerning: normal;
+  letter-spacing: 0.05rem;
+}
+.textblockright{
+  float: right;
+  display: block;
+  width: 50%;
+  padding: 0.5em;
+  padding-left: 1.5em;
+  color: #f5fcf7;
+  line-height: 1.4em;
+  font-size: 1.1em;
+  /*text spacing*/
+  font-kerning: normal;
+  letter-spacing: 0.05rem;
+}
+
+.noteright {
+  font-size: 0.5em;
+  float: right;
+  width: 35%;
+  padding: 0.5em;
+  padding-left: 1em;
+  color: #f5fcf7;
+  line-height: 1.4em;
+  font-kerning: normal;
+  letter-spacing: 0.05rem;
+  margin-top: -3em;
+  margin-right: -0.8em;
+}
+/* headline typography */
+
+h1,
+#header {
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 500%;
+  text-align: left;
+  color: white;
+  background: url(../images/met_outsidel2.jpg) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.3px #92bde8;
+}
+
+#header1 {
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 330%;
+  color: #e9e9e9;
+  text-align: left;
+  /*-webkit-text-stroke: 1.5px black;*/
+}
+
+h3 #aktiv {
+  font-family: aktiv-grotesk-thin, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: aktiv-grotesk, sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  line-height: 1.3em;
+  /*brown*/
+  color: #4c4037;
+  padding: 0.2em;
+}
+
+/*h1{ font-size:36px; }*/
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.38em;
+  font-size: 200%;
+  /*font-size:21px; */
+  /*color:#c30;*/
+  /*green*/
+  /*color:#168a06; */
+  color: #4c4037;
+}
+
+h4 {
+  color: #f5fcf7;
+  line-height: 1.4em;
+  font-size: 1.1em;
+  font-kerning: normal;
+  letter-spacing: 0.05rem;
+  display: inline;
+}
+h5{
+  color: #4c4037;
+  line-height: 1.4em;
+  font-size: 1.1em;
+  font-kerning: normal;
+  letter-spacing: 0.05rem;
+  display: inline;
+}
+h6 {
+  color: #f5fcf7;
+  /*line-height: 1.4em;*/
+  font-size: 0.5em;
+  display: inline;
+}
+/*header*/
+
+.title1 {
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4em;
+  font-size: 1100%;
+  padding-top: 0;
+}
+
+.title2 {
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4em;
+  font-size: 300%;
+  text-align: left;
+  color: white;
+  /* Fallback: assume this color ON TOP of image */
+  background: url(../images/met_outsidel2.jpg) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.2px #92bde8;
+}
+
+#header2 {
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 200%;
+  /*brown*/
+  color: #4c4037;
+  text-align: center;
+  /*-webkit-text-stroke: 1.5px black;*/
+}
+
+.subhead {
+  padding-top: 0.5em;
+  font-size: 150%;
+  /*brown*/
+  color: #4c4037;
+}
+
+.subhead2{
+    padding-top: 0.6em;
+    font-size: 110%;
+  /*brown*/
+    color: #4c4037;
+    font-family: aktiv-grotesk-thin, sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: bolder;
+}
+
+#intro {
+  max-width: 1000px;
+  margin-bottom: 1em;
+  background:#877c73;
+  display: inline-block;
+}
+
+
+/* spacing & borders at the top and bottom of the page */
+
+main {
+  max-width: 1200px;
+  margin: 0em auto;
+  padding: 2.5em 0.5em;
+  margin-bottom: 1em;
+}
+
+#mainfull {
+  max-width: 1250px;
+  padding: 3em auto;
+  padding-bottom: 0;
+  padding-left: 3em;
+  background: #877c74;
+  margin-top: -10px;
+}
+
+/*shorter text blocks across width*/
+.mainshort {
+  max-width: 1000px;
+  margin: 3em auto;
+  margin-top: 0px;
+  background: #877c74;
+}
+
+.charts{
+  max-width: 1200px;
+  margin: 3em auto;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 1em;
+}
+/*for audience section - slightly different background*/
+.audienceband{
+    background: pink;
+    background-color: pink; 
+    color: pink;
+    /*background-color: #9e826b; */
+    /*color: #9e826b;*/
+  }
+/*main container for 2 column text blocks*/
+.main2col{
+  max-width: 1000px;
+  margin: 2em auto;
+  display: flex;
+  border: 0;
+  border-bottom: 1px dashed #f4c6bd;
+}
+
+.main2col2{
+  max-width: 1000px;
+  margin: 2em auto;
+  display: flex;
+  border: 0;
+  border-top: 1px dashed #f4c6bd;
+  padding-top: 4em;
+}
+
+#chartempty{
+  max-height: 0em;
+  width: auto;
+}
+#chartsmultiples{
+  max-height: 74em;
+  width: auto;
+  display: flex;
+  padding-top: 0;
+  border-bottom: 1px dashed #f4c6bd;
+}
+#chartsbubblemain{
+  /*max-width: 1200px;*/
+  /*height: auto;*/
+  max-height: 870px;
+  width: auto;
+  display: flex;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#textend{
+  margin: 1em auto;
+}
+
+.imgacross{
+  max-width: 1250px;
+  padding-left: 0;
+  margin-top: -1em;
+  margin: 0 auto;
+}
+
+#imgacross2{
+  margin-top: 0; 
+  text-align: center; 
+  padding-left: 3em; 
+  border-bottom:none;
+}
+
+#bubbles2across{
+  /*width: 100vw;*/
+  max-width: 1250px;
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+/* spacing & borders at the top and bottom of the page */
+
+/*#mainhuge, #mainhuge1  {*/
+/*  background: url(../images/DP319028_met3.jpg) no-repeat center center fixed;*/
+/*  -webkit-background-size: cover;*/
+/*  -moz-background-size: cover;*/
+/*  -o-background-size: cover;*/
+/*  background-size: cover;*/
+  /*overflow: hidden;*/
+  /*width: 100%;*/
+  /*height: auto;*/
+  /*margin: 0;*/
+/*  width: 100vw;*/
+/*  height: auto;*/
+/*  position: relative;*/
+/*  left: 50%;*/
+/*  right: 50%;*/
+/*  margin-left: -50vw;*/
+/*  margin-right: -50vw;*/
+/*}*/
+
+/*images spanning full width*/
+
+.full{  
+  /*width: 100%;*/
+  width: 100vw;
+  height: auto;
+  vertical-align: bottom;
+  position: relative;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/*header*/
+
+header {
+  /*padding-bottom: 1em;*/
+}
+
+article {
+  /*border-bottom:2px solid black;*/
+  border-style: groove;
+  /*border-bottom: 1.5px dashed #9fbfcc;*/
+  border-bottom: 1px dashed #f4c6bd;
+  padding-bottom: 1em;
+}
+
+.dashline {
+  border: 0;
+  border-bottom: 1px dashed #f4c6bd;
+  /*border-bottom: 1.5px dashed #9fbfcc;*/
+}
+
+p {
+  /*margin-bottom: 1em;*/
+  color: #f5fcf7;
+  line-height: 1.4em;
+  font-size: 1.1em;
+  /*text spacing*/
+  font-kerning: normal;
+  letter-spacing: 0.05rem;
+}
+
+.starter {
+  margin-top: 0.2em;
+  color: #f5fcf7;
+  line-height: 1.4em;
+  font-style: italic;
+}
+
+#container0{
+  /*max-width: 1250px;*/
+}
+
+#container1{
+  /*max-width: 1250px;*/
+  padding-top: 1em;
+}
+
+#container2{
+  max-width: 1250px;
+  padding-bottom: 1em;
+  padding-top: 0em;
+}
+
+#container3{
+  max-width: 1250px;
+  /*margin-bottom: 20em;*/
+}
+
+#container20{
+  max-width: 1250px;
+  
+  padding-top: 5em;
+}
+
+#container4{
+  max-width: 1250px;
+  
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+
+#container7{
+  max-width: 1250px;
+  padding-top: 3em;
+  /*padding-bottom: 2em;*/
+}
+
+#container8{
+  max-width: 1250px;
+  margin-bottom: 18em;
+}
+
+.container9{
+  
+}
+#container10{
+  max-width:  1250px;
+  padding: 0;
+  padding-bottom: 2em;
+}
+
+#container21{
+  max-width: 1250px;
+  display: flex;
+}
+
+/*pre2015 and 2015+ bubbles on one line*/
+#container22{
+  max-width: 1250px;
+  display: flex;
+  /*padding-bottom: 12em;*/
+}
+
+#container24{
+max-width: 1250px;
+}
+
+#museumheading{
+  font-family: aktiv-grotesk-thin, sans-serif;
+  font-size: 1.2em;
+  max-width: 1250px;
+  text-align: center;
+  display: inline-block;
+}
+
+#containerend{
+  max-width: 1000px;
+  /*padding-top: 10em;*/
+  padding-bottom: 1em;
+} 
+
+.dashline {
+  position: relative;
+  /*width: 100%;*/
+  /*width: 100vw;*/
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px
+}
+
+#sections8{
+  padding-top: 2.5em;
+}
+
+
+.section {    /*delete this line to disable the multi-column layout*/
+   display: flex;   
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#step4{
+  padding-bottom:  3em;
+}
+
+
+.who {
+  font-family: bebas-neue, sans-serif;
+  /*display: block;*/
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1em;
+  font-size: 2.8em;
+  color: #4c4037;
+  text-align: left;
+  padding-left: 0.1em;
+  padding-bottom: 0.05em;
+  padding-top: 0.1em;
+  
+}
+
+/*.each_content1,*/
+/*.each_content2,*/
+/*.each_content3,*/
+/*.each_content4,*/
+/*.each_content5,*/
+/*.each_content6,*/
+/*.eachcontent7,*/
+/*.eachcontent8 {*/
+/*  padding: 0.2em;*/
+/*  color: #4c4037;*/
+/*}*/
+
+/*article #graph {*/
+
+/*  margin-right:1em;  add some horizontal breathing room b/t the image and the text */
+
+/*}*/
+
+.text {
+  color: #4c4037;
+  /* customize the typography for the descriptive text */
+  /*font-style:italic;*/
+}
+
+/*on the left whiter ground*/
+
+.text2 {
+  font-family: aktiv-grotesk-regular, sans-serif;
+  color: #070402;
+  line-height: 1.2em;
+  font-size: 1.1em;
+  /*text spacing*/
+  font-kerning: normal;
+  letter-spacing: 0.04rem;
+  font-weight:  regular;
+  padding: 0.3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 0;
+  padding-bottom: 0.4em;
+}
+.museumheadingtext2{
+  font-family: aktiv-grotesk-thin, sans-serif;
+  /*color: #070402;*/
+  color: #f5fcf7;
+  line-height: 0.6em;
+  font-size: 1.4em;
+  /*text spacing*/
+  font-kerning: normal;
+  letter-spacing: 0.04rem;
+  text-align:  center;
+  display: inline-block;
+  padding: 0.3em;
+  margin: 4em 4em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 0;
+  padding-bottom: 0.4em;
+}
+
+.graph {
+  margin-bottom: 40px;
+}
+
+/*/////adding*/
+
+/*adding*/
+
+
+/*STICKY containerfor each dv*/
+
+.container {
+  position: relative;
+  /*width: 100%;*/
+  width: 100vw;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px
+}
+
+/*for text on ground*/
+
+.sectback {
+  max-width: 1250px;
+  background: #877c73;
+  background-color: #877c74;
+}
+
+/*section block ground*/
+#NYC, #NYC1, #NYC2, #NYC3, #NYC4{
+  background: #cfe4f9;
+  opacity: 0.3;
+}
+
+/*end of full width*/
+
+/*for floating text box on left*/
+
+.section {
+  /*width: 340px; */
+  /*width of left floating text in 2 column sections*/
+  width: 25%;
+}
+
+.section>div {
+  background: white;
+  /*  background:#877c74;*/
+  opacity: .3;
+  margin-bottom: 200px;
+  transition: all 1.5s;
+}
+
+.section>div:last-child {
+  margin-bottom: 30px;
+}
+
+.section>div.graph-scroll-active {
+  opacity: 1;
+}
+
+.graph {
+  width: 75%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  float: right;
+}
+
+.graph-scroll-fixed .graph {
+  position: fixed;
+}
+
+/*end of sticky*/
+
+.jump_test {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
+/*image to right of text box*/
+
+#graph3,
+#graph4,
+#graph5,
+#graph6,
+#graph7 {
+  width: 75%;
+}
+
+#graph3{
+  padding-left: 1em;
+}
+
+#graph1, #graph2, #graph3, #graph4, #graph5, #graph6, #graph7,
+#graph8, #graph9, #graph10, #graph20 
+{
+  width: 75%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  float: right;
+}
+
+#graph7{
+  padding-left: 3em;
+}
+
+#graph8{
+  margin-left: 0;
+}
+
+#graph10{
+  margin-top: 2.5em;
+}
+
+/*////space*/
+
+.step {
+  /*margin-bottom: 200px;*/
+  margin-bottom: 100px;
+}
+
+/*end of add*/
+
+#textparagraph, #textparagraph2 {
+  max-width: 1200px;
+  /*width: 100%; */
+  overflow: hidden;   /* moves block to below graphs */
+   width: 100vw;
+  height: auto; 
+}
+
+/*full width text*/
+.textparagraph{
+    max-width: 1000px;
+    margin: 3em auto;
+    display: inline-block;
+}
+/*full width text*/
+.textblock {
+  background-size: cover;
+  overflow: hidden;   /* moves block to below graphs */
+  height: auto;
+}
+.textnoground{
+  font-family: aktiv-grotesk-regular, sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.3em;
+  /*brown*/
+  color: #4c4037;
+  background-color: #877c74;
+  padding: 0.2em;
+  padding-top: 3em;
+  font-weight: regular;
+  font-size: 1.1em;
+}
+
+/*each data visualization*/
+/*NEA audience */
+
+      #svg1 {
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        padding-left:1em;
+      }
+
+       .gridy,
+      .gridx {
+        opacity: 0.5;
+        stroke-dasharray: "2,4";
+        stroke: grey;
+        stroke-width: 0.2;
+      }
+
+      .xaxis1, .yaxis1 {
+        opacity: 1;
+        stroke-width: 0.08;
+        stroke: darkslategrey;
+        fill: currentColor;
+        font-size: 70%;
+      }
+      
+      .NEAtitle {
+        opacity: 0.9;
+        color: #f5f4f9;
+        fill: currentColor;
+      }
+      
+      .NEAsub {
+        opacity: 0.9;
+        color: #f5f4f9;
+        fill: currentColor;
+      }
+      
+      .NEApercent {
+        opacity: 0.9;
+        /*color: #efe8e6;*/
+        color: #ffffff;
+        fill: currentColor;
+      }
+
+ #tooltipNEA {
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        position: absolute;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        margin: 0 auto;
+        width: 50px;
+        height: 30px;
+        padding: 6px;
+        /*background-color: #737997;*/
+        color: white;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-box-shadow: 0px 2px 10px rgba(0, 50, 0, 0.1);
+        -moz-box-shadow: 0px 2px 10px rgba(0, 50, 0, 0.1);
+        box-shadow: 0px 2px 10px rgba(0, 50, 0, 0.1);
+        pointer-events: none;
+        -webkit-transition: hidden 30s ease-out;
+        -moz-transition: hidden 30s ease-out;
+        -o-transition: hidden 30s ease-out;
+        transition: hidden 30s ease-out;
+      }
+
+      #tooltipNEA.hidden {
+        display: none;
+        /*transition: display 30s ease-out;*/
+      }
+      #11{
+        display: table-cell;
+      }
+      #value, #12{
+        display: table-cell; 
+        vertical-align: middle; 
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+      #tooltipNEA p {
+        margin: 0;
+      }
+
+      
+/*NEA 2012-2017 audience greyblue area*/
+#svg0{  
+                font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+                 background: #877c74;
+                 stroke-width: 0.02;
+                 padding-top: 2em;
+                 padding-left: 1em;
+            }
+            .yaxisnea, .xaxisnea {
+                color: darkslategrey;
+                fill: currentColor;
+                stroke: darkslategrey;
+                stroke-width: 0.01;
+                opacity: 0.9;
+                font-size: 70%;
+            }
+            
+            .xaxisnea2{
+                font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+                opacity: 1;
+                stroke-width: 0.8;
+                fill: currentColor;
+                stroke: darkslategrey;
+                color: darkslategrey;
+                font-size: 70%;
+            }
+            .ytext2{
+                font-size: 0.9em;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+             .audtext{
+                font-size: 1em;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+            .audheading{
+                font-size: 1.2em;
+                color: #f5f4f9;
+                fill: currentColor;
+                opacity: 0.9;
+            }
+            .audsubhead{
+                font-size: 1.5em;
+                color: #f5f4f9;
+                fill: currentColor;
+                opacity: 0.9;
+            }
+            
+/*NEA race and ethnicity 2012-2017*/
+#svg24{  
+                font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+                 background: #877c74;
+                 stroke-width: 0.02;
+                 padding-top: 2em;
+                 padding-left: 2.2em;
+            
+            }
+            .yaxisnea3, .xaxisnea3{
+                 fill: none;
+                color: darkslategrey;
+                stroke: darkslategrey;
+                fill: currentColor;
+                stroke-width: 0.2;
+                /*opacity: 0.7;*/
+                opacity: 0.8;
+            }
+            
+            .xaxisnea3{
+                font-size: 70%;
+                fill: none;
+                color: #231d19;
+                stroke: #231d19;
+                fill: currentColor;
+                stroke-width: 0.32;
+                opacity: 1;
+            }
+            .subhead3{
+                font-size: 0.66em;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+            
+            .audtext3{
+                font-size: 1em;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+            .audheading3{
+                font-size: 1.2em;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+            .audsubhd3{
+                font-size: 1.47em;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+            .audsughead5{
+              color: #f5f4f9;
+             fill: currentColor;
+            }
+            
+#tooltipline1,#tooltipline2,#tooltipline3,#tooltipline4,#tooltipline5  {
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        position: absolute;
+        text-align: center;
+        font-size: 0.8em;
+        margin: 0 auto;
+        width: 90px;
+        height: 40px;
+        padding: 6px;
+        color: white;
+        pointer-events: none;
+        transition-delay: all 0.2s;
+      }
+       #tooltipline1.hidden {
+        display: none;
+      }
+       #tooltipline2.hidden {
+        display: none;
+      }
+       #tooltipline3.hidden {
+        display: none;
+      }
+       #tooltipline4.hidden {
+        display: none;
+      }
+       #tooltipline5.hidden {
+        display: none;
+       }
+      #11{
+        display: table-cell;
+      }
+       #2, #4, #6, #8, #15{
+        display: table-cell;
+      }
+      #value, #value1, #value2, #value3, #value4, #3, #35, #7, #12, #14{
+        display: table-cell; 
+        vertical-align: middle; 
+        justify-content: center;
+        align-items: center;
+        transform: translateY(50%);
+        text-align: center;
+      }
+      #tooltipline1 p {
+        margin: 0;
+      }  
+      #tooltipline2 p {
+        margin: 0;
+      } 
+      #tooltipline3 p {
+        margin: 0;
+      } 
+      #tooltipline4 p {
+        margin: 0;
+      } 
+      #tooltipline5 p {
+        margin: 0;
+      } 
+#tooltipline1:hover { 
+        transition-duration: 3s;
+        transition: all .5s ease-out 7s;
+}
+     
+          
+
+/*DCLA horizontal job types yellow percent circle grid*/
+/* whole screen width */
+/*https://css-tricks.com/full-width-containers-limited-width-parents/*/
+
+#svg21{
+  font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+  font-size: 1em;
+  float: left;
+  margin-top: -5em;
+  padding-left: 1.5em;
+}
+.linegrid {
+  opacity: 0.4;
+}
+.stylenumbers{
+  background-color: "yellow";
+   opacity: 0.6;
+   width: 50px;
+   height: 30px;
+   padding: 1em;
+}
+.stylepercent{
+  background-color: "pink";
+   opacity: 0.6;
+   width: 50px;
+   height: 30px;
+   padding: 1em;
+}
+#percent-btn:active {
+    transform: scale(0.995);
+}
+#percent-btn:hover {
+    outline: 0.5px solid #9ea5aa;
+    outline-offset: 1px;
+     transform: scale(0.995);
+}
+#numbers-btn:active {
+    transform: scale(0.995);
+}
+#numbers-btn:hover {
+    outline: 0.5px solid #9ea5aa;
+    outline-offset: 1px;
+    transform: scale(0.995);
+}
+.percenttext, .numberstext{
+  font-size: 0.7em;
+  color: #f5f4f9;
+  fill: currentColor;
+}
+.textpink {
+  color: #fdd2f5;
+  fill: currentColor;
+  opacity: 0.8;
+  /*font-size: 0.8em;*/
+}
+.textsubhead {
+  color: #f5f4f9;
+  fill: #f5f4f9;
+  fill: currentColor;
+  opacity: 0.8;
+}
+.percent7{
+  color: #f5f4f9;
+  fill: currentColor;
+  opacity: 0.8;
+  font-size: 75%;
+}
+.number7{
+  visibility: "hidden";
+  color: #f5f4f9;
+  fill: currentColor;
+  opacity: 0.8;
+  font-size: 75%;
+}
+.circlepink {
+  color: #fdd2f5;
+  fill: currentColor;
+  stroke: #d384ff;
+  stroke-weight: 0.01;
+  opacity: 0.5;
+}
+.circlepercent {
+  /*color: "pink";*/
+  fill: currentColor;
+  stroke: #d384ff;
+  stroke-weight: 0.01;
+  opacity: 0.5;
+}
+.circlehover {
+  color: "purple";
+  fill: currentColor;
+  stroke: #d384ff;
+  stroke-weight: 0.01;
+  opacity: 0.45;
+}
+.circlenumbers{
+  color: "yellow";
+  fill: currentColor;
+  opacity: 0.5;
+}
+
+
+/*DCLA small multiple charts*/
+.svgheading {
+                float: left;
+                background: #877c74;
+                height: auto;
+                text-align: left;
+                padding-bottom: 0.8em;
+                padding-left: 1.3em;
+            }
+.svgheading2 {
+                float: left;
+                background: #877c74;
+                color: #f5f4f9;
+                fill: currentColor;
+                height: auto;
+                text-align: left;
+                padding-bottom: 1.3em;
+                padding-left: 1.3em;
+            }
+            
+#svgheading {
+                float: left;
+                font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+                text-align: left;
+                height: auto;
+                color: #f5f4f9;
+                fill: currentColor;
+            }
+#svg4,
+#svg5,
+#svg6,
+#svg7,
+#svg8,
+#svg9 {
+          float: left;
+          font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+          margin-top: -20px;
+          padding-right: 5px;
+          padding-bottom: 5px;
+          padding-top: 0;
+          padding-left: 25px;
+          stroke-width: 0.02;
+          background: #877c74;
+        }
+
+            .titlemult {
+                font-size: 0.8em;
+                color: #ffffff;
+                fill: currentColor;
+                text-align: right;
+            }
+
+            .titlenumber {
+                /*wording curators change on mouseover*/
+                font-size: 0.8em;
+                color: #ffffff;
+                 fill: currentColor;
+                /*text-align: left;*/
+                text-align: right;
+            }
+
+            .axislabel {
+                font-size: 85%;
+                color: #ffffff;
+                fill: #ffffff;
+                stroke-width: 0.02;
+            }
+
+            .yaxisl {
+                opacity: 0;
+                /*fill: #ffffff;  to toggle left axis off*/
+                /*stroke: #ffffff;*/
+                /*stroke-width: 0.02;*/
+            }
+
+            .yaxismult {
+                color: #ffffff;
+                fill: #ffffff;
+                stroke: #ffffff;
+                stroke-width: 0.02;
+                opacity: 0.8;
+            }
+
+            .linemult {
+                stroke: yellow;
+                stroke-width: 0.02;
+            }
+
+            .ytext1title1,
+            .ytext1title2,
+            .ytext2title1,
+            .ytext3title1,
+            .ytext4title1,
+            .ytext5title1,
+            .ytext6title1 {
+                transition-timing-function: ease-in;
+                transition: 10s;
+            }
+
+            .areayellow {
+                fill: yellow;
+                opacity: 0.8;
+                transition-timing-function: ease-in;
+                transition: 2s;
+            }
+
+            .area1 {
+                fill: #f9da25;
+                opacity: 0.6;
+                transition-timing-function: ease-in;
+                transition: 2s;
+            }
+
+
+/*small national art museum staff 2015 and 2018*/
+
+			#svg16, #svg18 {
+				font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        padding-right: 0;
+   			padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 0;
+        /*stroke-width: 0.02;*/
+        background: #877c74;             
+        padding-top: 0;
+        padding-left: 0;
+			}
+			
+			.barchange:hover{
+				fill: pink;
+			}
+			
+			.axisside3{
+				stroke: darkslategrey;
+				color: darkslategrey;
+				stroke-width: 0.3;
+				fill: currentColor;
+			}
+			
+/*national art museum staff 2015 and 2018 percent*/
+
+#svg27{  
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        background: #877c74;
+        stroke-width: 0.02;
+        padding-top: 2em;
+       }
+			.gridy,
+      .gridx {
+       font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        opacity: 0.7;
+        color: darkslategrey;
+        /*stroke-dasharray: 2,4;*/
+        stroke: darkslategrey;
+        stroke-width: 0.1;
+        z-index: -1000;
+      }
+      .x18axis {
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        opacity: 0.8;
+        /*stroke-dasharray: 2,4;*/
+        stroke: darkslategrey;
+        stroke-width: 0.3;
+        fill: darkslategrey;
+        color: darkslategrey;
+        /*fill: darkslategrey;*/
+      }
+      .y18axis{
+         stroke-width: 0.2;
+         opacity: 0.6;
+      }
+  .thinbar{
+       -webkit-transition: fill 12s ease-out;
+        -moz-transition: fill 12s ease-out;
+        -o-transition: fill 12s ease-out;
+        transition: fill 12s ease-out;
+        opacity: 0.6;
+  }
+  
+/*museum artworks bubble svg15*/
+
+#svg15{
+  background: #877c74;
+  font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+  font-size: 1em;
+  margin-top: 2.5em;
+}
+.tiptext{
+        text-anchor: middle;
+        margin: 0 auto;
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        font-size: 0.9em;
+      }
+.newtooltips p {
+       text-anchor: middle;
+    }
+.newtooltips15 p {
+       text-anchor: middle;
+    }
+ 
+
+/*museum artworks bubble before 2015 and 2015 and after   */
+
+  #svg25, #svg26{  
+              background: #877c74;
+              font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+              font-size: 20px;
+              float:left;
+            }
+ #svg25{
+     margin-left: -3em;
+   }   
+
+
+/*percent museum artworks pre and post 2015*/
+#svg28, #svg29{  
+              background: #877c74;
+              font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+              font-size: 20px;
+              float:left;
+            }
+ #svg28{
+     margin-left: -3em;
+   }   
+
+.tiptextperc{
+        text-anchor: middle;
+        margin: 0 auto;
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        font-size: 0.9em;
+      }
+.newtooltipsperc p {
+       text-anchor: middle;
+    }
+.newtooltips15perc p {
+       text-anchor: middle;
+    }
+    
+/*next vis*/
+
+
+
+.numberBox {
+  margin-top: 0.15em;
+  font-size: 180%;
+  font-weight: 700;
+  border: 2px solid #FFF;
+  float: left;
+  width: 1.8em;
+  box-sizing: border-box;
+  text-align: center;
+  padding: .35em 0;
+  margin-right: 0.6em;
+}
+
+#conclusion {
+  /*padding-top: 10em; */
+  font-family: bebas-neue, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5em;
+  padding-left: 0.25em;
+  font-size: 380%;
+  /*color: #e9e9e9;*/
+  color: #9fbfcc;
+  text-align: left;
+  /*-webkit-text-stroke: 1px #f5fcf7;*/
+}
+
+.endnotes {
+  /*margin-top: 2em;*/
+  font-size: 0.8em;
+  color: #f5fcf7;
+  line-height: 0.7em;
+}
+
+/*thanks to NYT style*/
+
+.graph-circle {
+  width: 10px;
+  height: 10px;
+  background: green;
+  border-radius: 50%;
+}
+
+.graph-sequence-indicator {
+  cursor: pointer;
+  pointer-events: all;
+  position: absolute;
+  top: 50%;
+  right: 27px;
+  /*fill: none;*/
+  fill: 'red';
+  z-index: -1;
+}
+
+.graph-sequence-indicator circle {
+  stroke: #000;
+  stroke-width: 1.25px;
+}
+
+.graph-sequence-indicator :hover circle,
+.graph-sequence-indicator--active {
+  fill: #000;
+}
+
+.graph--head-dark .graph-sequence-indicator circle,
+.graph--dark .graph-sequence-indicator circle {
+  stroke: #fff;
+}
+
+.graph--head-dark .graph-sequence-indicator :hover circle,
+.graph--head-dark .graph-sequence-indicator--active,
+.graph--dark .graph-sequence-indicator :hover circle,
+.graph--dark .graph-sequence-indicator--active {
+  fill: #fff;
+}
+
+/* 
+  media queries
+  ##Device = Desktops
+  ##Large desktop screen
+ */
+
+@media all and (max-width: 1500px) {
+  main {
+    max-width: 1400px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+/*   
+  ##Screen = 1281px to higher resolution desktops
+ */
+
+@media all and (min-width: 1281px) and (max-width: 1499px) {
+
+  main {
+    max-width: 1200px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  #container21{
+  /*margin-left: 0.5em;*/
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+
+  main {
+    max-width: 1000px;
+    margin-right: 55px;
+    margin-left: 55px;
+  }
+  #container21{
+  /*margin-left: 0.2em;*/
+}
+}
+
+/*=======adding for scrolling=========*/
+
+@media (max-width: 925px) {
+  .graph {
+    /*width: 100%;*/
+     width: 100vw;
+    margin-left: 0px;
+    float: none;
+  }
+
+  .section {
+    width: auto;
+    position: relative;
+    margin: 0px auto;
+  }
+
+  .section>div {
+    background: rgba(255, 255, 255, .5);
+    padding: 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 80vh;
+  }
+
+  pre {
+    overflow: hidden;
+  }
+
+  h1 {
+    margin: 10px;
+  }
+}
+
+/*==============*/
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+  #mainshort {
+    margin: 1.8em;
+  }
+
+  #intro {
+    margin: 1.8em;
+  }
+
+  #mainfull {
+    font-size: 75%;
+    line-height: 75%;
+  }
+
+  main {
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+
+
+
+  sections {
+    display: inline;
+  }
+
+  .graph {
+    display: inline;
+  }
+
+  .who {
+    color: #877c74;
+    -webkit-text-fill-color: white;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media all and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  #mainshort {
+    margin: 1.6em;
+  }
+  #intro {
+    margin: 1.6em;
+  }
+  #mainfull {
+    font-size: 75%;
+    line-height: 75%;
+  }
+
+  article section.argument {
+    display: inline;
+    font-size: 75%;
+  }
+
+  section.argument {
+    display: inline;
+  }
+
+  .graph {
+    display: inline;
+  }
+  .who {
+    color: #877c74;
+    -webkit-text-fill-color: white;
+  }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media all and (min-width: 481px) and (max-width: 767px) {
+
+  main {
+    margin: 1.5em;
+  }
+
+  #mainshort {
+    margin: 1.5em;
+  }
+
+  #intro {
+    margin: 1.5em;
+  }
+  #mainfull {
+    font-size: 60%;
+    line-height: 45%;
+    /*display: inline;*/
+  }
+
+  article section.argument {
+    display: inline;
+    font-size: 75%;
+  }
+
+  section.argument {
+    display: inline;
+  }
+
+  .graph {
+    display: inline;
+  }
+
+  .who {
+    color: #877c74;
+    -webkit-text-fill-color: white;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+
+  main {
+    display: inline;
+    margin: 1.4em;
+  }
+
+  #mainshort {
+    margin: 1.4em;
+  }
+  #intro {
+    margin: 1.4em;
+  }
+
+  #mainfull {
+    font-size: 50%;
+    line-height: 35%;
+  }
+
+  p {
+    font-size: 75%;
+  }
+
+  article section.argument {
+    display: inline;
+  }
+
+
+  section.argument {
+    display: inline;
+  }
+
+  .graph {
+    display: inline-block;
+  }
+
+  .who {
+    color: #877c74;
+    -webkit-text-fill-color: white;
+  }
+}
+
+
+
+/* look around on https://fonts.google.com to find other typefaces… */
+/*@import url('https://fonts.googleapis.com/css?family=Alegreya');*/
+/*bebas neue, aktiv-grotesk, aktiv-grotesk-thin */
+/*@import url("https://use.typekit.net/dsl0cau.css");*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 */
+/*html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,  blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }*/
+/*aside, details, figcaption, figure, footer, header, hgroup, menu, nav {display: block; }*/
+/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }*/
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav {display: block; }*/
+ /*section {display: block; }*/
+/*body {line-height: 1; }*/
+/*ol, ul {list-style: none; }*/
+/*blockquote, q {quotes: none; }*/
+/*blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }*/
+/*table {border-collapse: collapse; border-spacing: 0; }*/
+/* end reset */
+
+
+/* use the sensible version of the box model */
+
+
+/*html { box-sizing: border-box; }*/
+/**, *:before, *:after { box-sizing: inherit; }*/
+
+
+
+/* set default font for body text */
+
+/*body {*/
+/*  font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;*/
+/*  margin: 1em auto;*/
+/*  font-size:1.4em;*/
+/*  line-height:1.3em;*/
+  /*background:#e9e9e9;*/
+/*  background:#877c74;*/
+  /*background-image:*/
+  /*  linear-gradient(*/
+  /*    #877c74, #8e6f5a*/
+  /*  );*/
+/*}*/
+
+
+/* headline typography */
+
+/*h1, #header{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  line-height:1.5em;*/
+/*  font-size: 500%;*/
+/*  text-align: left;*/
+/*  color: white; */
+/*   background: url(../images/met_outsidel2.jpg) no-repeat;*/
+/*   -webkit-background-clip: text;*/
+/*   -webkit-text-fill-color: transparent;*/
+/*   -webkit-text-stroke: 1px #9fbfcc;*/
+/*}*/
+
+/*#header1{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  line-height:1.5em;*/
+/*  font-size: 330%;*/
+/*  color: #e9e9e9;*/
+/*  text-align: left;*/
+   /*-webkit-text-stroke: 1.5px black;*/
+/*}*/
+
+
+/*.title1{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  line-height:1.4em;*/
+/*  font-size: 1100%;*/
+/*  padding-top: 0;*/
+/*}*/
+
+/*.title2{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  line-height:1.4em;*/
+/*  font-size: 300%;*/
+/*  text-align: left;*/
+  /*color: white;  */
+  /* Fallback: assume this color ON TOP of image */
+/*   background: url(../images/met_outsidel2.jpg) no-repeat;*/
+/*   -webkit-background-clip: text;*/
+/*   -webkit-text-fill-color: transparent;*/
+/*   -webkit-text-stroke: 1px #9fbfcc;*/
+/*}*/
+
+/*#header2{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  line-height:1.5em;*/
+/*  font-size: 200%;*/
+  /*brown*/
+/*  color: #4c4037;*/
+/*  text-align: center;*/
+   /*-webkit-text-stroke: 1.5px black;*/
+/*}*/
+
+/*.subhead{*/
+/*  padding-top: 0.5em;*/
+/*  font-size: 60%;*/
+  /*brown*/
+/*  color: #4c4037;*/
+/*}*/
+
+/*#intro{*/
+   /*max-width:900px;*/
+/*   margin: 4.5em;*/
+/*   margin-top: 1em;*/
+/*   margin-bottom: 1em;*/
+/*}*/
+
+/*h3 #aktiv{*/
+/*  font-family: aktiv-grotesk-thin, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  font-size: 2em;*/
+/*}*/
+
+/*h2 {*/
+/*  font-family: aktiv-grotesk, sans-serif, "Helvetica Neue", "Helvetica", "Arial", sans-serif;*/
+/*  font-weight:bold;*/
+/*  line-height:1.3em;*/
+  /*brown*/
+/*  color: #4c4037;*/
+/*  padding: 0.2em;*/
+/*}*/
+
+/*h1{ font-size:36px; }*/
+/*h2{ font-size: 1.25em; }*/
+/*h3{ font-family: bebas-neue, sans-serif;*/
+/*    font-style: normal;*/
+/*    font-weight: 100;*/
+/*    line-height:1.38em;*/
+/*    font-size: 200%;*/
+    /*font-size:21px; */
+    /*color:#c30;*/
+    /*green*/
+    /*color:#168a06; */
+/*    color: #4c4037;*/
+/*}*/
+/*h4{*/
+/*    color: #f5fcf7;*/
+/*    line-height: 1.4em;*/
+/*    font-size: 1.1em;*/
+/*    font-kerning: normal;*/
+/*    letter-spacing: 0.05rem;*/
+/*    display:inline;*/
+/*}*/
+
+/*h6{*/
+/*  color: #f5fcf7;*/
+  /*line-height: 1.4em;*/
+/*  font-size: 0.5em;*/
+/*  display:inline;*/
+/*}*/
+
+/* spacing & borders at the top and bottom of the page */
+
+/*main{*/
+/*  max-width:1400px;*/
+/*  margin:3em auto;*/
+/*  margin-bottom: 1em;*/
+  
+/*}*/
+
+/*.mainsmall{*/
+/*  max-width:1000px;*/
+  /*max-width:1300px;*/
+  /*margin:4em auto;*/
+/*  margin:3em auto;*/
+/*  background:#e9e9e9;*/
+/*}*/
+
+/*#mainfull{*/
+/*    max-width:1400px;*/
+/*    margin:3em auto;*/
+/*    background:#877c74;*/
+/*    margin-top: -10px;*/
+/*}*/
+
+/*#mainshort{*/
+/*    max-width: 1400px;*/
+/*    margin: 3em auto;*/
+/*    margin-top: 0px;*/
+/*    background:#877c74;*/
+    /*background:#e9e9e9;*/
+/*}*/
+
+
+/*container #mainhuge{*/
+/*  background: url(../images/DP319028_met3.jpg) no-repeat center center fixed; */
+/*  -webkit-background-size: cover;*/
+/*  -moz-background-size: cover;*/
+/*  -o-background-size: cover;*/
+/*  background-size: cover;*/
+/*  overflow: hidden;*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*}*/
+
+/*header{*/
+/*  padding-bottom:1em;*/
+/*}*/
+
+/*header .intro{*/
+/*  margin-top:2em;*/
+/*}*/
+
+/*article{*/
+  /*border-bottom:2px solid black;*/
+/*  border-style: groove;*/
+  /*border-bottom: 1.5px dashed #9fbfcc;*/
+/*  border-bottom: 1px dashed #f4c6bd;*/
+/*  padding-bottom:1em;*/
+/*}*/
+
+/*#header {*/
+/*  border-style: groove;*/
+/*}*/
+/*hr,*/
+/*.dashline {*/
+/*    border: 0;*/
+/*    border-bottom: 1px dashed #f4c6bd;*/
+    /*border-bottom: 1.5px dashed #9fbfcc;*/
+/*}*/
+
+/*p{*/
+/*  margin-bottom:1em;*/
+/*  color: #f5fcf7;*/
+/*  line-height: 1.4em;*/
+/*  font-size: 1.1em;*/
+/*text spacing*/
+/*  font-kerning: normal;*/
+/*  letter-spacing: 0.05rem;*/
+/*}*/
+
+/*.starter{*/
+/*  margin-top: 0.2em;*/
+/*  color: #f5fcf7;*/
+/*  line-height: 1.4em;*/
+/*  font-style:italic;*/
+/*}*/
+
+/* .imghuge{*/
+/*  background: url(../images/DP319028_met3.jpg) no-repeat center center fixed; */
+/*  -webkit-background-size: cover;*/
+/*  -moz-background-size: cover;*/
+/*  -o-background-size: cover;*/
+/*  background-size: cover;*/
+/*}*/
+
+
+/*article #sections{*/
+  /* display: flex;   delete this line to disable the multi-column layout*/ 
+/*  margin-top:1em;*/
+/*  margin-bottom:1em;*/
+/*}*/
+
+/*.who{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  display: block;*/
+/*  font-style: normal;*/
+/*  font-weight: 300;*/
+/*  line-height:1em;*/
+/*  font-size: 3em;*/
+  /*color: #e9e9e9;*/
+/*    color: #4c4037;*/
+  /*color: #877c74;*/
+/*  text-align: left;*/
+/*  padding-left: 0.1em;*/
+   /*-webkit-text-stroke: 1px #f5fcf7;*/
+   /*paint-order: stroke fill;*/
+/*}*/
+
+/*.each_content1, .each_content2, .each_content3, .each_content4, .each_content5, .each_content6{*/
+/*  padding: 0.2em;*/
+/*  color: #4c4037;*/
+/*}*/
+/*article #graph {*/
+ /*  margin-right:1em;  add some horizontal breathing room b/t the image and the text */
+/*}*/
+
+
+/*.text{*/
+  /*color:#4c4037;  */
+  /* customize the typography for the descriptive text */
+  /*font-style:italic;*/
+/*}*/
+
+/*on the left whiter ground*/
+/*.text2{*/
+/*  color: #422c04;*/
+/*  line-height: 1.2em;*/
+/*  font-size: 1em;*/
+/*text spacing*/
+/*  font-kerning: normal;*/
+/*  letter-spacing: 0.04rem;*/
+/*  font-weight: bold;*/
+/*  padding: 0.35em;*/
+/*  padding-top: 0;*/
+/*}*/
+
+/*#graph{*/
+/*  margin-bottom: 40px;*/
+  /*border: 2px solid white;*/
+/*}*/
+
+/*/////adding*/
+/*adding*/
+
+/*circle{*/
+/*  fill: steelblue;*/
+/*}*/
+
+/*svg{*/
+/*  background-color: #eee;*/
+/*}*/
+
+/*STICKY containerfor each dv*/
+/*#container{*/
+/*  position: relative;*/
+/*}*/
+/*for full width text image*/
+/*#sections2{*/
+/*  max-width: 1300px;*/
+/*  background:#877c73;*/
+/*}*/
+/*end of full width*/
+/*for floating text on left*/
+/*#sections{*/
+/*  width: 340px;*/
+/*}*/
+
+/*#sections > div{*/
+/*  background: white;*/
+  /*	background:#877c74;*/
+/*  opacity: .3;*/
+/*  margin-bottom: 200px;*/
+/*  transition: all 1.5s;*/
+/*}*/
+/*#sections > div:last-child{*/
+/*  margin-bottom: 30px;*/
+/*}*/
+/*#sections > div.graph-scroll-active{*/
+/*  opacity: 1;*/
+/*}*/
+
+/*#graph{*/
+  /*margin-left: 40px;*/
+  /*margin-left: 305px;*/
+/*  width: 900px;*/
+  /* margin-left: 165px;*/
+  /*width: 600px;*/
+/*  position: -webkit-sticky;*/
+/*  position: sticky;*/
+/*  top: 0px;*/
+/*  float: right;*/
+/*}*/
+/*end of sticky*/
+
+/*////space*/
+/*.step {*/
+/*margin-bottom: 200px;*/
+/*}*/
+
+/*end of add*/
+
+
+/*.dcla1{*/
+/*  width: 100%;*/
+/*         height: auto;*/
+/*         z-index: -1;*/
+/*}*/
+
+/*.container1  .container2 .container3 .container4{*/
+  
+/*}*/
+
+/*.textblock {*/
+/*  padding-bottom: 3em;*/
+/*  padding-top: 3em;*/
+  /*background-color: pink;*/
+/*  width: 100%;*/
+/*  background-size: cover;*/
+/*  overflow: hidden;*/
+/*  height: auto;*/
+/*}*/
+
+/*container3{*/
+/*  margin: 5em;*/
+/*}*/
+
+/*each data visualization*/
+/*#svg1{*/
+/*         width: 100%;*/
+/*         height: auto;*/
+/*         z-index: -1;*/
+/*            }*/
+
+/*.numberBox {*/
+/*  margin-top: 0.15em;*/
+/*  font-size: 180%;*/
+/*  font-weight: 700;*/
+/*  border: 2px solid #FFF;*/
+/*  float: left;*/
+/*  width: 1.8em;*/
+/*  box-sizing: border-box;*/
+/*  text-align: center;*/
+/*  padding: .35em 0;*/
+/*  margin-right: 0.6em;*/
+/*}*/
+
+/*#conclusion{*/
+/*  font-family: bebas-neue, sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 300;*/
+/*  line-height:1.5em;*/
+/*  font-size: 380%;*/
+  /*color: #e9e9e9;*/
+/*  color: #9fbfcc;*/
+/*  text-align: left;*/
+   /*-webkit-text-stroke: 1px #f5fcf7;*/
+/*}*/
+/*.endnotes{*/
+/*  margin-top: 2em;*/
+/*  font-size: 1em;*/
+/*  color: #4c4037;*/
+/*}*/
+
+
+/* 
+  media queries
+  ##Device = Desktops
+  ##Large desktop screen
+ */ 
+/*@media all and (max-width: 1500px) {*/
+/*  main{*/
+/*    margin-right: 20px;*/
+/*    margin-left: 20px;*/
+/*  }*/
+/*}*/
+  
+/*   
+  ##Screen = 1281px to higher resolution desktops
+ */ 
+
+
+/*@media all and (min-width: 1281px) and (max-width: 1499px) {*/
+  
+/*    main{*/
+/*    margin-right: 50px;*/
+/*    margin-left: 50px;*/
+/*    }*/
+/*}*/
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+/*@media all and (min-width: 1025px) and (max-width: 1280px) {*/
+  
+/*  main{*/
+/*    margin-right: 55px;*/
+/*    margin-left: 55px;*/
+/*  }*/
+/*}*/
+
+/*adding for scrolling*/
+/*@media (max-width: 925px)  {*/
+/*  #graph{*/
+/*    width: 100%;*/
+/*    margin-left: 0px;*/
+/*    float: none;*/
+/*  }*/
+
+/*  #sections{*/
+/*    width: auto;*/
+/*    position: relative;*/
+/*    margin: 0px auto;*/
+/*  }*/
+
+/*  #sections > div{*/
+/*    background: rgba(255,255,255,.5);*/
+/*    padding: 10px;*/
+/*    border-top: 1px solid;*/
+/*    border-bottom: 1px solid;*/
+/*    margin-bottom: 80vh;*/
+/*  }*/
+
+/*  pre{*/
+/*    overflow: hidden;*/
+/*  }*/
+
+/*  h1{*/
+/*    margin: 10px;*/
+/*  }*/
+/*}*/
+/*///*/
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/*@media all and (min-width: 768px) and (max-width: 1024px) {*/
+  
+/*    #mainshort{*/
+/*    margin: 1.8em;*/
+/*} */
+
+/*#intro{*/
+/*    margin: 1.8em;*/
+/*}*/
+
+/* #mainfull{*/
+/*   font-size: 75%;*/
+/*   line-height: 75%;*/
+/* }*/
+ 
+/* main{*/
+/*    margin-right: 60px;*/
+/*    margin-left: 60px;*/
+/*  }*/
+  
+
+  
+/*  sections {*/
+/*    display: inline;*/
+/*  }*/
+  
+/*  #graph{*/
+/*    display: inline;*/
+/*  }*/
+  
+/*  .who{*/
+/*    color: #877c74;*/
+/*    -webkit-text-fill-color: white;*/
+/*  }*/
+/*}*/
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/*@media all and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {*/
+    
+/*    #mainshort{*/
+/*    margin: 1.6em;*/
+/*}*/
+/*  #intro{*/
+/*    margin: 1.6em;*/
+/*}*/
+/*   #mainfull{*/
+/*  font-size: 75%;*/
+/*  line-height: 75%;*/
+/*   }*/
+   
+/*  article section.argument{*/
+/*    display: inline;*/
+/*    font-size: 75%;*/
+/*  }*/
+  
+/*  section.argument{*/
+/*    display: inline;*/
+/*  }*/
+  
+/*  #graph{*/
+/*    display: inline;*/
+/*  }*/
+/*  .who{*/
+/*    color: #877c74;*/
+/*    -webkit-text-fill-color: white;*/
+/*  }*/
+ 
+/*}*/
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+/*@media all and (min-width: 481px) and (max-width: 767px) {*/
+
+/*main{*/
+/*    margin: 1.5em;*/
+/*  }*/
+  
+/*  #mainshort{*/
+/*    margin: 1.5em;*/
+/*}*/
+
+/*#intro{*/
+/*    margin: 1.5em;*/
+/*}*/
+/*  #mainfull{*/
+/*  font-size: 60%;*/
+/*  line-height: 45%;*/
+   /*display: inline;*/
+/*  }*/
+  
+/*  article section.argument{*/
+/*    display: inline;*/
+/*    font-size: 75%;*/
+/*  }*/
+  
+/*  section.argument {*/
+/*    display: inline;*/
+/*  }*/
+  
+/*  #graph{*/
+/*    display: inline;*/
+/*  }*/
+  
+/*  .who{*/
+/*    color: #877c74;*/
+/*    -webkit-text-fill-color: white;*/
+/*  }*/
+/*}*/
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+/*@media all and (min-width: 320px) and (max-width: 480px) {*/
+  
+/*  main{*/
+/*    display: inline;*/
+/*    margin: 1.4em;*/
+/*  }*/
+  
+/*  #mainshort{*/
+/*    margin: 1.4em;*/
+/*}*/
+/*#intro{*/
+/*    margin: 1.4em;*/
+/*}*/
+
+/*  #mainfull{*/
+/*  font-size: 50%;*/
+/*  line-height: 35%;*/
+/*  }*/
+  
+/*  p{*/
+/*    font-size: 75%;*/
+/*  }*/
+ 
+/*   article section.argument{*/
+/*    display: inline;*/
+/*  }*/
+  
+  
+/* section.argument{*/
+/*    display: inline;*/
+/*  }*/
+  
+/*  #graph{*/
+/*    display: inline-block;*/
+/*  }*/
+  
+/*  .who{*/
+/*    color: #877c74;*/
+/*    -webkit-text-fill-color: white;*/
+/*  }*/
+/*}*/

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--NEA AUDIENCE DATA 1982-2017 art museum visits-->
+<!--one line to show trend of art museum audience 1982 - 2017-->
+
+
+<html>
+
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+
+    <title>NEA audience 1982-2017</title>
+    
+     <link rel="stylesheet" href="https://use.typekit.net/dsl0cau.css">
+        <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+        
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+
+    <style type="text/css">
+      body {
+        /*font-family: Helvetica, Arial, sans-serif;*/
+        /*font-size: 20px;*/
+        /*color: white;*/
+        /*padding: 0;*/
+        /*background: #877c74;*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+      }
+
+      #svg1 {
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        stroke-width: 0.02;
+      }
+
+      .gridy,
+      .gridx {
+        opacity: 0.5;
+        stroke-dasharray: "2,4";
+        stroke: grey;
+        stroke-width: 0.1;
+      }
+
+      .yaxis1 {
+        opacity: 0.7;
+        stroke-width: 0.01;
+        stroke: grey;
+        fill: currentColor;
+        font-size: 70%;
+      }
+      
+        .xaxis1 {
+        stroke-width: 0.2;
+        stroke: darkslategrey;
+        /*fill: currentColor;*/
+        fill: none;
+        /*color: #f5f4f9;*/
+        /*font-color: #f5f4f9;*/
+        font-size: 0.9em;
+        opacity: 0.7;
+      }
+      
+      .NEAtitle {
+        opacity: 0.9;
+        color: #efe8e6;
+        fill: currentColor;
+      }
+      
+      .NEAsub {
+        opacity: 0.9;
+        color: #efe8e6;
+        fill: currentColor;
+      }
+      
+      .NEApercent {
+        opacity: 0.9;
+        /*color: #efe8e6;*/
+        color: #ffffff;
+        fill: currentColor;
+      }
+
+      #tooltipNEA {
+        font-family: aktiv-grotesk-thin, sans-serif, "Helvetica", 'Saira', sans-serif;
+        position: absolute;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        margin: 0 auto;
+        width: 50px;
+        height: 18px;
+        padding: 6px;
+        /*padding-top: 2px;*/
+        /*background-color: #737997;*/
+        color: white;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-box-shadow: 0px 2px 10px rgba(0, 50, 0, 0.1);
+        -moz-box-shadow: 0px 2px 10px rgba(0, 50, 0, 0.1);
+        box-shadow: 0px 2px 10px rgba(0, 50, 0, 0.1);
+        pointer-events: none;
+      }
+
+      #tooltipNEA.hidden {
+        display: none;
+      }
+      #11{
+        display: table-cell;
+      }
+      #value, #12{
+        display: table-cell; 
+        vertical-align: middle; 
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+      #tooltipNEA p {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body onresize='window.location.reload(true)'>
+
+
+   <div data-cloud9-id='9' id="svg1">
+
+    <div data-cloud9-id='10' id="tooltipNEA" class="hidden">
+      <p data-cloud9-id='11'><span data-cloud9-id='12' id="value"></span>%</p></div>
+
+
+      <script src="indexNEA1982-2017script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,376 @@
+[
+{
+    "location": "Cluster 0", 
+    "character": "surgery",
+    "words": 992
+},
+{
+    "location": "Cluster 2", 
+    "character": "surgery",
+    "words": 992
+},
+{
+    "location": "Cluster 6", 
+    "character": "surgery",
+    "words": 992
+},
+{
+    "location": "Cluster 17", 
+    "character": "surgery",
+    "words": 992
+},
+{
+    "location": "Cluster 0", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 1", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 3", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 4", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 6", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 13", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 14", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 15", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 16", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 17", 
+    "character": "need",
+    "words": 1316
+},
+{
+    "location": "Cluster 1", 
+    "character": "cancer",
+    "words": 1357
+},
+{
+    "location": "Cluster 6", 
+    "character": "cancer",
+    "words": 1357
+},
+{
+    "location": "Cluster 10", 
+    "character": "cancer",
+    "words": 1357
+},
+{
+    "location": "Cluster 11", 
+    "character": "cancer",
+    "words": 1357
+},
+{
+    "location": "Cluster 12", 
+    "character": "cancer",
+    "words": 1357
+},
+{
+    "location": "Cluster 19", 
+    "character": "cancer",
+    "words": 1357
+},
+{
+    "location": "Cluster 1", 
+    "character": "treatments",
+    "words": 1340
+},
+{
+    "location": "Cluster 6", 
+    "character": "treatments",
+    "words": 1340
+},
+{
+    "location": "Cluster 12", 
+    "character": "treatments",
+    "words": 1340
+},
+{
+    "location": "Cluster 19", 
+    "character": "treatments",
+    "words": 1340
+},
+{
+    "location": "Cluster 1", 
+    "character": "know",
+    "words": 956
+},
+{
+    "location": "Cluster 10", 
+    "character": "know",
+    "words": 956
+},
+{
+    "location": "Cluster 14", 
+    "character": "know",
+    "words": 956
+},
+{
+    "location": "Cluster 16", 
+    "character": "know",
+    "words": 956
+},
+{
+    "location": "Cluster 17", 
+    "character": "know",
+    "words": 956
+},
+{
+    "location": "Cluster 19", 
+    "character": "know",
+    "words": 956
+},
+{
+    "location": "Cluster 2", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 3", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 4", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 5", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 6", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 13", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 15", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 16", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 18", 
+    "character": "medical",
+    "words": 1271
+},
+{
+    "location": "Cluster 2", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 3", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 5", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 6", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 9", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 11", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 12", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 13", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 14", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 16", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 17", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 19", 
+    "character": "family",
+    "words": 1344
+},
+{
+    "location": "Cluster 2", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 3", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 4", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 6", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 7", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 8", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 19", 
+    "character": "work",
+    "words": 1234
+},
+{
+    "location": "Cluster 2", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 3", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 6", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 8", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 10", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 13", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 14", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 15", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 16", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 19", 
+    "character": "time",
+    "words": 1323
+},
+{
+    "location": "Cluster 4", 
+    "character": "years",
+    "words": 1134
+},
+{
+    "location": "Cluster 5", 
+    "character": "years",
+    "words": 1134
+},
+{
+    "location": "Cluster 6", 
+    "character": "years",
+    "words": 1134
+},
+{
+    "location": "Cluster 8", 
+    "character": "years",
+    "words": 1134
+},
+{
+    "location": "Cluster 12", 
+    "character": "years",
+    "words": 1134
+},
+{
+    "location": "Cluster 14", 
+    "character": "years",
+    "words": 1134
+},
+{
+    "location": "Cluster 18", 
+    "character": "years",
+    "words": 1134
+}]

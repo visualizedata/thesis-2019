@@ -1,0 +1,4 @@
+cluster,donors_count,donors_mean,donors_std,donors_min,donors_max,engagement_count,engagement_mean,engagement_std,engagement_min,engagement_max,goal_count,goal_mean,goal_std,goal_min,goal_max,raised_count,raised_mean,raised_std,raised_min,raised_max,shares_count,shares_mean,shares_std,shares_min,shares_max,success_count,success_mean,success_std,success_min,success_max
+1,847,53,76,4,629,282,16,9,1,48,282,15181,20087,658,158333,282,5406,9640,122,84766,282,277,389,3,4000,282,43,36,2,194
+2,751,49,67,3,470,188,13,8,1,43,188,15065,20408,763,137500,188,4554,7067,159,56115,188,325,559,9,7250,188,40,35,2,178
+3,308,52,76,4,479,103,15,9,1,44,103,15214,19682,817,111067,103,4869,9892,212,78268,103,352,665,5,5667,103,40,34,2,167

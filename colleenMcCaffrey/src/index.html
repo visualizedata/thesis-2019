@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <title>Sum of Us</title>
+	    
+		<!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant:300,400" rel="stylesheet">
+		
+		<!-- Styling -->
+		<!-- <link href="style.css" rel="stylesheet"> -->
+		
+        <!-- D3 v4 -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+		
+		<!-- Custom "chord" and "ribbon" functions -->
+		<!-- <script src="loom.js"></script> -->
+        <!-- <script src="string.js"></script> -->
+<style>
+html, body {
+    /* overflow: visible; */
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    /* fill: #b9b9b9; */
+}
+p {
+    font-size: 15px;
+    opacity: 0.70;
+}
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-size: 42px;
+    font-weight: 400;
+}
+h2 {
+    font-size: 28px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.em {
+    font-size: 11px; 
+    font-style: italic;
+    color: grey;
+    font-weight: 50;
+}
+
+/* .cells circle {
+    pointer-events: all;
+}
+circle {
+    pointer-events: all;
+
+} */
+/* 
+.lotr-content-wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#lotr-title {
+	font-size: 42px;
+	font-weight: 300;
+	margin: 40px 30px 0px 30px;
+	color: #272727;
+}
+
+#lotr-subtitle {
+	font-size: 14px;
+	color: #b1b1b1;
+	margin: 0px 30px 20px 30px;
+	font-weight: 300;
+}
+
+#lotr-intro {
+	font-size: 16px;
+	margin: 0px 30px 10px 30px;
+	max-width: 800px;
+}
+
+#lotr-note {
+	font-size: 14px;
+	margin: 0px 30px 10px 30px;
+	max-width: 800px;
+	color: #b1b1b1;
+	font-weight: 300;
+}
+
+#lotr-chart {
+	text-align: center;
+}
+
+#lotr-credit {
+	font-size: 14px;
+	margin: 10px 30px 5px 30px;
+}
+
+#lotr-sources {
+	font-size: 11px;
+	max-width: 300px;
+	margin: 15px 30px 5px 30px;
+	color: #9e9e9e;
+	font-weight: 300;
+	padding-bottom: 20px;
+}
+
+a:hover {
+  	text-decoration: none;
+  	border-bottom: 1px solid black;
+}
+
+a, a:link, a:visited, a:active {
+	text-decoration: none;
+  	color: black;
+  	border-bottom: 1px dotted rgba(0, 0, 0, .5);
+} -->
+
+/* rect,
+path,
+text,
+g,
+line {
+  transition: all 0.2s ease-in-out 0.2s;
+} */
+/*--- chart ---*/
+
+/* .name-title {
+	font-size: 2.8rem;
+	fill: #232323;
+	cursor: default;
+	text-anchor: middle;
+} */
+
+/* .value-title {
+	text-anchor: middle;
+	font-size: 1.8rem;
+  	fill: #b9b9b9;
+} */
+
+/* .character-note {
+	text-anchor: middle;
+	font-size: 1.4rem;
+    fill: #232323;
+} */
+			
+/* .inner-label {
+	font-size: 1.4rem;
+	fill: #232323;
+    cursor: default;
+} */
+
+/* .outer-label {
+	font-size: 1.6rem;
+	fill: #5f5f5f;
+	cursor: default;
+}
+*
+.outer-label-value {
+  	font-size: 1.2rem;
+  	fill: #b9b9b9;
+}
+#lotr-chart {
+    display: block;
+} */
+
+/* app layout */
+.container { 
+    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
+    height: 100%;
+    margin: 0;
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    overflow: visible;
+}
+.section {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 1200px;
+    height: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+.section-alt {
+    min-height: 1200px;
+    height: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+.no-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.center {
+    align-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    }
+.content-1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content-1-3 {
+    display: block;
+    width: 40%;
+    /* padding-top: 40px; */
+    padding-left: 2%;
+    padding-right: 3%;
+    height: 100%;
+
+}
+.content-2-3 {
+    display: block;
+    width: 60%;
+    height:100%;
+}
+.callout {
+    font-weight: bold;
+    color: purple;
+    /* border-bottom: 1px solid purple; */
+}
+/* #hero{
+    background: url(images/thesis-hero.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+.display {
+    padding-top: 10%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+
+.section-wrap {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 776px) {
+    .section {
+        flex-wrap: wrap;
+    }
+    .content-2-3 {
+        width: 100%;
+    }
+    .content-1-3 {
+        width: 100%;
+    }
+
+}
+
+/* css for term swarm */
+.cells path {
+      fill: none;
+      pointer-events: all;
+    }
+    #term-swarm {
+        height: 650px;
+        width: 100%;
+        top: 0;
+        position: sticky;
+        top: 20;
+    }
+    .chart-container-full {
+        width: 100vw;
+    }
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        /* background-color: yellow; */
+    }
+    #terms-head {
+        opacity: 0;
+    }
+    .terms-heading {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -300px;
+        position: sticky;
+        height: 70vh;
+        top: 20;
+        -webkit-transition: opacity 2s ease-in-out;
+         -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+         -ms-transition: opacity 2s ease-in;         
+          -o-transition: opacity 2s ease-in;
+
+    }
+    .align-bottom {
+        bottom: 0;
+        position: sticky;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    section {
+        height: 100%;
+    }
+    #terms-block {
+        opacity: 0;
+        -webkit-transition: opacity 2s ease-in-out;
+         -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+         -ms-transition: opacity 2s ease-in;         
+          -o-transition: opacity 2s ease-in;
+    }
+    
+    /* css for stacks */
+ #details {
+  margin-right: 10%;
+  max-width: 250px; 
+  padding: 1rem;
+
+}
+
+.story-scroll {
+  height: auto;
+  max-height: 250px;
+  overflow: auto;
+}
+.col h3 {
+  align-content: center;
+  padding-top: 30px;
+}
+div.chart-title {
+  width: 50px;
+  margin-top: 7%;
+  margin-left: 0;
+
+}
+.chart-title {
+  color: rgb(152, 0, 67);
+
+}
+
+#barcode-chart {
+  /* padding: 1rem; */
+}
+.two-col {
+  width: 45%;
+  padding-right: 7%;
+}
+
+a {
+  color: #212121;
+  opacity: 1;
+}
+.small {
+  text-transform: upperclass;
+  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-weight: 200;
+}
+a:hover {
+  color: #df65b0;
+  opacity: 0.8;
+}
+  /* .y.axis line {
+    fill: none;
+    stroke: #990000;
+    shape-rendering: crispEdges;
+    stroke-width: 1px;
+  }  */
+
+  /* .x.axis line {
+    display: none;
+  } */
+
+ /* .tick.g-baseline line {
+    stroke: #990000;
+    stroke-dasharray: 0;
+    stroke-width: 2px;
+}   */
+
+   /* .axis text {
+    font-size: 10px;
+    pointer-events: none;
+    fill: #a6a6a6;
+  }
+
+  .y.axis text {
+    text-anchor: start !important;
+    font-size: 10px;
+    fill: #e6e6e6;
+  } 
+
+  .domain {
+    display: none;
+  } */
+
+  .xLabel, .yLabel {
+    font-size: 14px;
+    fill: #cdcdcd;
+
+  }
+  
+  /* .line {
+    stroke: #262626;
+    stroke-width: 2px;
+    fill: none;
+  } */
+
+  /* .area {
+    fill: #f2f2f2;
+    opacity: 0.4;
+  }
+*/
+  /* .g-label-text {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: blue;
+  } */
+  /*
+
+  .g-label-circle {
+    fill: #4bc6df;
+  } */
+
+  .micro-content {
+      /* width: 67%; */
+      display: flex;
+  }
+
+  .micro-content div {
+    /* width: 35%;
+    padding-right: 2%; */
+    padding-bottom: 3%;
+    margin-left: 4%;
+   }
+ 
+    /* div.col  {
+      width: 25%;
+      padding: 15px;
+
+    } */
+
+  .col {
+    width: 80%;
+    align-items: center;
+    margin: 1%;
+  }
+
+  
+
+  .mc-kicker {
+    color: #a6a6a6;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .bolded {
+    font-weight: 500;
+    color: #262626;
+  }
+
+  .mc-head {
+    color: #262626;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+  }
+
+  div.tooltip {   
+      position: absolute;           
+      text-align: left;                                       
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      pointer-events: none;   
+      color: #a6a6a6;  
+  } 
+      
+  .axis--y path {
+    display: none;
+  }
+
+  .terms-display {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+
+  }
+  button.plotlabel {
+  background-color: purple; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  opacity: 1;  
+  }
+
+button.plotlabel:hover {
+  opacity: .7;  
+}
+button.plotlabel.active {
+  background-color: hotpink;
+  opacity: 1;  
+}
+
+.circle-label {
+}
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    overflow: visible;
+}
+.side-full {
+    padding-top: 25%;
+    max-height: 100vh;
+    height: 100%;
+}
+.terms {
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+}
+.terms:hover { 
+    font-size: 36px;
+}
+.terms-list {
+    padding-top: 0;
+    height: 100vh;
+}
+
+#last-content {
+    height: 100vh;
+    min-height: 500px;
+    margin-bottom: 20%;
+}
+.terms-ul {
+    cursor: default;
+}
+#project-title {
+    padding-top: 30%;
+}
+
+
+/* var colorArr = ["pink", "hotpink", "orange", "violet",'#ce1256','#980043','#67001f','#ef6548', '#df65b0']; */
+.cluster5:hover ~ .cluster5 {
+    color: "pink";
+    fill: "pink";
+    }    
+.fin {
+    padding-top: 25%;
+}
+
+ul#barkey {
+    list-style-type: none;
+    margin-left: 15%;
+}
+ul#barkey li {
+    font-size: 10px;
+    display: inline-block;
+    width: 25%;
+}
+
+ul li.below::before {
+    content: "\0268A";
+  color: #c994c7;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -.5em;
+  font-size: 36px;
+}
+ul li.above::before {
+    content: "\0268A";
+  color: #df65b0;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -.5em;
+  font-size: 36px;
+}
+ul li.exceeds::before {
+  content: "\0268A";
+  color:#b30254;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -.5em;
+  font-size: 36px;
+}
+
+#radialTerms {
+    margin-bottom: 10%;
+}
+</style>
+		
+</head>
+<body>
+
+    <!-- dont delete- example working sticky scroll!!!! -->
+    <!-- KEEEEPPPPPP -->
+        <!-- <div class="container">
+        <div class="full-height">
+            <h1>test 1</h1>
+        </div>
+        <div class="full-height">
+                <div class="sticky">
+                <h1>Test 2</h1>
+                </div>
+                <div style="height: 2000px; position: relative;">
+                    this should scroll
+                    <p>this should be last before div moves on</p>
+                </div>
+        </div>
+        <div class="full-height">
+            <h1>Test 3</h1>
+        </div>
+        </div> -->
+       <!-- dont delete above code - working sticky scroll example -->
+       <!-- KEEEEPPPP -->
+    <div class= "container">
+        <div class="full-height">
+            <div id="radialTerms" class="section">
+                <div class="sticky content-2-3">
+                    <div id="radiusGraph" style="width: auto; height: 600px;">
+                            <!-- <div class="heading" style="width: 300px; position: absolute; left: 300; top: 300;  text-align: center;">
+                                <h1>The Sum of Us</h1>
+                                <h2>What can crowdfunding tell us about the U.S. healthcare gap?</h2>
+                            </div> -->
+                        <!-- <button onclick="update(nodeRadiusCluster)">Enter</button>
+                        <button onclick="drop()">Drop</button> -->
+                    <!-- <svg width="600" height="600" viewBox="-480 -250 960 600">
+                        <circle r="100" stroke="brown" stroke-opacity="0.5" fill="none"></circle>
+                        <circle r="200" stroke="steelblue" stroke-opacity="0.5" fill="none"></circle>
+                    </svg> -->
+                    <!-- <button oncllick="update(nodeRadiusAll)">onLoad layout</button> -->
+                    <!-- end radius graph -->
+                    </div> 
+                    <!-- end 2-3 cols -->
+                </div>
+             <div class="content-1-3">
+                <div id="subtitle" style="position: relative; height: 3500px;; overflow: hidden;">
+                    <div id="project-title" class="side-full">
+                        <h1>The Sum of Us</h1>
+                        <h2>What can crowdfunding tell us about the U.S. healthcare gap?</h2>
+                        <p>As of April 2019, health expenses account for 17.9% of the U.S. GDP, the highest of developed countries in the world. Medical costs in the U.S. are the number 1 cause of bankruptcy in U.S. and a federal study conducted in December 2018 shows that <span class="callout">40% of American households can’t afford a $400 financial emergency</span>. 
+                    </div>
+                    <div class="side-full">
+                        <h2>Why Crowdfunding?</h2>
+                        <p>
+                           GoFundMe was founded in 2010 as a way to help people raise money for weddings and vacations. In 2019 <a href="https://www.gofundme.com/start/medical-fundraising"> GoFundMe claims to be the number one medical fundrasing platform</a> with over 250,000 medical campaigns raising more than $650 million dollars. 
+                        </p>
+                    </div>
+                    <div id="radialTrigger1" class="side-full">
+                            <h2>Collecting the Campaign Data</h2>
+                            <p>
+                                Using a hybrid approach of structured and unstructured learning, and the philospohy of human-centered design, the data from campaigns dating back to the last election in November 2018 were collected and analyzed using <a href="https://en.wikipedia.org/wiki/K-means_clustering">k-means clustering</a> to group the campaigns and <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">tf-idf</a> to find the most relevant unique terms within the corpus and each group. Continue scrolling to reveal the top terms and hover to see the group associations and distributions on the node chart. 
+                            </p>
+                    </div>
+                    <div class="sticky terms-list" class="side-full">
+                        <ul class="terms-ul">
+                        <li class="cluster5 cluster0 cluster8 terms">Help</li>
+                        <li class="cluster8 cluster2 terms">Family </li>
+                        <li class="cluster6 cluster8 cluster0 terms"> Work</li>
+                        <li class="cluster1 terms">Breast </li>
+                        <li class="cluster6 terms">Surgery</li>
+                        <li class="cluster1 terms">Cancer </li>
+                        <li class="cluster1 cluster7 terms">Treatments </li>
+                        <li class="cluster9 terms">Hospital</li>
+
+                        <li class="cluster4 terms">Kidney </li>
+                        <li class="cluster2 terms">Home</li>
+                        <li class="cluster7 terms">Support </li>
+                        <li class="cluster5 terms">Car </li>
+                        <li class="cluster5 terms">Accident </li>
+                        <li class="cluster4 terms">Transplant </li>
+
+                        <li class="cluster8 cluster9 terms">Expenses </li>
+                        <li class="cluster9 terms">Heart</li>
+                        <li class="cluster6 terms">Insurance </li>
+
+                        <li class="cluster2 terms">Fire </li>
+
+                        </ul>
+                     </div>
+                    <div id="last-content"  class="side-full">
+                        <h2>Top Terms</h2>
+                        <p>
+                         Not surprisingly <span class="callout">help</span> is number one. Interestingly the non-medical terms <span class="callout">work</span> and <span class="callout">family</span> had similar rankings to the more medical terms of <span class="callout">surgery</span> and <span class="callout">cancer</span>. The node colors represent the unique groups that each campaign was assigned in relation to the structured k-means learning, although a larger corpus of data could reveal new trends.</h3>
+                        </p>
+                    </div>
+                    <div class="side-full">
+                    </div>
+                    <!-- end subtitle -->
+                </div>
+                <!-- end content 1-3 -->
+                </div>
+            <!-- end class section -->
+            </div>
+        <!-- end fullheight div -->
+     </div>
+
+         <!-- old not useful?  -->
+       <!-- <div class="section"> -->
+            <!-- <div id="hero" class="content-1 center">
+                <div class="display">
+                    <h1>The Sum of Us</h1>
+                    <h3> What can crowdfunding tell us about the gaps in the American healthcare system?</h3>
+                </div>
+            </div> 
+        </div> -->
+
+        <!-- old intro -->
+        <!-- <div class="content-1 center">
+            <div id="intro" class="display">
+                <h1>The Sum of Us</h1>
+                <h3> What can crowdfunding tell us about the gaps in the American healthcare system?</h3>
+                <p>As of April 2019, health expenses account for 17.9% of the U.S. GDP, the highest of developed countries in the world. Medical costs are number 1 cause of bankruptcy in U.S. and  federal study conducted in December 2018 shows that 40% of American households can’t afford a $400 financial emergency. The average amount raised per campaign is is $10, 965 compared to what the U.S government pays on healthcare per individual, $8, 234.</p>
+            </div>
+        </div> -->
+        <!-- end old intro -->
+
+
+        <!-- OLD - remove after -->
+        <!-- shows term count -->
+        <!-- <section>
+                <div class="sticky" id="term-swarm">
+                </div>
+            <div class="content-1 center">
+                    <div id="terms-head" class="sticky terms-heading">
+                        <h1>Top Terms</h1>
+                        <h3>After scraping gofundme.com, these were the most frequent unique terms in all of the campaigns. Not surprisingly 'Help' is number one. The colors respresents groups pf campaigns with related terms, revealing people's top needs and sorting them by similarities.</h3>
+                    </div> 
+                     <div id="terms-block" class="align-bottom">
+                     <div class="center">
+                        <p class="terms-display">Help 4386</p>
+                        <p class="terms-display">Family 2524</p>
+                        <p class="terms-display">Time 2143</p>
+                        <p class="terms-display">Work 2021</p>
+                        <p class="terms-display">Breast 2001</p>
+                    </div>
+                </div> 
+            </div>
+        </section> -->
+         <!-- end old - remove after -->
+
+        <!-- plot charts -->
+        <!-- behin full height div -->
+    <div class="full-height">
+        <!-- <section> -->
+            <div id="plots" class="section">
+                    <div id="plots-nav" class="sticky content-2-3">
+                        <!-- Add filter buttons -->
+                        <button class="plotlabel active" onclick="update('raised_mean', 'average across all groups $5,449','5449','The average amount raised per campaign is $5,449. The campaigns that raised the most had top terms: cancer, treatment, surgery, work, expenses','$')">Average Amount Raised</button>
+                        <button class="plotlabel" onclick="update('goal_mean', 'average across all groups $15,144','15144', 'The average campaign fundraising goal ranged from 10k-20k, with campaigns fundraising for top terms heart, liver, doctor, bills, hospital, chemotherapy, cancer, and family being the highest','$')">Average Fundraising Goal</button>
+                        <button class="plotlabel" onclick="update('donors_mean', 'average across all groups 56','56','The average amount of donors per campaign across all groups was 56, with an average donation of $97','')">Average Number of Donors</button>
+                        <!-- Create a div where the graph will take place -->
+                        <div id="plots-chart"></div>
+                    </div>
+                <div class="content-1-3">
+                        <h1>Group Comparisons</h1>
+                        <p>Exploring the campiagns by group shows us patterns of needs as well as who is contributing to what, and maybe more importanly, which campaigns are struggling the most.</p>
+                        <h3 class="plot-information">Text goes here on update of chart</h3>
+                </div>
+                <!-- end plots class section -->
+        </div>
+        <!-- </section> -->
+        <!-- end full height div -->
+        </div>
+        <!-- begin full height div -->
+        <div class="full-height">
+            <blockquote> </blockquote>
+        <!-- barcode stacks -->
+        <div class="section-alt">
+            <div class="section-wrap">
+                <div class="content-2-3">
+                    <div class="section-wrap">
+                        <h1>Campaign Success Rates</h1>
+                        <h3>Which campaigns performed better?</h3>
+                        <p>Since 2013 average national salaries have stagnated while the out of-pocket costs per individual with employer supported healthcare has risen 17.9%, or around $5,893.  For those with a chronic disease? The costs have risen $20,000 on average per individual. Hover over the graphs below to see which campaigns, sorted by topics and terms, raised the most money in the shortest amount of time (success rate), and which had the highest rate of people donating who interacted with the campaign (engagement rate).                      </p>
+                       <p>The average success rate, amount of goal raised, across all groups is 40.9% and the average engagement rate, the percent of people who donate to a campiagn out of all the users who interact in an explicit way, via sharing or liking or donating.</p>
+                        <p class="em">The words below indicate highest ranking per group, but does not represent exclusivity and each groups top terms will likely show up in the other group's campaigns contents. The group labels were ranked higher by the strcutured learning algorithm and therefore indicate higher significance to campaign. </p>
+                    </div>
+                    <ul id="barkey">
+                        <li class="below">Below Average</li>
+                        <li class="above">Above Average</li>
+                        <li class="exceeds">Exceeds Goal</li>
+                    </ul>
+                </div>
+                <div class="content-1-3 ">
+            <!-- <div class="two-col"> -->
+                </div>
+               <!-- set up microcontent to have unique identifier as well? pass as parameter? -->
+            <div class="sticky" id="barcode-chart">
+                <div class="no-wrap">
+                    <div class="content-2-3">
+                        <div class="micro-content">
+                            <div class="chart-title">
+                        <!-- <h3>Group 1</h3> -->
+                                <p class="small">
+                                        work<br/>
+                                        help<br/>
+                                        service<br/>
+                                        family<br/>
+                                        expenses
+                                </p>
+                             </div>
+                            <div class="col" id="g21-chart"></div>
+                        <!-- <div class="col" id="g31-chart"></div> -->
+                        <!-- <div class="col" id="g11-chart"></div> -->
+                        </div>
+                        <div class="micro-content">
+                            <div class="chart-title">
+                        <!-- <h3>Group 2</h3> -->
+                                <p class="small">
+                                cancer<br/>
+                                treatments<br/>
+                                hospital<br/>
+                                surgery<br/>
+                                kidney<br/>                                
+                                 </p>
+                            </div>
+                            <div class="col" id="g22-chart"></div>
+                        <!-- <div class="col" id="g32-chart"></div> -->
+                        <!-- <div class="col" id="g12-chart"></div> -->
+                        </div>
+                        <div class="micro-content">
+                            <div class="chart-title">
+                        <!-- <h3>Group 3</h3> -->
+                                <p class="small">
+                                fire<br/>
+                                home<br/>
+                                family<br/>
+                                lost <br/>
+                                accident
+                                </p>
+                            </div>
+                            <div class="col" id="g23-chart"></div>
+                        <!-- <div class="col" id="g33-chart"></div> -->
+                        <!-- <div class="col" id="g13-chart"></div> -->
+                        </div>
+                    </div><!-- end 2-3 column-->
+                        <!-- <div class="micro-content">
+                            <div class="chart-title">
+                                <p class="small">
+                                que<br/>
+                                en<br/>
+                                el<br/>
+                                para
+                                </p>
+                            </div>
+                        <div class="col" id="g24-chart"></div>
+                            <div class="col" id="g34-chart"></div>
+                            <div class="col" id="g14-chart"></div>
+                        </div>
+                    </div>  -->
+                    <div class="content-1-3">
+                        <div id="details">
+                        </div>
+                    </div>
+                    </div>
+                </div>  <!-- end chart -->
+               </div>  <!-- end section -->
+            </div>
+        <!-- end full height div -->
+        </div> 
+        <div class="full-height">
+            <div class="section">
+                    <!-- <div id="subsection2" class="section-wrap"> -->
+                <div class="sticky content-2-3 ">
+                    <h1>Who's left out?</h1>
+                    <div class="no-wrap">
+                            <div class="two-col">
+                                <p>Digital literacy should not be a prerequisite to accessing affordable healthcare, but with more than 1 in 3 campaigns on the GoFundMe platform being for Medical expenses of all kind, it is slowly becoming one.  This is not a sustainable solution for a healthcare substitute, and many are being left out of the conversation particularly due the the stigma of crowdfunding, people with diseases perceived to be “choices”  or “blameworthy” diseases like mental health and addiction or “getting my life together as a single mom with a sick kid”, as compared to “faultless” diseases such as cancer or a genetic disorder. </p>
+                            </div>
+                            <div class="two-col">
+                                <p> The social element also cannot be ignored, we can in the charts above that the campaigns with higher engagement yield higher success rate, so those without a build in network or community to help promote their campaign are more likely to suffer. “If there’s already a hierarchy of affliction and need in society, then crowdfunding often works to exacerbate it.”</p>
+                            </div>
+                    </div>
+
+                </div>
+                <div class="content-1-3">
+                    <p>Submitted in partial fulfillment of the requirements for the degree of Master Science in Data Visualization at Parsons School of Design</p></p>
+                    <p>This project aims to reveal new data and meaningful insights that can be used by healthcare policymakers and civic-minded innovators to create a more integrative healthcare system.  </p>
+
+                </div>
+            </div>
+        <!-- end full height div -->
+         </div>
+        <!-- end all sections -->
+        <div class="sticky fin full-height">
+            <div class="section">
+                <div class="section-nowrap">
+                    <h1>Thank You</h1>
+                    <h3>Colleen McCaffrey</h3>
+                    <h3>colmccaffrey.github.io/thesis</h3>
+                    </div>
+                </div>
+        </div>
+        <div class="full-height">
+            
+
+        </div>
+    </div>
+            <!-- <div class="content-1-3"> -->
+                <!-- <h1>Top Campaign Terms</h1>
+                <h3>Identifying needs through unstructured learning</h3>
+                <div>
+                 <p>The majority of costs in healthcare are incurred by a fraction of the population but with the current system nearly 1 in 10 Americans resort to crowdfunding for medical costs. We collected data on crowdfunding campaigns from “Medical”, “Emergency” and “Memorial” Categories and analyzed them with k-means clustering to gain more insight on what people are campaigning for and what makes for a successful campaign. Hover over the chart to explore the clusters.</p> -->
+                <!-- <p>With these gaps in the system more people are turning to GoFundMe to supplement insurance costs and the indirect costs of being out of work due to an illness or caring for a loved, which often fall behind in the political conversations around healthcare  behind prescription drug costs and surgery, despite being mentioned in 7 out of 10 campaigns. Some of the primary issues for someone to launch a GoFundMe Campaign are lack of transparency on pricing which varies with health insurance hospital and state, lack of coverage period (though those with coverage struggle as well), gaps in coverage - ie time off, new job, etc, and costs beyond what healthcare covers extra costs like travel for loved one, research or clinical trials not covered, which can be seen in the chart where “family”, “time” and “work” are used even more frequently than “cancer” and “surgery”, showing the recurring need for support in these areas of people’s lives when confronting a medical issue.</p>
+                </div>
+            </div>
+            <div class="content-2-3">
+                <div id="lotr-chart"></div>
+            </div>
+        </div>
+        <div class="section-wrap">
+                <p class="dev-links">
+                  <em>dev links: </em>
+                  <a href="index.html"> Cluster Words | </a> 
+                  <a href="barcode.html"> Cluster Campaign Success | </a>
+                  <a href="parallel_c_ex.html"> Raw Data Explore</a>
+                </p>
+            </div>
+        </div>
+        <script src="example_loom_script.js"></script> -->
+
+    <!-- can remove terms.js -->
+    <!-- <script src="js/terms.js"></script> -->
+    <script src="js/plot-charts.js"></script>
+    <script src="js/stacks.js"></script>
+    <script src="js/radial.js"></script>
+
+
+    <!-- extras -->
+    <script>
+    var btnContainer = document.getElementById("plots-nav");
+
+        // Get all buttons with class="btn" inside the container
+        var btns = btnContainer.getElementsByClassName("plotlabel");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+    </script>
+    
+</body>
+</html>

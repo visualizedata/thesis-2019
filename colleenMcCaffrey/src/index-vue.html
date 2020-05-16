@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>DRAFT-Thesis</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- provided some basic styles, which elements are transitioned might be interesting to look at -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- D3 here -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- and Vue here -->
+</head>
+
+<body>
+  <!-- This is our container div, that we will reference in our script-->
+  <div id="links">
+    <h3><a href="https://xd.adobe.com/view/49826df6-0baf-499b-4b5e-0df23271117a-3fb3/?fullscreen" target="_blank">Design Mockup</a></h3>
+    <h3><a href="https://github.com/colmccaffrey/thesis/tree/master/src/data" target="_blank">Data</a></h3>
+    <h3><a href="https://github.com/colmccaffrey/thesis/tree/master/process" target="_blank">Process</a></h3>
+  </div>
+  <!--begin src code 1 of 2-->
+  <!-- <div id="bars">
+    {{data[2].name}}
+    <div id="center">
+      <h3>Data load test: {{jsonData.title}}</h3>
+      <div>
+        <p>Our inpute here.</p>
+        <input type="number" placeholder="Edit me" v-model='data[0].val'/>
+      </div>
+    <svg :width='svgWidth' :height='svgHeight'> -->
+      <!--end src code 1 of 2-->
+
+
+      <!-- use backticks to include variable declared with $- javascript method when you need variables in string - interpolate lets javascript be executed-->
+      <!-- <g :transform="'translate(' + margin.left + ',' + margin.top + ')'"> -->
+
+        <!-- begin src code 2 of 2-->
+      <!-- <g :transform="`translate(${margin.left}, ${margin.top})`">
+        <rect v-for="(element, index) in data"
+          :x="scale.x(element.name)"
+          :y="scale.y(element.val)"
+          :width="scale.x.bandwidth()"
+          :height = "height-scale.y(element.val)"
+          :name="element.name"
+          :fill="myFill(element.val)"
+      />
+      <g v-axis:x="scale" :transform="`translate(${0}, ${height})`"></g>
+      <g v-axis:y="scale"></g>
+      
+      </g>
+    </svg>
+    </div>
+  </div> -->
+   <!--end src code 2 of 2-->
+
+  <!-- It’s important that your script is at the bottom of your body,
+  because we need the DOM to be ready-->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

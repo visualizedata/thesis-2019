@@ -1,0 +1,30 @@
+/* 
+Credit to Landon Schropp
+https://davidwalsh.name/write-media-queries-sass
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$phablet-width: 550px;
+$bigscreens-width: 2000px;
+$margin-threshold: 1100px;
+
+@mixin phablet {
+  @media (max-width: #{$phablet-width}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$phablet-width}) and (max-width: #{$bigscreens-width - 1px}) {
+    @content;
+  }
+}
+@mixin bigscreens {
+  @media (min-width: #{$bigscreens-width}) {
+    @content;
+  }
+}
+
+@mixin marginthreshold {
+  @media (max-width: #{$margin-threshold}) {
+    @content;
+  }
+}
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */

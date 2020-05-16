@@ -1,0 +1,2118 @@
+Description: Revision of (2017 – Welfare indicators with replicate weights) included incother
+Samples selected:
+      IPUMS-CPS, ASEC 2017                              regular
+File Type:                    rectangular
+Case Selection:               No
+  Variable               Columns        Len    03/2017
+  YEAR               H   1-4            4      X 
+  SERIAL             H   5-9            5      X 
+  MONTH              H  10-11           2      X 
+  CPSID              H  12-25          14      X 
+  ASECFLAG           H  26              1      X 
+  ASECWTH            H  27-36          10      X 
+  STATEFIP           H  37-38           2      X 
+  METAREA            H  39-42           4      X 
+  COUNTY             H  43-47           5      X 
+  STATECENSUS        H  48-49           2      X 
+  INDIVIDCC          H  50              1      X 
+  HHINCOME           H  51-58           8      X 
+  PUBHOUS            H  59              1      X 
+  RENTSUB            H  60              1      X 
+  HEATSUB            H  61              1      X 
+  HEATVAL            H  62-65           4      X 
+  FOODSTMP           H  66              1      X 
+  STAMPNO            H  67              1      X 
+  STAMPMO            H  68-69           2      X 
+  ATELUNCH           H  70-71           2      X 
+  LUNCHSUB           H  72              1      X 
+  FRELUNCH           H  73-74           2      X 
+  FAMINC             H  75-77           3      X 
+  NFAMS              H  78-79           2      X 
+  NCOUPLES           H  80              1      X 
+  NMOTHERS           H  81              1      X 
+  NFATHERS           H  82              1      X 
+  PERNUM             P  83-84           2      X 
+  CPSIDP             P  85-98          14      X 
+  ASECWT             P  99-108         10      X 
+  AGE                P 109-110          2      X 
+  SEX                P 111              1      X 
+  RACE               P 112-114          3      X 
+  MARST              P 115              1      X 
+  FAMSIZE            P 116-117          2      X 
+  NCHILD             P 118              1      X 
+  NCHLT5             P 119              1      X 
+  FAMUNIT            P 120-121          2      X 
+  BPL                P 122-126          5      X 
+  YRIMMIG            P 127-130          4      X 
+  CITIZEN            P 131              1      X 
+  EMPSTAT            P 132-133          2      X 
+  LABFORCE           P 134              1      X 
+  CLASSWKR           P 135-136          2      X 
+  UHRSWORKT          P 137-139          3      X 
+  WHYUNEMP           P 140              1      X 
+  WHYABSNT           P 141-142          2      X 
+  EDUC               P 143-145          3      X 
+  SCHLCOLL           P 146              1      X 
+  DIFFANY            P 147              1      X 
+  EARNWT             P 148-157         10      X 
+  REPWTP             P 158              1      X 
+  REPWTP1            P 159-168         10      X 
+  REPWTP2            P 169-178         10      X 
+  REPWTP3            P 179-188         10      X 
+  REPWTP4            P 189-198         10      X 
+  REPWTP5            P 199-208         10      X 
+  REPWTP6            P 209-218         10      X 
+  REPWTP7            P 219-228         10      X 
+  REPWTP8            P 229-238         10      X 
+  REPWTP9            P 239-248         10      X 
+  REPWTP10           P 249-258         10      X 
+  REPWTP11           P 259-268         10      X 
+  REPWTP12           P 269-278         10      X 
+  REPWTP13           P 279-288         10      X 
+  REPWTP14           P 289-298         10      X 
+  REPWTP15           P 299-308         10      X 
+  REPWTP16           P 309-318         10      X 
+  REPWTP17           P 319-328         10      X 
+  REPWTP18           P 329-338         10      X 
+  REPWTP19           P 339-348         10      X 
+  REPWTP20           P 349-358         10      X 
+  REPWTP21           P 359-368         10      X 
+  REPWTP22           P 369-378         10      X 
+  REPWTP23           P 379-388         10      X 
+  REPWTP24           P 389-398         10      X 
+  REPWTP25           P 399-408         10      X 
+  REPWTP26           P 409-418         10      X 
+  REPWTP27           P 419-428         10      X 
+  REPWTP28           P 429-438         10      X 
+  REPWTP29           P 439-448         10      X 
+  REPWTP30           P 449-458         10      X 
+  REPWTP31           P 459-468         10      X 
+  REPWTP32           P 469-478         10      X 
+  REPWTP33           P 479-488         10      X 
+  REPWTP34           P 489-498         10      X 
+  REPWTP35           P 499-508         10      X 
+  REPWTP36           P 509-518         10      X 
+  REPWTP37           P 519-528         10      X 
+  REPWTP38           P 529-538         10      X 
+  REPWTP39           P 539-548         10      X 
+  REPWTP40           P 549-558         10      X 
+  REPWTP41           P 559-568         10      X 
+  REPWTP42           P 569-578         10      X 
+  REPWTP43           P 579-588         10      X 
+  REPWTP44           P 589-598         10      X 
+  REPWTP45           P 599-608         10      X 
+  REPWTP46           P 609-618         10      X 
+  REPWTP47           P 619-628         10      X 
+  REPWTP48           P 629-638         10      X 
+  REPWTP49           P 639-648         10      X 
+  REPWTP50           P 649-658         10      X 
+  REPWTP51           P 659-668         10      X 
+  REPWTP52           P 669-678         10      X 
+  REPWTP53           P 679-688         10      X 
+  REPWTP54           P 689-698         10      X 
+  REPWTP55           P 699-708         10      X 
+  REPWTP56           P 709-718         10      X 
+  REPWTP57           P 719-728         10      X 
+  REPWTP58           P 729-738         10      X 
+  REPWTP59           P 739-748         10      X 
+  REPWTP60           P 749-758         10      X 
+  REPWTP61           P 759-768         10      X 
+  REPWTP62           P 769-778         10      X 
+  REPWTP63           P 779-788         10      X 
+  REPWTP64           P 789-798         10      X 
+  REPWTP65           P 799-808         10      X 
+  REPWTP66           P 809-818         10      X 
+  REPWTP67           P 819-828         10      X 
+  REPWTP68           P 829-838         10      X 
+  REPWTP69           P 839-848         10      X 
+  REPWTP70           P 849-858         10      X 
+  REPWTP71           P 859-868         10      X 
+  REPWTP72           P 869-878         10      X 
+  REPWTP73           P 879-888         10      X 
+  REPWTP74           P 889-898         10      X 
+  REPWTP75           P 899-908         10      X 
+  REPWTP76           P 909-918         10      X 
+  REPWTP77           P 919-928         10      X 
+  REPWTP78           P 929-938         10      X 
+  REPWTP79           P 939-948         10      X 
+  REPWTP80           P 949-958         10      X 
+  REPWTP81           P 959-968         10      X 
+  REPWTP82           P 969-978         10      X 
+  REPWTP83           P 979-988         10      X 
+  REPWTP84           P 989-998         10      X 
+  REPWTP85           P 999-1008        10      X 
+  REPWTP86           P 1009-1018       10      X 
+  REPWTP87           P 1019-1028       10      X 
+  REPWTP88           P 1029-1038       10      X 
+  REPWTP89           P 1039-1048       10      X 
+  REPWTP90           P 1049-1058       10      X 
+  REPWTP91           P 1059-1068       10      X 
+  REPWTP92           P 1069-1078       10      X 
+  REPWTP93           P 1079-1088       10      X 
+  REPWTP94           P 1089-1098       10      X 
+  REPWTP95           P 1099-1108       10      X 
+  REPWTP96           P 1109-1118       10      X 
+  REPWTP97           P 1119-1128       10      X 
+  REPWTP98           P 1129-1138       10      X 
+  REPWTP99           P 1139-1148       10      X 
+  REPWTP100          P 1149-1158       10      X 
+  REPWTP101          P 1159-1168       10      X 
+  REPWTP102          P 1169-1178       10      X 
+  REPWTP103          P 1179-1188       10      X 
+  REPWTP104          P 1189-1198       10      X 
+  REPWTP105          P 1199-1208       10      X 
+  REPWTP106          P 1209-1218       10      X 
+  REPWTP107          P 1219-1228       10      X 
+  REPWTP108          P 1229-1238       10      X 
+  REPWTP109          P 1239-1248       10      X 
+  REPWTP110          P 1249-1258       10      X 
+  REPWTP111          P 1259-1268       10      X 
+  REPWTP112          P 1269-1278       10      X 
+  REPWTP113          P 1279-1288       10      X 
+  REPWTP114          P 1289-1298       10      X 
+  REPWTP115          P 1299-1308       10      X 
+  REPWTP116          P 1309-1318       10      X 
+  REPWTP117          P 1319-1328       10      X 
+  REPWTP118          P 1329-1338       10      X 
+  REPWTP119          P 1339-1348       10      X 
+  REPWTP120          P 1349-1358       10      X 
+  REPWTP121          P 1359-1368       10      X 
+  REPWTP122          P 1369-1378       10      X 
+  REPWTP123          P 1379-1388       10      X 
+  REPWTP124          P 1389-1398       10      X 
+  REPWTP125          P 1399-1408       10      X 
+  REPWTP126          P 1409-1418       10      X 
+  REPWTP127          P 1419-1428       10      X 
+  REPWTP128          P 1429-1438       10      X 
+  REPWTP129          P 1439-1448       10      X 
+  REPWTP130          P 1449-1458       10      X 
+  REPWTP131          P 1459-1468       10      X 
+  REPWTP132          P 1469-1478       10      X 
+  REPWTP133          P 1479-1488       10      X 
+  REPWTP134          P 1489-1498       10      X 
+  REPWTP135          P 1499-1508       10      X 
+  REPWTP136          P 1509-1518       10      X 
+  REPWTP137          P 1519-1528       10      X 
+  REPWTP138          P 1529-1538       10      X 
+  REPWTP139          P 1539-1548       10      X 
+  REPWTP140          P 1549-1558       10      X 
+  REPWTP141          P 1559-1568       10      X 
+  REPWTP142          P 1569-1578       10      X 
+  REPWTP143          P 1579-1588       10      X 
+  REPWTP144          P 1589-1598       10      X 
+  REPWTP145          P 1599-1608       10      X 
+  REPWTP146          P 1609-1618       10      X 
+  REPWTP147          P 1619-1628       10      X 
+  REPWTP148          P 1629-1638       10      X 
+  REPWTP149          P 1639-1648       10      X 
+  REPWTP150          P 1649-1658       10      X 
+  REPWTP151          P 1659-1668       10      X 
+  REPWTP152          P 1669-1678       10      X 
+  REPWTP153          P 1679-1688       10      X 
+  REPWTP154          P 1689-1698       10      X 
+  REPWTP155          P 1699-1708       10      X 
+  REPWTP156          P 1709-1718       10      X 
+  REPWTP157          P 1719-1728       10      X 
+  REPWTP158          P 1729-1738       10      X 
+  REPWTP159          P 1739-1748       10      X 
+  REPWTP160          P 1749-1758       10      X 
+  FAMID              P 1759-1760        2      X 
+  ASECFWT            P 1761-1772       12      X 
+  ACTNLFLY           P 1773-1774        2      X 
+  FTOTVAL            P 1775-1784       10      X 
+  INCTOT             P 1785-1792        8      X 
+  INCWAGE            P 1793-1799        7      X 
+  INCBUS             P 1800-1806        7      X 
+  INCFARM            P 1807-1813        7      X 
+  INCSS              P 1814-1818        5      X 
+  INCWELFR           P 1819-1823        5      X 
+  INCRETIR           P 1824-1829        6      X 
+  INCSSI             P 1830-1834        5      X 
+  INCINT             P 1835-1839        5      X 
+  INCUNEMP           P 1840-1844        5      X 
+  INCWKCOM           P 1845-1849        5      X 
+  INCVET             P 1850-1854        5      X 
+  INCSURV            P 1855-1860        6      X 
+  INCDISAB           P 1861-1866        6      X 
+  INCDIVID           P 1867-1872        6      X 
+  INCRENT            P 1873-1877        5      X 
+  INCEDUC            P 1878-1882        5      X 
+  INCCHILD           P 1883-1887        5      X 
+  INCASIST           P 1888-1892        5      X 
+  INCOTHER           P 1893-1897        5      X 
+  GOTVDISA           P 1898             1      X 
+  GOTVEDUC           P 1899             1      X 
+  GOTVOTHE           P 1900             1      X 
+  GOTVPENS           P 1901             1      X 
+  GOTVSURV           P 1902             1      X 
+  INCDISA1           P 1903-1907        5      X 
+  INCDISA2           P 1908-1912        5      X 
+  INCLONGJ           P 1913-1919        7      X 
+  INCRETI1           P 1920-1924        5      X 
+  INCRETI2           P 1925-1929        5      X 
+  INCSURV1           P 1930-1934        5      X 
+  INCSURV2           P 1935-1939        5      X 
+  MTHWELFR           P 1940-1944        5      X 
+  OINCBUS            P 1945-1950        6      X 
+  OINCFARM           P 1951-1956        6      X 
+  OINCWAGE           P 1957-1963        7      X 
+  SRCDISA1           P 1964-1965        2      X 
+  SRCDISA2           P 1966-1967        2      X 
+  SRCEARN            P 1968             1      X 
+  SRCEDUC            P 1969             1      X 
+  SRCRETI1           P 1970             1      X 
+  SRCRETI2           P 1971             1      X 
+  SRCSURV1           P 1972-1973        2      X 
+  SRCSURV2           P 1974-1975        2      X 
+  SRCUNEMP           P 1976             1      X 
+  SRCWELFR           P 1977             1      X 
+  SRCWKCOM           P 1978             1      X 
+  SSIKID             P 1979             1      X 
+  SSKID              P 1980             1      X 
+  VETQA              P 1981             1      X 
+  WHYSS1             P 1982             1      X 
+  WHYSS2             P 1983             1      X 
+  WHYSSI1            P 1984             1      X 
+  WHYSSI2            P 1985             1      X 
+  CTCCRD             P 1986-1991        6      X 
+  ACTCCRD            P 1992-1996        5      X 
+  ADJGINC            P 1997-2003        7      X 
+  EITCRED            P 2004-2007        4      X 
+  FEDRETIR           P 2008-2013        6      X 
+  FEDTAX             P 2014-2020        7      X 
+  FEDTAXAC           P 2021-2027        7      X 
+  FICA               P 2028-2032        5      X 
+  FILESTAT           P 2033             1      X 
+  DEPSTAT            P 2034-2035        2      X 
+  MARGTAX            P 2036-2037        2      X 
+  STATETAX           P 2038-2043        6      X 
+  STATAXAC           P 2044-2049        6      X 
+  TAXINC             P 2050-2056        7      X 
+  OFFPOV             P 2057-2058        2      X 
+  OFFPOVUNIV         P 2059-2060        2      X 
+  OFFTOTVAL          P 2061-2070       10      X 
+  POVERTY            P 2071-2072        2      X 
+  CUTOFF             P 2073-2078        6      X 
+  FOODSTAMP          P 2079-2083        5      X 
+  SCHLLUNCH          P 2084-2087        4      X 
+  SPMLUNCH           P 2088-2091        4      X 
+  SPMCAPHOUS         P 2092-2109       18      X 
+  SPMNEWFAM          P 2110             1      X 
+  SPMPOV             P 2111             1      X 
+  SPMMORT            P 2112             1      X 
+  SPMEQSCALE         P 2113-2131       19      X 
+  SPMWT              P 2132-2139        8      X 
+  SPMMEDXPNS         P 2140-2149       10      X 
+  SPMCHSUP           P 2150-2154        5      X 
+  SPMSTTAX           P 2155-2164       10      X 
+  SPMFEDTAXAC        P 2165-2184       20      X 
+  SPMEITC            P 2185-2189        5      X 
+  SPMFICA            P 2190-2204       15      X 
+  SPMFEDTAXBC        P 2205-2224       20      X 
+  SPMWIC             P 2225-2233        9      X 
+  SPMHEAT            P 2234-2255       22      X 
+  SPMSNAP            P 2256-2260        5      X 
+  SPMFTOTVAL         P 2261-2267        7      X 
+  SPMTOTRES          P 2268-2289       22      X 
+  SPMNADULTS         P 2290-2291        2      X 
+  SPMNCHILD          P 2292-2293        2      X 
+  SPMNPERS           P 2294-2295        2      X 
+  SPMTHRESH          P 2296-2317       22      X 
+  DISABWRK           P 2318             1      X 
+  HEALTH             P 2319             1      X 
+  QUITSICK           P 2320             1      X 
+  HIMCAID            P 2321             1      X 
+  HIMCARE            P 2322             1      X 
+  HICHAMP            P 2323             1      X 
+  CAID               P 2324             1      X 
+  CARE               P 2325             1      X 
+  CHAMPUS            P 2326             1      X 
+  CHAMPVA            P 2327             1      X 
+  MILITVA            P 2328             1      X 
+  INDIANH            P 2329             1      X 
+  MOCAID             P 2330-2331        2      X 
+  KIDCAID            P 2332             1      X 
+  HIURULE            P 2333-2334        2      X 
+  HIUNPERS           P 2335-2336        2      X 
+  HIUID              P 2337-2344        8      X 
+  HIUFPGINC          P 2345-2348        4      X 
+  HIUFPGBASE         P 2349-2353        5      X 
+  GOTWIC             P 2354             1      X 
+  KIDCNEED           P 2355             1      X 
+
+Variable Availability Key:
+All Years X - available in this sample
+All Years . - not available in this sample
+
+
+ MONTH		Month
+01		January
+02		February
+03		March
+04		April
+05		May
+06		June
+07		July
+08		August
+09		September
+10		October
+11		November
+12		December
+
+ ASECFLAG		Flag for ASEC
+1		ASEC
+2		March Basic
+
+ STATEFIP		State (FIPS code)
+01		Alabama
+02		Alaska
+04		Arizona
+05		Arkansas
+06		California
+08		Colorado
+09		Connecticut
+10		Delaware
+11		District of Columbia
+12		Florida
+13		Georgia
+15		Hawaii
+16		Idaho
+17		Illinois
+18		Indiana
+19		Iowa
+20		Kansas
+21		Kentucky
+22		Louisiana
+23		Maine
+24		Maryland
+25		Massachusetts
+26		Michigan
+27		Minnesota
+28		Mississippi
+29		Missouri
+30		Montana
+31		Nebraska
+32		Nevada
+33		New Hampshire
+34		New Jersey
+35		New Mexico
+36		New York
+37		North Carolina
+38		North Dakota
+39		Ohio
+40		Oklahoma
+41		Oregon
+42		Pennsylvania
+44		Rhode Island
+45		South Carolina
+46		South Dakota
+47		Tennessee
+48		Texas
+49		Utah
+50		Vermont
+51		Virginia
+53		Washington
+54		West Virginia
+55		Wisconsin
+56		Wyoming
+61		Maine-New Hampshire-Vermont
+65		Montana-Idaho-Wyoming
+68		Alaska-Hawaii
+69		Nebraska-North Dakota-South Dakota
+70		Maine-Massachusetts-New Hampshire-Rhode Island-Vermont
+71		Michigan-Wisconsin
+72		Minnesota-Iowa
+73		Nebraska-North Dakota-South Dakota-Kansas
+74		Delaware-Virginia
+75		North Carolina-South Carolina
+76		Alabama-Mississippi
+77		Arkansas-Oklahoma
+78		Arizona-New Mexico-Colorado
+79		Idaho-Wyoming-Utah-Montana-Nevada
+80		Alaska-Washington-Hawaii
+81		New Hampshire-Maine-Vermont-Rhode Island
+83		South Carolina-Georgia
+84		Kentucky-Tennessee
+85		Arkansas-Louisiana-Oklahoma
+87		Iowa-N Dakota-S Dakota-Nebraska-Kansas-Minnesota-Missouri
+88		Washington-Oregon-Alaska-Hawaii
+89		Montana-Wyoming-Colorado-New Mexico-Utah-Nevada-Arizona
+90		Delaware-Maryland-Virginia-West Virginia
+99		State not identified
+
+ METAREA		Metropolitan area
+0060		Abilene, TX
+0080		Akron, OH
+0120		Albany, GA
+0160		Albany-Schenectady-Troy, NY
+0200		Albuquerque, NM
+0240		Allentown-Bethlehem-Easton, PA/NJ
+0280		Altoona, PA MSA
+0320		Amarillo, TX
+0380		Anchorage, AK
+0400		Anderson, IN
+0440		Ann Arbor, MI
+0450		Anniston, AL
+0451		Anniston-Oxford, AL
+0460		Appleton,Oshkosh-Neenah, WI
+0461		Appleton, WI
+0462		Oshkosh-Neenah, WI
+0480		Asheville, NC
+0500		Athens, GA
+0501		Athens-Clark County, GA
+0520		Atlanta, GA
+0521		Atlanta-Sandy Springs-Marietta, GA
+0560		Atlantic City, NJ
+0580		Auburn-Opelika, AL
+0600		Augusta-Aiken, GA-SC
+0601		Augusta-Richmond County, GA-SC
+0640		Austin, TX
+0641		Austin-Round Rock, TX
+0680		Bakersfield, CA
+0720		Baltimore, MD
+0721		Baltimore-Towson, MD
+0722		Baltimore-Towson-Columbia, MD
+0730		Bangor, ME
+0740		Barnstable-Yarmouth, MA
+0741		Barnstable Town, MA
+0760		Baton Rouge, LA
+0780		Battle Creek, MI
+0840		Beaumont-Port Arthur-Orange, TX
+0841		Beaumont-Port Arthur, TX
+0860		Bellingham, WA
+0870		Benton Harbor, MI
+0871		Niles-Benton Harbor, MI
+0880		Billings, MT
+0900		Bend, OR
+0920		Biloxi-Gulfport, MS
+0960		Binghamton, NY
+1000		Birmingham, AL
+1001		Birmingham-Hoover, AL
+1010		Blacksburg-Christiansburg-Radford, VA
+1020		Bloomington, IN
+1040		Bloomington-Normal, IL
+1041		Bloomington, IL
+1080		Boise City, ID
+1081		Boise City-Nampa, ID
+1120		Boston, MA
+1121		Lawrence-Haverhill. MA/NH
+1122		Lowell, MA/NH
+1123		Salem-Gloucester, MA
+1124		Boston-Cambridge-Quincy, MA-NH
+1125		Boston-Cambridge-Newton, MA-NH
+1130		Bowling Green, KY
+1140		Bradenton, FL
+1150		Bremerton-Silverdale, WA
+1160		Bridgeport, CT
+1161		Bridgeport-Stamford-Norwalk, CT
+1200		Brockton, MA
+1240		Brownsville-Harlingen-San Benito,TX
+1241		Brownsville-Harlingen, TX
+1280		Buffalo-Niagara Falls, NY
+1281		Niagara Falls, NY
+1300		Burlington, NC
+1310		Burlington, VT
+1311		Burlington-South Burlington, VT
+1305		California-Lexington Park, MD
+1320		Canton, OH
+1321		Canton-Massillon, OH
+1340		Carbondale-Marion, IL
+1360		Cedar Rapids, IA
+1390		Chambersburg-Waynesboro, PA
+1400		Champaign-Urbana-Rantoul, IL
+1401		Champaign-Urbana, IL
+1440		Charleston-North Charleston, SC
+1480		Charleston, WV
+1520		Charlotte-Gastonia-Rock Hill, NC/SC
+1521		Charlotte-Gastonia-Concord, NC/SC
+1530		Charlottesville, VA
+1560		Chattanooga, TN/GA
+1600		Chicago-Gary-Lake IL
+1601		Aurora-Elgin, IL
+1602		Gary-Hamond-East Chicago, IN
+1603		Joliet, IL
+1604		Lake County, IL
+1605		Chicago-Naperville-Joliet, IL-IN-WI
+1620		Chico,CA
+1640		Cincinnati-Hamilton,OH/KY/IN
+1641		Cincinnati-Middleton, OH/KY/IN
+1660		Clarksville-Hopkinsville,TN/KY
+1661		Clarksville, TN/KY, TN/KY
+1680		Cleveland, OH
+1681		Cleveland-Lorain-Mentor, OH
+1685		Cleveland, TN
+1700		Coeur d'Alene, ID
+1710		College Station-Bryan, TX
+1720		Colorado Springs, CO
+1740		Columbia, MO
+1760		Columbia, SC
+1800		Columbus, GA/AL
+1840		Columbus, OH
+1880		Corpus Christi, TX
+1920		Dallas-Fort Worth, TX
+1921		Fort Worth-Arlington, TX
+1922		Dallas-Fort Worth-Arlington, TX
+1930		Danbury, CT
+1940		Daphne-Fairhope-Foley, AL
+1960		Davenport-Rock Island-Moline, IA/IL
+2000		Dayton-Springfield, OH
+2001		Springfield, OH
+2002		Dayton, OH
+2020		Daytona Beach, FL
+2021		Deltona-Daytona Beach-Ormond Beach, FL
+2030		Decatur, AL
+2040		Decatur, IL
+2080		Denver-Boulder-Longmont, CO
+2081		Boulder-Longmont, CO
+2082		Boulder, CO
+2083		Denver-Aurora, CO
+2120		Des Moines, IA
+2160		Detroit, MI
+2161		Detroit-Warren-Livonia, MI
+2190		Dover, DE
+2240		Duluth-Superior, MN/WI
+2241		Duluth, MN/WI
+2281		Dutchess County, NY
+2285		East Stroudsburg, PA
+2290		Eau Claire, WI
+2300		El Centro, CA
+2310		El Paso, TX
+2330		Elkhart-Goshen, IN
+2360		Erie, PA
+2400		Eugene-Springfield, OR
+2440		Evansville, IN/KY
+2520		Fargo-Moorhead, ND/MN
+2521		Fargo, ND/MN
+2540		Farmington, NM
+2560		Fayetteville, NC
+2580		Fayetteville-Springdale, AR
+2581		Fayetteville-Springdale-Rogers, AR-MO
+2600		Fitchburg-Leominster, MA
+2601		Leominster-Fitchburg-Gardner, MA
+2640		Flint, MI
+2650		Florence, AL
+2651		Florence-Muscle Shoals, AL
+2660		Florence, SC
+2670		Fort Collins-Loveland, CO
+2680		Fort Lauderdale-Hollywood-Pompano Beach, FL
+2700		Fort Myers-Cape Coral, FL
+2710		Fort Pierce, FL
+2711		Port St. Lucie-Fort Pierce, FL
+2720		Fort Smith, AR/OK
+2750		Fort Walton Beach, FL
+2751		Fort Walton Beach-Crestview-Destin, FL
+2760		Fort Wayne, IN
+2840		Fresno, CA
+2880		Gadsden, AL
+2900		Gainesville, FL
+2905		Gainesville, GA
+2920		Galveston-Texas City, TX
+2940		Glens Falls, NY
+2980		Goldsboro, NC
+3000		Grand Rapids, MI
+3001		Grand Rapids-Wyoming, MI
+3002		Grand Rapids-Muskegon-Holland, MI MSA
+3003		Holland-Grand Haven, MI
+3060		Greeley, CO
+3080		Green Bay, WI
+3120		Greensboro-Winston Salem, NC
+3121		Winston-Salem, NC
+3122		Greensboro-High Point, NC
+3150		Greenville, NC
+3160		Greenville-Spartanburg-Anderson, SC
+3161		Anderson, SC
+3162		Greenville, SC
+3163		Spartanburg, SC
+3180		Hagerstown, MD
+3181		Hagerstown-Martinsburg, MD-WV
+3200		Hamilton-Middleton, OH
+3220		Hanford-Corcoran, CA
+3240		Harrisburg-Lebanon-Carlisle, PA
+3241		Harrisburg-Carlisle, PA
+3260		Harrisonburg, VA
+3280		Hartford-Bristol-Middleton- New Britain, CT
+3283		New Britain, CT
+3284		Hartford-West Hartford-East Hartford, CT
+3285		Hartford, CT
+3290		Hickory-Morganton, NC
+3291		Hickory-Morganton-Lenoir, NC
+3310		Hilton Head Island-Bluffton-Beaufort, SC
+3320		Honolulu, HI
+3350		Houma-Thibodaux, LA
+3351		Houma-Bayou Cane-Thibodaux, LA
+3360		Houston-Brazoria,TX
+3361		Brazoria, TX
+3362		Houston-Baytown-Sugar Land, TX
+3400		Huntington-Ashland,WV/KY/OH
+3440		Huntsville,AL
+3460		Idaho Falls, ID
+3480		Indianapolis, IN
+3500		Iowa City, IA
+3520		Jackson, MI
+3560		Jackson, MS
+3590		Jacksonville,FL
+3600		Jacksonville, NC
+3610		Jamestown-Dunkirk, NY
+3611		Jamestown, NY MSA
+3620		Janesville-Beloit, WI
+3621		Janvesville, WI
+3660		Johnson City-Kingsport-Bristol, TN/VA
+3661		Johnson City, TN
+3662		Kingsport-Bristol, TN-VA
+3680		Johnstown, PA
+3710		Joplin, MO
+3715		Kahului-Wailuku-Lahaina, HI
+3720		Kalamazoo-Portage, MI
+3721		Kalamazoo-Battle Creek, MI MSA
+3740		Kankakee, IL
+3741		Kankakee-Bradley, IL
+3760		Kansas City, MO/KS
+3790		Kennewick-Richland, WA
+3810		Killeen-Temple,TX
+3811		Killeen-Temple-Fort Hood, TX
+3830		Kingston, NY
+3840		Knoxville, TN
+3870		LaCrosse, WI
+3880		Lafayette, LA
+3890		Lafayette-West Lafayette, IN
+3960		Lake Charles, LA
+3980		Lakeland-Winterhaven, FL
+4000		Lancaster, PA
+4040		Lansing-East Lansing, MI
+4080		Laredo, TX
+4100		Las Cruces, NM
+4120		Las Vegas, NV
+4130		Las Vegas-Paradise, NV
+4150		Lawrence, KS
+4200		Lawton, OK
+4290		Lewiston-Auburn, ME
+4280		Lexington-Fayette, KY
+4320		Lima, OH
+4360		Lincoln, NE
+4400		Little Rock-North Little Rock, AR
+4420		Longview-Marshall, TX
+4421		Longview, TX
+4430		Longview, WA
+4440		Lorain-Elyria, OH
+4480		Los Angeles-Long Beach, CA
+4481		Anaheim-Santa Ana- Garden Grove, CA
+4482		Orange County, CA
+4483		Los Angeles-Long Beach-Santa Ana, CA
+4484		Los Angeles-Long Beach-Anaheim, CA
+4520		Louisville, KY/IN
+4600		Lubbock, TX
+4640		Lynchburg, VA
+4680		Macon-Warner Robins, GA
+4681		Macon, GA
+4682		Warner Robins, GA
+4700		Madera, CA
+4720		Madison, WI
+4760		Manchester, NH
+4761		Manchester-Nashua, NH
+4770		Manhattan, KS
+4800		Mansfield, OH
+4880		McAllen-Edinburg-Pharr-Mission, TX
+4881		McAllen-Edinburg-Pharr, TX
+4890		Medford, OR
+4900		Melbourne-Titusville-Cocoa-Palm Beach, FL
+4901		Palm Bay-Melbourne-Titusville, FL
+4920		Memphis, TN/AR/MS
+4940		Merced, CA
+5000		Miami-Hialeah, FL
+5001		Miami-Fort Lauderdale-Miami Beach, FL
+5020		Michigan City-La Porte, IN
+5080		Milwaukee, WI
+5081		Milwaukee-Waukesha-West Allis, WI
+5120		Minneapolis-St. Paul, MN
+5121		Minneapolis-St. Paul-Bloomington, MN/WI
+5160		Mobile, AL
+5170		Modesto, CA
+5190		Monmouth-Ocean, NJ
+5200		Monroe, LA
+5220		Monroe, MI
+5240		Montgomery, Al
+5260		Morgantown, WV
+5270		Mount Vernon-Anacortes, WA
+5320		Muskegon-Norton Shores-Muskegon Heights, MI
+5321		Muskegon-Norton Shores, MI
+5330		Myrtle Beach, SC
+5331		Myrtle Beach-Conway-North Myrtle Beach, SC
+5340		Naples, FL
+5341		Naples-Marco Island, FL
+5350		Nashua, NH
+5360		Nashville, TN
+5361		Nashville-Davidson-Murfreesboro, TN
+5400		New Bedford, MA
+5480		New Haven-Meriden, CT
+5481		New Haven, CT
+5482		New Haven-Milford, CT
+5520		New London-Norwich, CT/RI
+5560		New Orleans, LA
+5561		New Orleans-Metairie-Kenner, LA
+5600		New York-Northeastern NJ
+5601		Nassau-Suffolk, NY
+5602		Bergen-Passaic, NJ
+5603		Jersey City, NJ
+5604		Middlesex-Somerset-Hunterdon, NJ
+5605		Newark, NJ
+5606		New York-Northern New Jersey-Long Island, NY-NJ-PA
+5607		New York, NY
+5640		Newark, OH
+5660		Newburgh-Middletown, NY
+5720		Norfolk-Virginia Beach-Newport News, VA
+5721		Virginia Beach-Norfolk-Newport News, VA/NC
+5740		North Port-Sarasota-Bradenton, FL
+5760		Norwalk, CT
+5770		Norwich-New London, CT
+5790		Ocala, FL
+5800		Odessa, TX
+5801		Midland, TX
+5840		Ocean City, NJ
+5880		Oklahoma City, OK
+5910		Olympia, WA
+5920		Omaha, NE/IA
+5921		Omaha-Council Bluffs, NE/IA
+5950		Orange, NY
+5960		Orlando, FL
+6010		Panama City, FL
+6011		Panama City-Lynn Haven, FL
+6080		Pensacola, FL
+6081		Pensacola-Ferry Pass-Brent, FL
+6120		Peoria, IL
+6160		Philadelphia, PA/NJ
+6161		Philadelphia-Camden-Wilmington, PA/NJ/DE
+6200		Phoenix, AZ
+6201		Phoenix-Mesa-Scottsdale, AZ
+6250		Pine Bluff, AR
+6280		Pittsburg, PA
+6281		Beaver County
+6400		Portland, ME
+6401		Portland-South Portland, ME
+6440		Portland-Vancouver, OR/WA
+6441		Vancouver, WA
+6442		Portland-Vancouver-Beaverton, OR/WA
+6450		Portsmouth-Dover-Rochester, NH/ME
+6451		Portsmouth-Rochester, NH/ME MSA
+6452		Rochester-Dover, NH/ME
+6460		Poughkeepsie, NY
+6461		Poughkeepsie-Newburgh-Middletown, NY
+6470		Prescott, AZ
+6480		Providence-Fall River-Pawtucket, MA/RI
+6482		Pawtuckett-Woonsocket-Attleboro, RI/MA
+6483		Providence-Fall River-Warwick, MA-RI
+6484		Providence-Warwick, RI-MA
+6520		Provo-Orem, UT
+6560		Pueblo, CO
+6580		Punta Gorda, FL
+6600		Racine, WI
+6640		Raleigh-Durham, NC
+6641		Durham, NC
+6642		Raleigh-Carey, NC
+6680		Reading, PA
+6690		Redding, CA
+6720		Reno, NV
+6721		Reno-Sparks, NV
+6760		Richmond-Petersburg, VA
+6761		Richmond, VA
+6780		Riverside-San Bernadino, CA
+6800		Roanoke, VA
+6840		Rochester, NY
+6880		Rockford, IL
+6920		Sacramento, CA
+6921		Sacramento-Arden Arcade-Roseville, CA
+6960		Saginaw-Bay City-Midland, MI
+6961		Saginaw-Saginaw Township North, MI
+6980		St. Cloud, MN
+7000		St. George, UT
+7040		St. Louis, MO/IL
+7080		Salem, OR
+7120		Salinas-Sea Side-Monterey, CA
+7121		Salinas, CA
+7130		Salisbury, MD
+7160		Salt Lake City-Ogden, UT
+7161		Salt Lake City, UT
+7162		Ogden-Clearfield, UT
+7240		San Antonio, TX
+7320		San Diego, CA
+7321		San Diego-Carlsbad-San Marcos, CA
+7360		San Francisco-Oaklan-Vallejo, CA
+7361		Oakland, CA
+7362		Vallejo-Fairfield-Napa, CA
+7363		Vallejo-Fairfield, CA
+7364		Napa, CA
+7365		San Francisco-Oakland-Fremont, CA
+7400		San Jose, CA
+7401		San Jose-Sunnyvale-Santa Clara, CA
+7460		San Luis Obispo-Atascadero-Paso Robles, CA
+7461		San Luis Obispo-Paso Robles, CA
+7470		Santa Barbara-Santa Maria-Lompoc, CA
+7471		Santa Barbara-Santa Maria-Goleta, CA
+7472		Santa Barbara-Santa Maria, CA
+7480		Santa Cruz, CA
+7481		Santa Cruz-Watsonville, CA
+7490		Santa Fe, NM
+7500		Santa Rosa-Petaluma, CA
+7510		Sarasota, FL
+7511		Sarasota-Bradenton-Venice, FL
+7520		Savannah, GA
+7560		Scranton-Wilkes-Barre, PA
+7600		Seattle-Everett, WA
+7601		Seattle-Tacoma-Bellevue, WA
+7610		Sharon, PA
+7640		Sherman-Denison, TX
+7680		Shreveport, LA
+7681		Shreveport-Bossier City, LA
+7720		Sioux City, IA-NE
+7760		Sioux Falls, SD
+7800		South Bend-Mishawaka, IN
+7840		Spokane, WA
+7880		Springfield, IL
+7920		Springfield, MO
+8000		Springfield-Holyoke-Chicopee, MA
+8001		Springfield, MA/CT
+8040		Stamford, CT
+8120		Stockton, CA
+8160		Syracuse, NY
+8200		Tacoma, WA
+8240		Tallahassee, FL
+8280		Tampa-St. Petersburg-Clearwater, FL
+8320		Terre Haute, IN
+8400		Toledo, OH/MI
+8440		Topeka, KS
+8480		Trenton, NJ
+8481		Trenton-Ewing, NJ
+8520		Tucson, AZ
+8560		Tulsa, OK
+8600		Tuscaloosa, AL
+8620		Tyler, TX
+8640		Urban Honolulu, HI
+8680		Utica-Rome, NY
+8700		Valdosta, GA
+8730		Ventura-Oxnard-Simi Valley, CA
+8731		Oxnard-Thousand Oaks-Ventura, CA
+8740		Vero Beach, FL
+8750		Victoria, TX
+8760		Vineland-Milville-Bridgetown, NJ
+8780		Visalia-Tulare-Porterville, CA
+8781		Visalia-Porterville, CA
+8800		Waco, TX
+8840		Washington, DC/MD/VA
+8880		Waterbury, CT
+8920		Waterloo-Cedar Falls, IA
+8930		Watertown-Fort Drum, NY
+8940		Wausau, WI
+8960		West Palm Beach-Boca Raton-Delray Beach, FL
+9000		Wheeling, WV/OH
+9040		Wichita, KS
+9050		Wichita Falls, TX
+9140		Williamsport, PA
+9160		Wilmington, DE/NJ/MD
+9200		Wilmington, NC
+9220		Winchester, VA-WV
+9240		Worcester, MA
+9260		Yakima, WA
+9270		Yolo, CA
+9280		York, PA
+9281		York-Hanover, PA
+9320		Youngstown-Warren, OH/PA
+9321		Youngstown-Warren-Boardman, OH
+9340		Yuba City, CA
+9360		Yuma, AZ
+9997		Other metropolitan areas, unidentified
+9998		NIU, household not in a metropolitan area
+9999		Missing data
+
+ STATECENSUS		State (Census code)
+00		Unknown
+11		Maine
+12		New Hampshire
+13		Vermont
+14		Massachusetts
+15		Rhode Island
+16		Connecticut
+19		Maine, New Hampshire, Vermont, Rhode Island
+21		New York
+22		New Jersey
+23		Pennsylvania
+31		Ohio
+32		Indiana
+33		Illinois
+34		Michigan
+35		Wisconsin
+39		Michigan, Wisconsin
+41		Minnesota
+42		Iowa
+43		Missouri
+44		North Dakota
+45		South Dakota
+46		Nebraska
+47		Kansas
+49		Minnesota, Iowa, Missouri, North Dakota, South Dakota, Nebraska, Kansas
+50		Delaware, Maryland, Virginia, West Virginia
+51		Delaware
+52		Maryland
+53		District of Columbia
+54		Virginia
+55		West Virginia
+56		North Carolina
+57		South Carolina
+58		Georgia
+59		Florida
+60		South Carolina, Georgia
+61		Kentucky
+62		Tennessee
+63		Alabama
+64		Mississippi
+67		Kentucky, Tennessee
+69		Alabama, Mississippi
+71		Arkansas
+72		Louisiana
+73		Oklahoma
+74		Texas
+79		Arkansas, Louisiana, Oklahoma
+81		Montana
+82		Idaho
+83		Wyoming
+84		Colorado
+85		New Mexico
+86		Arizona
+87		Utah
+88		Nevada
+89		Montana, Idaho, Wyoming, Colorado, New Mexico, Arizona, Utah, Nevada
+91		Washington
+92		Oregon
+93		California
+94		Alaska
+95		Hawaii
+99		Washington, Oregon, Alaska, Hawaii
+
+ PUBHOUS		Living in public housing
+0		NIU
+1		No
+2		Yes
+
+ RENTSUB		Paying lower rent due to government subsidy
+0		NIU
+1		No
+2		Yes
+
+ HEATSUB		Received energy subsidy
+0		NIU
+1		No
+2		Yes
+
+ FOODSTMP		Food stamp recipiency
+0		NIU
+1		No
+2		Yes
+
+ STAMPMO		Number of months received food stamps
+00		NIU
+01		One
+02		Two
+03		Three
+04		Four
+05		Five
+06		Six
+07		Seven
+08		Eight
+09		Nine
+10		Ten
+11		Eleven
+12		Twelve
+
+ ATELUNCH		Number of children who ate complete school lunch
+00		Zero
+01		One
+02		Two
+03		Three
+04		Four
+05		Five
+06		Six
+07		Seven
+08		Eight
+09		Nine or more
+99		NIU
+
+ LUNCHSUB		Government school lunch food subsidy
+0		NIU
+1		Yes, children receive free or reduced price lunch
+2		No, children did not receive free or reduced price lunch
+
+ FRELUNCH		Number of children with government school lunch subsidy
+00		Zero
+01		One
+02		Two
+03		Three
+04		Four
+05		Five
+06		Six
+07		Seven
+08		Eight
+09		Nine or more
+98		NIU -- Children didn't eat hot lunch
+99		NIU -- No children in hh
+
+ FAMINC		Family income of householder
+100		Under $5,000
+110		Under $1,000
+111		Under $500
+112		$500 - 999
+120		$1,000 - 1,999
+121		$1,000 - 1,499
+122		$1,500-1,999
+130		$2,000 - 2,999
+131		$2,000 - 2,499
+132		$2,500 - 2,999
+140		$3,000 - 3,999
+141		$3,000 - 3,499
+142		$3,500 - 3,999
+150		$4,000 - 4,999
+200		$5,000 - 7,999
+210		$5,000 - 7,499
+220		$5,000 - 5,999
+230		$6,000 - 7,999
+231		$6,000 - 7,499
+232		$6,000 - 6,999
+233		$7,000 - 7,499
+234		$7,000 - 7,999
+300		$7,500 - 9,999
+310		$7,500 - 7,999
+320		$8,000 - 8,499
+330		$8,500 - 8,999
+340		$8,000 - 8,999
+350		$9,000 - 9,999
+400		$10,000 - 14,999
+410		$10,000 - 10,999
+420		$11,000 - 11,999
+430		$10,000 - 12,499
+440		$10,000 - 11,999
+450		$12,000 - 12,999
+460		$12,000 - 14,999
+470		$12,500 - 14,999
+480		$13,000 - 13,999
+490		$14,000 - 14,999
+500		$15,000 - 19,999
+510		$15,000 - 15,999
+520		$16,000 - 16,999
+530		$17,000 - 17,999
+540		$15,000 - 17,499
+550		$17,500 - 19,999
+560		$18,000 - 19,999
+600		$20,000 - 24,999
+700		$25,000 - 49,999
+710		$25,000 - 29,999
+720		$30,000 - 34,999
+730		$35,000 - 39,999
+740		$40,000 - 49,999
+800		$50,000 and over
+810		$50,000 - 74,999
+820		$50,000 - 59,999
+830		$60,000 - 74,999
+840		$75,000 and over
+841		$75,000 - 99,999
+842		$100,000 - 149,999
+843		$150,000 and over
+995		Missing
+996		Refused
+997		Don't know
+999		Blank
+
+ NFAMS		Number of families in household
+00		0 families (vacant unit)
+01		1 family or N/A
+02		2 families
+03		3
+04		4
+05		5
+06		6
+07		7
+08		8
+09		9
+10		10
+11		11
+12		12
+13		13
+14		14
+15		15
+16		16
+17		17
+18		18
+19		19
+20		20
+21		21
+22		22
+23		23
+24		24
+25		25
+26		26
+27		27
+28		28
+29		29
+30		30
+
+ NCOUPLES		Number of married couples in household
+0		0 couples or NIU
+1		1
+2		2
+3		3
+4		4
+5		5
+6		6
+7		7
+9		9
+
+ NMOTHERS		Number of mothers in household
+0		0 mothers or NIU
+1		1
+2		2
+3		3
+4		4
+5		5
+6		6
+
+ NFATHERS		Number of fathers in household
+0		0 fathers or NIU
+1		1
+2		2
+3		3
+4		4
+5		5
+6		6
+
+ AGE		Age
+00		Under 1 year
+01		1
+02		2
+03		3
+04		4
+05		5
+06		6
+07		7
+08		8
+09		9
+10		10
+11		11
+12		12
+13		13
+14		14
+15		15
+16		16
+17		17
+18		18
+19		19
+20		20
+21		21
+22		22
+23		23
+24		24
+25		25
+26		26
+27		27
+28		28
+29		29
+30		30
+31		31
+32		32
+33		33
+34		34
+35		35
+36		36
+37		37
+38		38
+39		39
+40		40
+41		41
+42		42
+43		43
+44		44
+45		45
+46		46
+47		47
+48		48
+49		49
+50		50
+51		51
+52		52
+53		53
+54		54
+55		55
+56		56
+57		57
+58		58
+59		59
+60		60
+61		61
+62		62
+63		63
+64		64
+65		65
+66		66
+67		67
+68		68
+69		69
+70		70
+71		71
+72		72
+73		73
+74		74
+75		75
+76		76
+77		77
+78		78
+79		79
+80		80
+81		81
+82		82
+83		83
+84		84
+85		85
+86		86
+87		87
+88		88
+89		89
+90		90 (90+, 1988-2002)
+91		91
+92		92
+93		93
+94		94
+95		95
+96		96
+97		97
+98		98
+99		99+
+
+ SEX		Sex
+1		Male
+2		Female
+9		NIU
+
+ RACE		Race
+100		White
+200		Black/Negro
+300		American Indian/Aleut/Eskimo
+650		Asian or Pacific Islander
+651		Asian only
+652		Hawaiian/Pacific Islander only
+700		Other (single) race, n.e.c.
+		Two or more races
+801		White-Black
+802		White-American Indian
+803		White-Asian
+804		White-Hawaiian/Pacific Islander
+805		Black-American Indian
+806		Black-Asian
+807		Black-Hawaiian/Pacific Islander
+808		American Indian-Asian
+809		Asian-Hawaiian/Pacific Islander
+810		White-Black-American Indian
+811		White-Black-Asian
+812		White-American Indian-Asian
+813		White-Asian-Hawaiian/Pacific Islander
+814		White-Black-American Indian-Asian
+815		American Indian-Hawaiian/Pacific Islander
+816		White-Black--Hawaiian/Pacific Islander
+817		White-American Indian-Hawaiian/Pacific Islander
+818		Black-American Indian-Asian
+819		White-American Indian-Asian-Hawaiian/Pacific Islander
+820		Two or three races, unspecified
+830		Four or five races, unspecified
+999		Blank
+
+ MARST		Marital status
+1		Married, spouse present
+2		Married, spouse absent
+3		Separated
+4		Divorced
+5		Widowed
+6		Never married/single
+7		Widowed or Divorced
+9		NIU
+
+ FAMSIZE		Number of own family members in hh
+00		Missing
+01		1 family member present
+02		2 family members present
+03		3 family members present
+04		4 family members present
+05		5 family members present
+06		6 family members present
+07		7 family members present
+08		8 family members present
+09		9 family members present
+10		10 family members present
+11		11 family members present
+12		12 family members present
+13		13 family members present
+14		14 family members present
+15		15 family members present
+16		16 family members present
+17		17 family members present
+18		18 family members present
+19		19 family members present
+20		20 family members present
+21		21 family members present
+22		22 family members present
+23		23 family members present
+24		24 family members present
+25		25 family members present
+26		26 family members present
+27		27 family members present
+28		28 family members present
+29		29 family members present
+
+ NCHILD		Number of own children in household
+0		0 children present
+1		1 child present
+2		2
+3		3
+4		4
+5		5
+6		6
+7		7
+8		8
+9		9+
+
+ NCHLT5		Number of own children under age 5 in hh
+0		No children under age 5
+1		1 child under age 5
+2		2
+3		3
+4		4
+5		5
+6		6
+7		7
+8		8
+9		9+
+
+ FAMUNIT		Family unit membership
+01		1st family in household or group quarters
+02		2nd family in household or group quarters
+03		3rd
+04		4th
+05		5th
+06		6th
+07		7th
+08		8th
+09		9th
+10		10
+11		11
+12		12
+13		13
+14		14
+15		15
+16		16
+17		17
+18		18
+19		19
+20		20
+21		21
+22		22
+23		23
+24		24
+25		25
+26		26
+27		27
+28		28
+29		29
+
+ BPL		Birthplace
+		UNITED STATES
+09900		United States, n.s.
+		US OUTLYING AREAS/TERRITORIES
+10000		American Samoa
+10500		Guam
+10750		Northern Mariana Islands
+11000		Puerto Rico
+11500		U.S. Virgin Islands
+12090		U.S. outlying areas, n.s.
+		OTHER NORTH AMERICA
+15000		Canada
+16010		Bermuda
+19900		North America, n.s.
+		CENTRAL AMERICA
+20000		Mexico
+21010		Belize/British Honduras
+21020		Costa Rica
+21030		El Salvador
+21040		Guatemala
+21050		Honduras
+21060		Nicaragua
+21070		Panama
+21090		Central America, n.s.
+		CARIBBEAN
+25000		Cuba
+26010		Dominican Republic
+26020		Haiti
+26030		Jamaica
+26043		Bahamas
+26044		Barbados
+26054		Dominica
+26055		Grenada
+26060		Trinidad and Tobago
+26065		Antigua and Barbuda
+26070		St. Kitts--Nevis
+26075		St. Lucia
+26080		St. Vincent and the Grenadi
+26091		Caribbean, n.s.
+		SOUTH AMERICA
+30005		Argentina
+30010		Bolivia
+30015		Brazil
+30020		Chile
+30025		Colombia
+30030		Ecuador
+30040		Guyana/British Guiana
+30050		Peru
+30060		Uruguay
+30065		Venezuela
+30070		Paraguay
+30090		South America, n.s.
+31000		Americas, n.s.
+		EUROPE
+		Northern Europe
+40000		Denmark
+40100		Finland
+40200		Iceland
+40400		Norway
+40500		Sweden
+		United Kingdom and Ireland:
+41000		England
+41100		Scotland
+41200		Wales
+41300		United Kingdom, n.s.
+41400		Ireland
+41410		Northern Ireland
+		Western Europe
+42000		Belgium
+42100		France
+42500		Netherlands
+42600		Switzerland
+		Southern Europe
+43300		Greece
+43400		Italy
+43600		Portugal
+43610		Azores
+43800		Spain
+		Central/Eastern Europe
+45000		Austria
+45200		Czechoslavakia
+45212		Slovakia
+45213		Czech Republic
+45300		Germany
+45400		Hungary
+45500		Poland
+45600		Romania
+45650		Bulgaria
+45675		Albania
+45700		Yugoslavia
+45720		Bosnia and Herzegovina
+45730		Croatia
+45740		Macedonia
+45750		Serbia
+45760		Kosovo
+45770		Montenego
+		Russian Empire:
+		Baltic States:
+46100		Estonia
+46200		Latvia
+46300		Lithuania
+46500		Other USSR/Russia
+46530		Ukraine
+46535		Belarus
+46540		Moldova
+46590		USSR, n.s.
+49900		Europe, n.s.
+		ASIA
+		East Asia:
+50000		China
+50010		Hong Kong
+50040		Taiwan
+50100		Japan
+50200		Korea
+50220		South Korea
+50300		Mongolia
+		Southeast Asia
+51100		Cambodia
+51200		Indonesia
+51300		Laos
+51400		Malaysia
+51500		Philippines
+51600		Singapore
+51700		Thailand
+51800		Vietnam
+		India/Southwest Asia:
+52000		Afghanistan
+52100		India
+52110		Bangladesh
+52120		Bhutan
+52130		Burma
+52140		Pakistan
+52150		Sri Lanka
+52200		Nepal
+		Eurasia:
+55100		Armenia
+55200		Azerbaijan
+55300		Georgia
+		Central Asia:
+55400		Uzbekistan
+55500		Kazakhstan
+		Middle East/Asia Minor:
+53000		Iran
+53200		Iraq
+53400		Israel
+53420		Palestine
+53500		Jordan
+53700		Lebanon
+54000		Saudi Arabia
+54100		Syria
+54200		Turkey
+54300		Cyprus
+54350		Kuwait
+54400		Yemen
+54500		United Arab Emirates
+54700		Middle East, n.s.
+59900		Asia, n.e.c./n.s.
+		AFRICA
+60010		Northern Africa
+60012		Egypt/United Arab Rep.
+60014		Morocco
+60016		Algeria
+60018		Sudan
+60019		Libya
+		West Africa:
+60023		Ghana
+60031		Nigeria
+60032		Cameroon
+60033		Cape Verde
+60034		Liberia
+60035		Senegal
+60036		Sierra Leone
+60037		Guinea
+60038		Ivory Coast
+60039		Togo
+		East Africa:
+60040		Eritrea
+60044		Ethiopia
+60045		Kenya
+60050		Somalia
+60060		Tanzania
+60065		Uganda
+60070		Zimbabwe
+60094		South Africa (Union of)
+		Central Africa:
+60095		Zaire
+60096		Congo
+60097		Zambia
+60099		Africa, n.s./n.e.c.
+		OCEANIA
+		Australia and New Zealand
+70010		Australia
+70020		New Zealand
+71000		Pacific Islands
+71021		Fiji
+71022		Tonga
+71023		Samoa
+71024		Marshall Islands
+72000		Micronesia
+96000		Other, n.e.c. and unknown
+99999		NIU
+
+ YRIMMIG		Year of immigration
+0000		NIU
+1949		1949 or earlier
+1959		1950-1959
+1964		1960-1964
+1969		1965-1969
+1974		1970-1974
+1979		1975-1979
+1981		1980-1981
+1983		1982-1983
+1985		1984-1985
+1987		1986-1987
+1989		1988-1989
+1991		1990-1991
+1993		1992-1993
+1994		1992-1994
+1995		1994-1995
+1996		1994-1996
+1997		1996-1997
+1998		1996-1998 (2000 CPS: 1998)
+1999		1998-1999 (1999 CPS: 1996-1999)
+2000		1998-2000
+2001		2000-2001 (2001 CPS: 1998-2001)
+2002		2000-2002
+2003		2002-2003 (2003 CPS: 2000-2003)
+2004		2002-2004
+2005		2004-2005 (2005 CPS: 2002-2005)
+2006		2004-2006
+2007		2004-2007
+2008		2006-2008 (2006-2007 CPS: 2004-2008)
+2009		2006-2009
+2010		2008-2010 (2012 CPS: 2008-2009)
+2011		2008-2011
+2012		2010-2012 (2014 CPS: 2010-2011)
+2013		2010-2013
+2014		2012-2014
+2015		2012-2015
+2016		2014-2016
+2017		2014-2017
+2018		2016-2018
+2019		2016-2019
+
+ CITIZEN		Citizenship status
+1		Born in U.S
+2		Born in U.S. outlying
+3		Born abroad of American parents
+4		Naturalized citizen
+5		Not a citizen
+9		NIU
+
+ EMPSTAT		Employment status
+00		NIU
+01		Armed Forces
+		In Labor Force
+		Employed
+10		At work
+12		Has job, not at work last week
+20		Unemployed
+21		Unemployed, experienced worker
+22		Unemployed, new worker
+30		Not in labor force
+31		NILF, housework
+32		NILF, unable to work
+33		NILF, school
+34		NILF, other
+35		NILF, unpaid, lt 15 hours
+36		NILF, retired
+
+ LABFORCE		Labor force status
+0		NIU
+1		No, not in the labor force
+2		Yes, in the labor force
+
+ CLASSWKR		Class of worker
+00		NIU
+10		Self-employed
+13		Self-employed, not incorporated
+14		Self-employed, incorporated
+20		Works for wages or salary
+21		Wage/salary, private
+22		Private, for profit
+23		Private, nonprofit
+24		Wage/salary, government
+25		Federal government employee
+26		Armed forces
+27		State government employee
+28		Local government employee
+29		Unpaid family worker
+99		Missing/Unknown
+
+ UHRSWORKT		Hours usually worked per week at all jobs
+997		Hours vary
+999		NIU
+
+ WHYUNEMP		Reason for unemployment
+0		NIU
+1		Job loser - on layoff
+2		Other job loser
+3		Temporary job ended
+4		Job leaver
+5		Re-entrant
+6		New entrant
+
+ WHYABSNT		Reason for absence from work
+00		NIU
+01		On temporary layoff (under 30 days)
+02		On indefinite layoff (30+ days)
+03		Slack work/business conditions
+04		Waiting for a new job to begin
+05		Vacation/personal days
+06		Own illness/injury/medical problems
+07		Child care problems
+08		Other family/personal obligation
+09		Maternity/paternity leave
+10		Labor dispute
+11		Weather affected job
+12		School/training
+13		Civic/military duty
+14		Does not work in the business
+15		Other
+
+ EDUC		Educational attainment recode
+000		NIU or no schooling
+001		NIU or blank
+002		None or preschool
+010		Grades 1, 2, 3, or 4
+011		Grade 1
+012		Grade 2
+013		Grade 3
+014		Grade 4
+020		Grades 5 or 6
+021		Grade 5
+022		Grade 6
+030		Grades 7 or 8
+031		Grade 7
+032		Grade 8
+040		Grade 9
+050		Grade 10
+060		Grade 11
+070		Grade 12
+071		12th grade, no diploma
+072		12th grade, diploma unclear
+073		High school diploma or equivalent
+080		1 year of college
+081		Some college but no degree
+090		2 years of college
+091		Associate's degree, occupational/vocational program
+092		Associate's degree, academic program
+100		3 years of college
+110		4 years of college
+111		Bachelor's degree
+120		5+ years of college
+121		5 years of college
+122		6+ years of college
+123		Master's degree
+124		Professional school degree
+125		Doctorate degree
+999		Missing/Unknown
+
+ SCHLCOLL		School or college attendance
+0		NIU
+1		High school full time
+2		High school part time
+3		College or university full time
+4		College or university part time
+5		Does not attend school, college or university
+
+ DIFFANY		Any difficulty
+0		NIU
+1		No difficulty
+2		Has difficulty
+
+ ACTNLFLY		Activity when not in labor force last year (part-year workers)
+00		NIU
+10		Ill or disabled
+20		Taking care of home/family
+30		Going to school
+40		Retired
+50		Other
+51		Looking for work
+52		No work available
+53		Doing unpaid work
+54		In Armed Forces
+
+ GOTVDISA		Received veterans' disability compensation
+0		NIU
+1		No
+2		Yes
+
+ GOTVEDUC		Received veterans' education assistance
+0		NIU
+1		No
+2		Yes
+
+ GOTVOTHE		Received other veterans' payments
+0		NIU
+1		No
+2		Yes
+
+ GOTVPENS		Received veterans' pension
+0		NIU
+1		No
+2		Yes
+
+ GOTVSURV		Received veterans' survivor benefits
+0		NIU
+1		No
+2		Yes
+
+ SRCDISA1		First source of disability income
+00		NIU
+01		Workers compensation
+02		Company or union disability
+03		Federal govt disability
+04		US military retirement disability
+05		State or local govt employee disability
+06		US railroad retirement disability
+07		Accident or disability insurance
+08		Black lung miners disability
+09		State temporary sickness
+10		Other or don't know
+
+ SRCDISA2		Second source of disability income
+00		NIU
+01		Workers compensation
+02		Company or union disability
+03		Federal govt disability
+04		US military retirement disability
+05		State or local govt employee disability
+06		US railroad retirement disability
+07		Accident or disability insurance
+08		Black lung miners disability
+09		State temporary sickness
+10		Other or don't know
+
+ SRCEARN		Source of earnings from longest job
+0		NIU
+1		Wage and salary
+2		Self employment
+3		Farm self employment
+4		Without pay
+
+ SRCEDUC		Source of educational assistance
+0		NIU
+1		Government assistance
+2		Scholarships, grants etc from school
+3		Other assistance
+4		Govt assistance and scholarships, grants etc from school
+5		Govt assistance and other assistance
+6		Scholarships, grants etc from school and other assistance
+7		Govt assistance, scholarships, grants etc from school, and other assistance
+
+ SRCRETI1		First source of retirement income
+0		NIU
+1		Company or Union  pension
+2		Federal Government retirement Pension
+3		US Military retirement pension
+4		State or local Govt retirement pension
+5		US Railroad retirement pension
+6		Regular payments from annuities or paid-up insurance policies
+7		Regular payments from IRA, KEOGH, or 401K accounts
+8		Other or don't know
+
+ SRCRETI2		Second source of retirement income
+0		NIU
+1		Company or Union  pension
+2		Federal Government retirement Pension
+3		US Military retirement pension
+4		State or local Govt retirement pension
+5		US Railroad retirement pension
+6		Regular payments from annuities or paid-up insurance policies
+7		Regular payments from IRA, KEOGH, or 401K accounts
+8		Other or do not know
+
+ SRCSURV1		First source of survivor benefits
+00		NIU
+01		Company or union survivor pension
+02		Federal government pension
+03		US military retirement survivor pension
+04		State or local govt survivor pension
+05		US railroad retirement survivor pension
+06		Workers compensation pension
+07		Black lung survivor pension
+08		Regular payments from estates or trusts
+09		Regular payments from annuities or paid-up life insurance
+10		Other or do not know
+
+ SRCSURV2		Second source of survivor benefits
+00		NIU
+01		Company or union survivor pension
+02		Federal government pension
+03		US military retirement survivor pension
+04		State or local govt survivor pension
+05		US railroad retirement survivor pension
+06		Workers compensation pension
+07		Black lung survivor pension
+08		Regular payments from estates or trusts
+09		Regular payments from annuities or paid-up life insurance
+10		Other or do not know
+
+ SRCUNEMP		Source of unemployment income
+0		No supplemental or strike benefits
+1		Supplemental unemployment benefits
+2		Union unemployment or strike benefits
+3		Both
+9		NIU
+
+ SRCWELFR		Source of welfare income
+0		NIU
+1		AFDC/TANF
+2		Other
+3		Both AFDC/TANF and other
+
+ SRCWKCOM		Source of workmen's compensation
+0		NIU
+1		State Workers Compensation
+2		Employer or employers insurance
+3		Own insurance
+4		Other
+
+ SSIKID		Child under 18 received SSI income
+0		NIU
+1		No
+2		Yes
+
+ SSKID		Child under 19 received SS income
+0		NIU
+1		No
+2		Yes
+
+ VETQA		Required to fill out annual income questionnaire for veterans' administration
+0		NIU
+1		No
+2		Yes
+
+ WHYSS1		First reason for receiving social security income
+0		NIU
+1		Retired
+2		Disabled (adult or child)
+3		Widowed
+4		Spouse
+5		Surviving child
+6		Dependent child
+7		On behalf of surviving, dependent, or disabled child(ren)
+8		Other (adult or child)
+
+ WHYSS2		Second reason for receiving social security income
+0		NIU
+1		Retired
+2		Disabled (adult or child)
+3		Widowed
+4		Spouse
+5		Surviving child
+6		Dependent child
+7		On behalf of surviving, dependent, or disabled child(ren)
+8		Other (adult or child)
+
+ WHYSSI1		First reason for receiving supplementary security income
+0		NIU
+1		Disabled (adult or child)
+2		Blind (adult or child)
+3		On behalf of a disabled child
+4		On behalf of a blind child
+5		Other (adult or child)
+
+ WHYSSI2		Second reason for receiving supplementary security income
+0		NIU
+1		Disabled (adult or child)
+2		Blind (adult or child)
+3		On behalf of a disabled child
+4		On behalf of a blind child
+5		Other (adult or child)
+
+ FILESTAT		Tax filer status
+0		No data
+1		Joint, both less than 65
+2		Joint, one less than 65, one 65+
+3		Joint, both 65+
+4		Head of household
+5		Single
+6		Nonfiler
+
+ OFFPOV		Official Poverty Status (IPUMS constructed)
+01		Below Poverty Line
+02		Above Poverty Line
+99		NIU
+
+ OFFPOVUNIV		Official Poverty Rate Universe
+00		Out of Poverty Universe
+01		In Poverty Universe
+
+ POVERTY		Original poverty status (PUMS original)
+00		NIU
+10		Below poverty
+20		Above poverty
+21		100-124 percent of the low-income level
+22		125-149 percent of the low-income level
+23		150 percent and above the low-income level
+
+ SPMNEWFAM		SPM unit's new family status
+0		Same as official poverty unit
+1		Cohabiting couple present
+2		Unrelated individual under 15 present
+3		Foster child age 15-21 present
+4		Newly included parent
+5		Multiple changes
+
+ SPMPOV		SPM unit's poverty status
+0		Above poverty (SPM)
+1		Below poverty (SPM)
+
+ SPMMORT		SPM unit's tenure/mortgage status
+1		Owners with a mortgage
+2		Owners without a mortgage
+3		Renters
+
+ DISABWRK		Work disability
+0		NIU
+1		No disability that affects work
+2		Disability limits or prevents work
+
+ HEALTH		Health status
+1		Excellent
+2		Very good
+3		Good
+4		Fair
+5		Poor
+
+ QUITSICK		Quit job or retired for health reasons
+0		NIU
+1		No, did not quit job or retire
+2		Yes, quit job or retired
+
+ HIMCAID		Covered by Medicaid last year
+1		No
+2		Yes
+
+ HIMCARE		Covered by Medicare last year
+0		NIU
+1		No
+2		Yes
+
+ HICHAMP		Covered by military health insurance last year
+1		No
+2		Yes
+
+ CAID		Covered by Medicaid last year
+1		No
+2		Yes
+
+ CARE		Covered by Medicare last year
+1		No
+2		Yes
+
+ CHAMPUS		Covered by Champus/Tricare last year
+1		No
+2		Yes
+
+ CHAMPVA		Covered by CHAMPVA last year
+1		No
+2		Yes
+
+ MILITVA		Covered by VA or Military health care last year
+0		No
+1		Yes, military health care or VA
+2		Yes, VA health care only
+3		Yes, military health care only
+4		Yes, both military health care and VA
+
+ INDIANH		Covered by Indian Health Service last year
+1		No
+2		Yes
+
+ KIDCAID		Child covered by Medicaid, last year
+0		NIU
+1		No
+2		Yes
+
+ HIURULE		HIU pointer rule
+10		Point HIU reference person to self
+20		Point married person, with spouse present, to spouse
+21		Point married female, with spouse present, to spouse
+30		Point eligible child to parent, if present
+31		Point eligible child to father, if present
+32		Point eligible child to mother, if present and father absent
+50		Point single adults to self
+60		Point related singleton children to first HIU reference person in household
+70		Point unrelated singleton children to self
+
+ GOTWIC		Received WIC
+0		NIU
+1		No
+2		Yes
+
+ KIDCNEED		Child needed care while parent worked
+0		NIU
+1		No
+2		Yes

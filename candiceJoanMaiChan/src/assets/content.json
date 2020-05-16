@@ -1,0 +1,131 @@
+{
+    "title" : "Opioids: The Branding and Commercialization of Pain",
+    "desc": "Over the past two decades, the branding and commercialization of opioids has created one of the greatest commercial successes and public health tragedies in the United States. Multifaceted marketing strategies, created by large pharmaceutical companies, highlight how the carefully curated image of opioids created a ubiquitous presence of the drug across the United States and changed the way Americans perceive pain. ",
+    "background": "black_and_yellow_smoke.png",
+    "content": [
+        {
+            "title": "The Salesforce",
+            "desc": "One of the cornerstones of Purdue’s marketing campaign and a long standing pharmaceutical marketing tactic to garner momentum for new drugs is the strategic mobilization of medical experts, sales professionals, and key opinion leaders.",
+            "content": [
+                {
+                    "imagelink": "1.1.png",
+                    "imagedesc": "In 2000, Purdue gathered a team of 671, which quickly grew to 2500, sales representatives to market OxyContin to around 94,000 doctors."
+
+                },
+                {
+                    "imagelink": "1.3.png",
+                    "imagedesc": "In order to build credibility, the salesforce charged expert medical thought leaders to speak positively about the new drug to professionals, workshops, and medical conferences to ensure that the drug reached the correct people."
+                },
+                {
+                    "imagelink": "1.2.png",
+                    "imagedesc": "During conferences, Oxycontin branded marketing materials were distributed to increase the brand's presence."
+                }
+            ]
+        },
+        {
+            "title": "Pain as the “Fifth Vital Sign",
+            "desc": "In 1995, following concern for under management of pain, the American Pain Society, the Veteran’s Health Administration and the Joint Commission introduced pain as the “fifth vital sign”. Since vital signs are taken seriously, the phrase was initially coined to heighten awareness of pain treatment amongst healthcare professionals.",
+            "content": [
+                {
+                    "imagelink": "2.1.png",
+                    "imagedesc": "The introduction of the 0-to-10 Numeric Rating Scale (NRS) intended to help healthcare professionals define pain and provide consistent communication by matching pain intensity to a number. "
+                }
+            ]
+        },
+        {
+            "title": "HCAHPS Survey",
+            "desc": "The HCAHPS survey, used since 2005 in many hospitals during a patient’s discharge, is one of the many patient satisfaction surveys that include three or more pain management related questions. The link between prescription opioid use and high patient satisfaction scores calls into question reimbursements that hinge on satisfaction scores.",
+            "content": [
+                {
+                    "imagelink": "3.1.png",
+                    "imagedesc": "In 2010, an extension to the HCAHPS survey rewarded hospitals that scored high in clinical outcomes and patient experience. The three questions focused on pain accounted for 30 percent of the overall score, weighing pain-related questions heavily over the rest of the survey. "
+                },
+                {
+                    "imagelink": "3.2.png",
+                    "imagedesc": "In 2010, an extension to the HCAHPS survey rewarded hospitals that scored high in patient experience, which left more conservative doctors with a difficult decision: to select the quick and risky route of prescribing pain medication or go the natural route only to face dissatisfaction from poor survey satisfaction scores, which also affected their compensation and promotion chances. "
+                }
+            ]
+        },
+        {
+            "title": "Purdue- JCAHO Partnership",
+            "desc": "The Joint Commission (JCAHO) is an organization that accredits more than 21,000 US health care organizations and programs. The Purdue-JCAHO partnership is an example of how big pharmaceutical companies formed strong alliances in order to push their drugs forward.",
+            "content": [
+                {
+                    "imagelink": "4.1.png",
+                    "imagedesc": "Multiple opioid related advertisements were distributed in the many JCAHO health care organizations and programs to ensure that the drug was front of mind. This advertisement targets the eldery demographic with arthritis pain."
+                },
+                {
+                    "imagelink": "4.2.png",
+                    "imagedesc": "This advertisement speaks to around-the-clock relief for severe pain, highlighting how long acting opioids relieves pain with fewer pills."
+                },
+                {
+                    "imagelink": "4.3.png",
+                    "imagedesc": "The opioid drug, OxyContin, was advertised as an advancement in pain relief medication and an option 'to start with and stay with.' The 'easy to dose, easy to titrate' promise on the advertisement gave people the impression that they were always in control."
+                }
+            ]
+        }
+    ],
+    "opioid_list": {
+      "title": "What are the Most Commonly Used Opioids?",
+      "desc": "Explore a list of some of the most commonly used painkillers",
+      "content": [
+        {
+          "title": "Fentanyl",
+          "imgsrc": "assets/images/fentanyl.png",
+          "desc": "Fentanyl is the strongest opioid on the market, up to 100 times more potent than morphine and 50 times stronger than heroin. It is often used to treat severe pain, or pain after surgical procedures.",
+          "street_names": ["Apache", "Tango", "Cash", "TNT"],
+          "symptoms": ["Fevers", "Sweating", "Naseau", "Muscle Pain", "Confusion", "Restlessness"]
+        },
+        {
+          "title": "OxyContin",
+          "imgsrc": "assets/images/oxycontin.png",
+          "desc": "Oxycontin plays a vital role in the opioid epidemic due to Purdue Pharma's marketing which led to millions of harmful prescriptions of the drug from the late 1990s.",
+          "street_names": ["Oxy", "Oxycotton", "Kickers", "OC", "Roxy"],
+          "symptoms": ["Insomnia", "Sweating", "Yawning", "Dialated Pupils", "Goosebumps", "Runny nose"]
+        },
+        {
+          "title": "Demerol",
+          "imgsrc": "assets/images/demerol.png",
+          "desc": "This drug is said to be more potent than morphine. It is often used to treat severe pain, or pain after surgical procedures. It’s often given to people who are resistant to other opiates.",
+          "street_names": ["Demmies", "Pain Killer"],
+          "symptoms": ["Insomnia", "Sweating", "Yawning", "Dialated Pupils", "Goosebumps", "Runny nose"]
+        },
+        {
+          "title": "Methadone",
+          "imgsrc": "assets/images/methadone.png",
+          "desc": "Methadone is of the synthetic variety and is most commonly prescribed as a part of opioid replacement therapy (ORT) for opioid addiction.",
+          "street_names": ["Done", "Dollies", "Metho", "Wafer", "Fizzies", "Methadose"],
+          "symptoms": ["Confusion", "Tremors", "irritability", "Mood Swings", "Fatigue", "Depression"]
+        },
+        {
+          "title": "MS Contin",
+          "imgsrc": "assets/images/mscontin.png",
+          "desc": "MS Contin is helpful for treating ongoing pain. Many cancer patients rely on this drug for pain relief.",
+          "street_names": ["God’s Drug", "Miss Emma","Monkey","Morpho"],
+          "symptoms": ["Insomnia", "Sweating", "Yawning", "Dialated Pupils", "Goosebumps", "Runny nose"]
+        },
+        {
+          "title": "Percocet",
+          "imgsrc": "assets/images/percocet.png",
+          "desc": "Percocet is often prescribed for injury or surgery-related pain. It is not as over-prescribed as the widely marketed OxyContin, it has been the cause of many unintentional addictions.",
+          "street_names": ["Percs", "Oxycet", "C.", "Greenies", "Rims"],
+          "symptoms": ["Insomnia", "shallow breathing", "chills", "high blood pressure", "irritability", "Vomiting"]
+        },
+        {
+          "title": "Codeine",
+          "imgsrc": "assets/images/codeine.png",
+          "desc": "Codeine is a less potent form of prescription painkiller and is sometimes abused in its tablet form; however, the most popular way to abuse codeine is by drinking the liquid cough syrup that contains it.",
+          "street_names": ["Lean", "Dirty Sprite", "Sizzurp"],
+          "symptoms": ["Loss of Appetite", "Cramps", "Naseau", "Insomnia", "Yawning", "Enlarged Pupils"]
+        },
+        {
+          "title": "Dilaudid",
+          "imgsrc": "assets/images/dilaudid.png",
+          "desc": "The drug is manufactured in different forms that can be taken orally as a pill, liquid, or injected.",
+          "street_names": ["Dillies", "M80s", "Hospital heroin"],
+          "symptoms": ["Cramps", "Agitation", "Tremors", "Low Blood Pressure", "Sweats", "Anxiety"]
+        }
+
+      ]
+    }
+}

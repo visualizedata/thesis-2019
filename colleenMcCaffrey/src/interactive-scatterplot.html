@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<style>
+  #my_dataviz {
+    position: fixed;
+        left: 0px;
+        right: 33.3%;
+        top: 0px;
+        bottom: 0px;
+  }
+  #scroll-text {
+    position: relative;
+    width: 30.3%;
+    height: 1000px;
+    left: 66.7%;
+    padding: 1% 3% 2% 2%; 
+  }
+</style>
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+<div id="scroll-text">
+  <h1>Top Campaign Terms</h1>
+  <h3>Identifying needs through unstructured learning</h3>
+  <!-- <p>The majority of costs in healthcare are incurred by a fraction of the population but with the current system nearly 1 in 10 Americans resort to crowdfunding for medical costs. We collected data on crowdfunding campaigns from “Medical”, “Emergency” and “Memorial” Categories and analyzed them with k-means clustering to gain more insight on what people are campaigning for and what makes for a successful campaign. Hover over the chart to explore the clusters.</p> -->
+  <p>With these gaps in the system more people are turning to GoFundMe to supplement insurance costs and the indirect costs of being out of work due to an illness or caring for a loved, which often fall behind in the political conversations around healthcare  behind prescription drug costs and surgery, despite being mentioned in 7 out of 10 campaigns. Some of the primary issues for someone to launch a GoFundMe Campaign are lack of transparency on pricing which varies with health insurance hospital and state, lack of coverage period (though those with coverage struggle as well), gaps in coverage - ie time off, new job, etc, and costs beyond what healthcare covers extra costs like travel for loved one, research or clinical trials not covered, which can be seen in the chart where “family”, “time” and “work” are used even more frequently than “cancer” and “surgery”, showing the recurring need for support in these areas of people’s lives when confronting a medical issue.</p>
+  </div>
+<script>
+      var chartDiv = document.getElementById("my_dataviz");
+
+        // set the dimensions and margins of the graph
+        var margin = {top: 10, right: 30, bottom: 30, left: 60},
+            width = chartDiv.clientWidth - margin.left - margin.right,
+            height = chartDiv.clientHeight - margin.top - margin.bottom;
+            // append the svg object to the body of the page
+            var svg = d3.select("#my_dataviz")
+              .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+                .attr("transform",
+                      "translate(" + margin.left + "," + margin.top + ")")
+        
+        //Read the data
+        d3.csv("data/test-med-15.csv", function(data) {
+        
+          // Add X axis
+          var x = d3.scaleLinear()
+            .domain([0, 120])
+            .range([ 0, width ]);
+          svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+        
+          // Add Y axis
+          var y = d3.scaleLinear()
+            .domain([0, 0])
+            .range([ 0, height]);
+          svg.append("g")
+         .attr("class", "myYaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
+            // .attr("transform", "translate(" + height + ", 0)")
+            .attr("transform", "translate(0, 0)")
+            .call(d3.axisLeft(y))
+            .attr("opacity", "0")
+        
+          // Add dots
+          svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+              .attr("cx", function (d) { return x(d.success); } )
+              .attr("cy", function (d) { return y(d.engagement); } )
+              .attr("r", function (d) {
+                var avDonation = (d.raised/d.donors) * 0.01 + 1;
+                if (avDonation > 10) {
+                  avDonation = 10;
+                }
+                return avDonation;
+              })
+              .style("fill", function (d) { 
+                  if (d.cluster == 0 || d.cluster == 8) {
+                    return "hotpink";
+                  } if (d.cluster == 1 || d.cluster == 4 || d.cluster == 9) {
+                    return "orange";
+                  } if (d.cluster == 6 || d.cluster == 7) {
+                    return "purple";
+                  } if (d.cluster == 2 || d.cluster == 5) {
+                    return "slateblue";
+                  } else {
+                    return "#69b3a2";
+                  }
+              })
+              // .attr("r", 1.5)
+              // .style("fill", "#69b3a2")
+        
+          // new Y axis
+          y.domain([75, 0])
+          svg.select(".myYaxis")
+            .transition()
+            .duration(2000)
+            .attr("opacity", "1")
+            .call(d3.axisLeft(y));
+        
+          svg.selectAll("circle")
+            .transition()
+            .delay(function(d,i){return(i*3)})
+            .duration(2000)
+            .attr("cx", function (d) { return x(d.success); } )
+            .attr("cy", function (d) { return y(d.engagement); } )
+        })
+        
+        </script>
