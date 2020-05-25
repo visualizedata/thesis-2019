@@ -1,0 +1,10 @@
+:root {
+  --fg: #1f1f1f;
+  --bg: #fafafa; 
+}
+
+body { 
+  color: var(--fg);
+  background: var(--bg);
+  margin: 0% 5% 0% 5%;
+}
